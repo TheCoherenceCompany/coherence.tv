@@ -8,14 +8,13 @@ A design system for **The Coherence Company** — built from the brand mark, the
 
 | Source | Path | Notes |
 | --- | --- | --- |
-| Brand mark (vector) | `uploads/coherence.svg` → `assets/coherence-logo.svg` | Calligraphic mark — intertwined flowing strokes forming a sphere. Original artwork on a 2000×2000 canvas. |
-| Wordmark/logo PNG | (mentioned in brief, not delivered) | Listed in the prompt as `Coherence Logo - transparent.png` but not present in `uploads/`. Flagged below. |
+| Brand mark | `assets/coherence-logo.png` | Calligraphic mark — intertwined flowing strokes forming a sphere. **Always use PNG, never SVG.** |
 | Brand reference | `uploads/2.png` → `assets/coherence-hero-reference.png` | 1920×1080 hero — vibrant teal at top fading through pale teal to white, ghost watermark on the right, vertical "THE COHERENCE COMPANY" wordmark in the right margin. This was the primary input for color, gradient direction, and layout cadence. |
-| Brand brief | conversation | "Primarily white, light colours, with teal accents — simple, professional, minimal, good use of whitespace. Noto Sans Light for body text." |
+| Brand brief | conversation | "Primarily white, light colours, with teal accents — simple, professional, minimal, good use of whitespace." |
 
-> **Substitutions / open items**
+> **Logo constraint**
+> - **PNG logos only.** Do not use SVG logos anywhere on the website. All logo uses must reference the PNG asset.
 > - Both **Instrument Serif** (display) and **Lexend** (body) are loaded from Google Fonts. If you have licensed `.woff2` files for either, drop them in `fonts/` and we'll swap the `@import` for a local `@font-face`.
-> - The high-res wordmark PNG is in `assets/coherence-logo-hd.png` and used in the site hero.
 
 ---
 
