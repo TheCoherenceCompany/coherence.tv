@@ -1,0 +1,101 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  /* Brush-stroke icons.
+     Each stroke is a FILLED path that tapers at the ends, like real ink on paper.
+     The taper comes from variable-width polygon paths rather than uniform stroke.
+     Curves are biased and slightly asymmetric so no two strokes feel identical. */
+  .ink {
+    width: 22px; height: 22px;
+    fill: var(--ink-700);
+    stroke: none;
+  }
+  .chip-icn {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--ink-050); border: 1px solid var(--border-2);
+  }
+  .chip-icn.teal { background: var(--teal-050); border-color: var(--teal-200); }
+  .chip-icn.teal .ink { fill: var(--teal-900); }
+</style>
+</head>
+<body style="padding:28px 32px;">
+  <div class="label">Iconography · brush-stroke · custom</div>
+
+  <div class="row" style="gap:10px; flex-wrap:wrap;">
+
+    <!-- arrow-up-right · single brushed diagonal + bracket, both taper to a flick -->
+    <span class="chip-icn">
+      <svg class="ink" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7.4 16.8 C 7.7 16.1, 9 14.4, 11.4 12, 13.8 9.6, 15.5 8.3, 16.2 8 L 16.6 8.4 C 16.3 9.1, 15 10.8, 12.6 13.2, 10.2 15.6, 8.5 16.9, 7.8 17.2 Z"/>
+        <path d="M11.5 7.4 C 12.4 7.2, 14.6 7, 16.4 7.05 C 16.9 7.05, 17 7.1, 17 7.5 C 17.1 9.4, 17 12, 16.7 12.9 L 16.05 13 C 15.85 12.2, 15.75 9.95, 15.8 8.4 L 11.6 8.4 Z"/>
+      </svg>
+    </span>
+
+    <!-- search · brushed loop with a flicked tail; loop has visible "lift" on the top -->
+    <span class="chip-icn">
+      <svg class="ink" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M10.2 4.9 C 6.4 6.1, 4.6 10.7, 6.6 13.9 C 8.7 17.3, 14 17.4, 15.9 14.1 C 17.5 11.3, 16.3 7.2, 13 5.6 C 12 5.1, 10.8 4.8, 10.2 4.9 Z M 10.7 6.4 C 12.8 5.95, 15.1 7.4, 15.7 9.7 C 16.4 12.3, 14.5 15.1, 11.9 15.3 C 9.4 15.5, 7.05 13.4, 7.25 11.05 C 7.4 9, 8.85 6.85, 10.7 6.4 Z"/>
+        <path d="M14.3 14.5 C 15.4 16, 17 17.6, 18.6 19 C 19 19.3, 19.3 19.5, 19.5 19.45 C 19.6 19.25, 19.4 18.9, 19.1 18.5 C 17.7 16.9, 16.2 15.4, 14.9 14 Z"/>
+      </svg>
+    </span>
+
+    <!-- mail · soft-flap envelope, top flap is a single brushed v-curve -->
+    <span class="chip-icn">
+      <svg class="ink" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5.4 6.8 C 5 6.85, 4.7 7.1, 4.55 7.4 C 4.4 9.3, 4.4 14.4, 4.55 16.4 C 4.7 16.95, 5.1 17.25, 5.6 17.3 C 9.7 17.45, 14.3 17.45, 18.4 17.3 C 18.95 17.25, 19.3 16.85, 19.4 16.3 C 19.55 14.4, 19.55 9.4, 19.4 7.5 C 19.3 7.05, 19 6.85, 18.5 6.8 C 14.3 6.65, 9.7 6.65, 5.4 6.8 Z M 6 7.85 C 9.7 7.7, 14.3 7.7, 18 7.85 C 18.4 7.9, 18.5 8, 18.55 8.4 C 18.65 10.2, 18.65 13.6, 18.55 15.4 C 18.5 15.95, 18.35 16.15, 17.9 16.2 C 14.1 16.35, 9.9 16.35, 6.1 16.2 C 5.6 16.15, 5.5 15.95, 5.45 15.4 C 5.35 13.6, 5.35 10.2, 5.45 8.4 C 5.5 8, 5.6 7.9, 6 7.85 Z"/>
+        <path d="M4.7 8 C 6.8 9.6, 9.4 11.3, 11.5 12.4 C 11.85 12.55, 12.15 12.55, 12.5 12.4 C 14.6 11.3, 17.2 9.6, 19.3 8 L 18.9 7.6 C 16.7 8.95, 14.1 10.4, 12 11.3 C 9.9 10.4, 7.3 8.95, 5.1 7.6 Z"/>
+      </svg>
+    </span>
+
+    <!-- circle · open-at-top calligraphic loop (echoes the logo); ends taper -->
+    <span class="chip-icn">
+      <svg class="ink" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M13.2 4.4 C 9.4 4.7, 5.7 7.5, 4.7 11.2 C 3.6 15.4, 6.6 19.8, 11 19.95 C 15.7 20.1, 19.8 16.4, 19.7 11.9 C 19.6 8.4, 17.3 5.7, 14.2 4.8 L 13.9 5.7 C 16.5 6.65, 18.3 9, 18.55 11.7 C 18.85 15.45, 15.7 18.9, 11.95 18.9 C 8 18.9, 4.95 15.15, 5.85 11.3 C 6.6 8.1, 9.7 5.7, 13.1 5.45 Z"/>
+      </svg>
+    </span>
+
+    <!-- layers · two flowing horizons, each tapers at both ends -->
+    <span class="chip-icn">
+      <svg class="ink" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4.5 9 C 7.5 7.5, 12 6.6, 16 7.4 C 17.6 7.7, 18.8 8.3, 19.6 9 L 19.4 9.7 C 17.2 11.1, 14.4 11.9, 11.7 11.95 C 8.6 12, 6 11.2, 4.6 9.7 Z M 6 9.2 C 9 8.3, 13 8, 16 8.6 C 16.9 8.8, 17.6 9.05, 18.1 9.3 C 16.3 10.3, 13.8 10.95, 11.5 10.95 C 9.2 10.95, 7.2 10.3, 6 9.5 Z"/>
+        <path d="M5 14.6 C 8 16.2, 12.4 16.7, 16 15.7 C 17.6 15.3, 18.7 14.7, 19.4 14 L 19.1 13.4 C 17 14.7, 13.8 15.3, 11 15.05 C 8 14.8, 5.8 14, 4.7 13.4 Z"/>
+      </svg>
+    </span>
+
+    <!-- book-open · pages curve like a real spread; both pages get a brushed lift -->
+    <span class="chip-icn">
+      <svg class="ink" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M11.7 7.2 C 10 6.4, 7.6 6, 5 6.3 C 4.7 6.4, 4.55 6.6, 4.55 7 C 4.55 10.3, 4.55 13.6, 4.55 16.9 C 4.55 17.2, 4.7 17.4, 5 17.4 C 7.6 17.2, 9.8 17.5, 11.7 18.6 C 11.9 18.7, 12.1 18.7, 12.3 18.6 C 14.2 17.5, 16.4 17.2, 19 17.4 C 19.3 17.4, 19.45 17.2, 19.45 16.9 C 19.45 13.6, 19.45 10.3, 19.45 7 C 19.45 6.6, 19.3 6.4, 19 6.3 C 16.4 6, 14 6.4, 12.3 7.2 C 12.1 7.3, 11.9 7.3, 11.7 7.2 Z M 11.6 8.4 L 11.6 17.2 C 10 16.5, 8 16.2, 5.7 16.3 L 5.7 7.5 C 7.95 7.4, 10 7.7, 11.6 8.4 Z M 12.4 8.4 C 14 7.7, 16.05 7.4, 18.3 7.5 L 18.3 16.3 C 16 16.2, 14 16.5, 12.4 17.2 Z"/>
+      </svg>
+    </span>
+
+    <!-- compass · circle as above, with a tapered needle in the middle -->
+    <span class="chip-icn">
+      <svg class="ink" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 4.3 C 7.7 4.5, 4.4 8, 4.5 12.2 C 4.65 16.6, 8.5 19.9, 12.8 19.6 C 17 19.3, 19.95 15.4, 19.5 11.2 C 19.05 7.05, 15.6 4.1, 11.3 4.55 L 11.4 5.55 C 15.1 5.2, 18.1 7.85, 18.45 11.45 C 18.85 15.4, 15.6 18.7, 11.7 18.55 C 8.05 18.4, 5.4 15.4, 5.55 11.8 C 5.7 8.2, 8.6 5.5, 12.05 5.4 Z"/>
+        <path d="M8.5 15.5 C 9.3 13, 10.6 10.9, 15 8.6 C 15.3 8.45, 15.55 8.55, 15.45 8.85 C 14.2 13, 12.5 14.7, 9 15.95 C 8.6 16.05, 8.4 16, 8.5 15.5 Z M 9.7 14.6 C 11 13, 12.5 11.5, 14 10.4 C 12.7 11.9, 11.4 13.4, 9.9 14.6 Z"/>
+      </svg>
+    </span>
+
+    <!-- chevron-right · one bold brushed curve, taper both ends -->
+    <span class="chip-icn">
+      <svg class="ink" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M9.6 5.4 C 11.4 7.4, 13.7 9.7, 14.7 11.3 C 14.95 11.75, 14.95 12.25, 14.7 12.7 C 13.7 14.3, 11.4 16.6, 9.6 18.6 L 8.8 18 C 10.4 15.85, 12.55 13.7, 13.45 12.3 C 13.6 12.1, 13.6 11.9, 13.45 11.7 C 12.55 10.3, 10.4 8.15, 8.8 6 Z"/>
+      </svg>
+    </span>
+
+    <!-- plus · two crossing brush strokes, very visible taper at each end -->
+    <span class="chip-icn teal">
+      <svg class="ink" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 4.4 C 12.55 6.7, 12.65 16.5, 12.1 19.6 C 12.05 19.7, 11.95 19.7, 11.9 19.6 C 11.35 16.5, 11.45 6.7, 12 4.4 Z" />
+        <path d="M4.4 12 C 6.7 11.45, 16.5 11.35, 19.6 11.9 C 19.7 11.95, 19.7 12.05, 19.6 12.1 C 16.5 12.65, 6.7 12.55, 4.4 12 Z" />
+      </svg>
+    </span>
+
+  </div>
+
+  <div style="font-size:12px; color:var(--ink-500); line-height:1.55;">
+    Brushed ink set. Each glyph is a filled path that tapers at both ends — same vocabulary as Lucide but built from real strokes, not equal-width lines. Echoes the logo and the calligraphy accents.
+  </div>
+</body></html>

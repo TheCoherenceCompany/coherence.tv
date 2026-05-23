@@ -1,0 +1,280 @@
+/* The Coherence Company · shared primitives
+   Nav, Footer, Section, HeroLight/Dark, CardGrid, JourneyTrack,
+   Timeline, FitCompare, ProblemCards, CTABand, JoinModal */
+
+const LOREM = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+const LOREM_SHORT = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.";
+
+const NAV_LINKS = [
+  { href: "who-for.html",     label: "Who For",      match: ["who-for"] },
+  { href: "what-we-do.html",  label: "What We Do",   match: ["what-we-do"] },
+  { href: "event.html",       label: "Coherence Conversations Event", match: ["event"] },
+  { href: "join.html",        label: "Join Us",      match: ["join"] },
+];
+
+const Nav = () => {
+  const [scrolled, setScrolled] = React.useState(false);
+  React.useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  const page = window.PAGE || "home";
+  const isActive = (m) => m.some(x => page === x || page.startsWith(x + "-"));
+
+  return (
+    <nav className={`nav${scrolled ? " scrolled" : ""}`}>
+      <a className="nav-brand" href="index.html">
+        <img src="assets/Logo.png" className="nav-logo" alt="The Coherence Company" />
+        <span className="nav-brand-tag">Humans &amp; AI<br />Wiser Together</span>
+      </a>
+      <div className="nav-links">
+        {NAV_LINKS.map(l => (
+          <a key={l.href} href={l.href}
+             className={`nav-link${isActive(l.match) ? " active" : ""}`}>
+            {l.label}
+          </a>
+        ))}
+        <a className="btn btn-primary btn-sm nav-cta" href="start.html">
+          Start a Conversation
+        </a>
+      </div>
+    </nav>
+  );
+};
+
+/* ---------- Section primitives ---------- */
+
+const Eyebrow = ({ children }) => <div className="eyebrow">{children}</div>;
+
+const SectionHead = ({ eyebrow, title, dek, align }) => (
+  <div className={`section-head${align === "center" ? " center" : ""}`}>
+    {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+    {title && <h2 className="section-title" dangerouslySetInnerHTML={{ __html: title }} />}
+    {dek && <p className="section-dek">{dek}</p>}
+  </div>
+);
+
+const Section = ({ id, tone = "white", calli, children }) => {
+  const cls = `section section-${tone}`;
+  return (
+    <section className={cls} id={id}>
+      {calli && (
+        <div
+          className={`calli ${calli.cls || ""}`}
+          style={{
+            backgroundImage: `url('assets/backgrounds/${calli.file}')`,
+            ...(calli.style || {})
+          }}
+          aria-hidden="true"
+        />
+      )}
+      <div className="container">{children}</div>
+    </section>
+  );
+};
+
+/* ---------- Hero variants ---------- */
+
+const HeroLight = ({ eyebrow, title, sub, primaryCTA, secondaryCTA, meta, calli }) => (
+  <section className="hero hero-light">
+    {calli && (
+      <div
+        className="calli in-gradient"
+        style={{
+          backgroundImage: `url('assets/backgrounds/${calli}')`,
+          width: 940, height: 940, right: -160, top: 20
+        }}
+        aria-hidden="true"
+      />
+    )}
+    <div className="hero-vertical">
+      <span className="hero-vertical-text">The Coherence Company · Humans &amp; AI · Wiser Together</span>
+    </div>
+    <div className="container hero-inner">
+      {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+      <h1 className="hero-h1 reveal" dangerouslySetInnerHTML={{ __html: title }} />
+      {sub && <p className="hero-sub reveal reveal-2">{sub}</p>}
+      <div className="hero-ctas reveal reveal-3">
+        {primaryCTA && (
+          <a className="btn btn-primary btn-lg" href={primaryCTA.href}>
+            {primaryCTA.label} <i data-lucide="arrow-right"></i>
+          </a>
+        )}
+        {secondaryCTA && (
+          <a className="btn btn-ghost btn-lg" href={secondaryCTA.href}>
+            {secondaryCTA.label}
+          </a>
+        )}
+      </div>
+      {meta && (
+        <div className="hero-meta reveal reveal-4">
+          {meta.map((m, i) => (
+            <span key={i} className="hero-meta-item">
+              <span className="dot"></span> {m}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+);
+
+/* ---------- Card grids ---------- */
+
+const CardGrid = ({ cols = 3, items, variant = "default" }) => (
+  <div className={`card-grid cols-${cols} variant-${variant}`}>
+    {items.map((it, i) => (
+      <article key={i} className="grid-card">
+        {it.num && <span className="grid-card-num">{it.num}</span>}
+        {it.icon && (
+          <div className="grid-card-icon"><i data-lucide={it.icon}></i></div>
+        )}
+        <h3>{it.title}</h3>
+        {it.body && <p>{it.body}</p>}
+        {it.link && (
+          <a className="grid-card-link" href={it.link.href}>
+            {it.link.label} <i data-lucide="arrow-right"></i>
+          </a>
+        )}
+      </article>
+    ))}
+  </div>
+);
+
+const TagList = ({ items }) => (
+  <ul className="tag-list">
+    {items.map((it, i) => <li key={i}>{it}</li>)}
+  </ul>
+);
+
+/* ---------- Journey track (5 stages) ---------- */
+
+const JourneyTrack = ({ steps }) => (
+  <div className="journey-track">
+    {steps.map((s, i) => (
+      <div key={i} className={`journey-step${s.highlight ? " void" : ""}`}>
+        <div className="journey-num">{String(i + 1).padStart(2, "0")}</div>
+        <div className="journey-name">{s.name}</div>
+        {s.note && <div className="journey-current">{s.note}</div>}
+      </div>
+    ))}
+  </div>
+);
+
+/* ---------- Timeline (vertical numbered) ---------- */
+
+const Timeline = ({ steps }) => (
+  <ol className="timeline">
+    {steps.map((s, i) => (
+      <li key={i} className="timeline-step">
+        <div className="timeline-num">{String(i + 1).padStart(2, "0")}</div>
+        <div className="timeline-body">
+          <h4>{s.title}</h4>
+          {s.body && <p>{s.body}</p>}
+        </div>
+      </li>
+    ))}
+  </ol>
+);
+
+/* ---------- Fit / Poor-fit comparison ---------- */
+
+const FitCompare = ({ strong, poor }) => (
+  <div className="fit-compare">
+    <div className="fit-col fit-strong">
+      <div className="fit-head">
+        <i data-lucide="check-circle-2"></i>
+        <span>Strong fit</span>
+      </div>
+      <ul>{strong.map((s, i) => <li key={i}>{s}</li>)}</ul>
+    </div>
+    <div className="fit-col fit-poor">
+      <div className="fit-head">
+        <i data-lucide="circle-slash"></i>
+        <span>Poor fit</span>
+      </div>
+      <ul>{poor.map((s, i) => <li key={i}>{s}</li>)}</ul>
+    </div>
+  </div>
+);
+
+/* ---------- Tensions block (3-column problem with named tensions) ---------- */
+
+const TensionsBlock = ({ items }) => (
+  <div className="tensions">
+    {items.map((t, i) => (
+      <div key={i} className="tension">
+        <div className="tension-num">{String(i + 1).padStart(2, "0")}</div>
+        <h4>{t.title}</h4>
+        <p>{t.body}</p>
+      </div>
+    ))}
+  </div>
+);
+
+/* ---------- CTA Band ---------- */
+
+const CTABand = ({ eyebrow, title, body, cta, tone = "sand" }) => (
+  <section className={`cta-band cta-${tone}`}>
+    <div className="container cta-band-inner">
+      {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+      <h2 className="cta-band-title" dangerouslySetInnerHTML={{ __html: title }} />
+      {body && <p className="cta-band-body">{body}</p>}
+      {cta && (
+        <a className="btn btn-primary btn-lg" href={cta.href}>
+          {cta.label} <i data-lucide="arrow-right"></i>
+        </a>
+      )}
+    </div>
+  </section>
+);
+
+/* ---------- Footer ---------- */
+
+const Footer = () => (
+  <footer className="footer">
+    <div className="container footer-inner">
+      <div className="footer-brand">
+        <img src="assets/coherence-logo.svg" width="44" height="44" alt="" />
+        <div>
+          <div className="footer-brand-name">The Coherence Company</div>
+          <div className="footer-brand-tag" style={{ marginTop: 8 }}>
+            AI-supported collaboration infrastructure for collective sensemaking,
+            coherent gatherings, and coordinated action.
+          </div>
+        </div>
+      </div>
+      <div className="footer-col">
+        <h6>Explore</h6>
+        <a href="who-for.html">Who For</a>
+        <a href="what-we-do.html">What We Do</a>
+        <a href="event.html">Coherence Conversations Event</a>
+        <a href="join.html">Join Us</a>
+      </div>
+      <div className="footer-col">
+        <h6>Get in touch</h6>
+        <a href="start.html">Start a Conversation</a>
+        <a href="mailto:hello@coherence.tv">hello@coherence.tv</a>
+        <a href="#" onClick={e => e.preventDefault()}>LinkedIn</a>
+        <a href="#" onClick={e => e.preventDefault()}>Newsletter</a>
+      </div>
+      <div className="footer-col">
+        <h6>Legal</h6>
+        <a href="#" onClick={e => e.preventDefault()}>Privacy &amp; Consent</a>
+        <a href="#" onClick={e => e.preventDefault()}>Terms</a>
+      </div>
+    </div>
+    <div className="container footer-bottom">
+      <span>© 2026 The Coherence Company · Early-stage. Building in public.</span>
+      <span>coherence.tv</span>
+    </div>
+  </footer>
+);
+
+Object.assign(window, {
+  LOREM, LOREM_SHORT,
+  Nav, Footer, Eyebrow, SectionHead, Section, HeroLight,
+  CardGrid, TagList, JourneyTrack, Timeline, FitCompare,
+  TensionsBlock, CTABand,
+});
