@@ -60,23 +60,30 @@ const Icon = ({ name }) => (
 );
 
 const NAV_LINKS = [
-  { href: "vision.html",      label: "Vision",       match: ["vision"] },
-  { href: "who-for.html",     label: "Who For",      match: ["who-for"] },
-  { href: "what-we-do.html",  label: "What We Do",   match: ["what-we-do"] },
+  { href: "about.html",         label: "About",                   match: ["about", "coherence-journey"] },
+  { href: "vision.html",        label: "Vision",                  match: ["vision"] },
   { href: "conversations.html", label: "Coherence Conversations", match: ["conversations", "event"] },
-  { href: "join.html",        label: "Join Us",      match: ["join"] },
-  { href: "about.html",       label: "About",        match: ["about"] },
+  { href: "who-for.html",       label: "Who For",                 match: ["who-for"],
+    sub: [
+      { href: "who-for.html",          label: "Overview",         icon: "compass" },
+      { href: "who-for-events.html",   label: "Events",           icon: "calendar" },
+      { href: "who-for-companies.html",label: "Organisations",    icon: "building-2" },
+      { href: "who-for-networks.html", label: "Networks",         icon: "users" },
+      { href: "who-for-civic.html",    label: "Civic Ecosystems", icon: "globe" },
+    ]
+  },
 ];
 
 const Nav = () => {
   const [scrolled, setScrolled] = React.useState(false);
+  const [openMenu, setOpenMenu] = React.useState(null);
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   const page = window.PAGE || "home";
-  const isActive = (m) => m.some(x => page === x || page.startsWith(x + "-"));
+  const isActive = (m) => m && m.some(x => page === x || page.startsWith(x + "-"));
 
   return (
     <nav className={`nav${scrolled ? " scrolled" : ""}`}>
@@ -86,13 +93,34 @@ const Nav = () => {
       </a>
       <div className="nav-links">
         {NAV_LINKS.map(l => (
-          <a key={l.href} href={l.href}
-             className={`nav-link${isActive(l.match) ? " active" : ""}`}>
-            {l.label}
-          </a>
+          <div
+            key={l.href}
+            className="nav-item"
+            onMouseEnter={() => l.sub && setOpenMenu(l.href)}
+            onMouseLeave={() => setOpenMenu(null)}
+          >
+            <a href={l.href} className={`nav-link${isActive(l.match) ? " active" : ""}${l.sub ? " has-sub" : ""}`}>
+              {l.label}
+              {l.sub && <span className="nav-chevron" aria-hidden="true">›</span>}
+            </a>
+            {l.sub && (
+              <div className={`nav-dropdown${openMenu === l.href ? " open" : ""}`}>
+                {l.sub.map(s => (
+                  <a
+                    key={s.href}
+                    href={s.href}
+                    className={`nav-dropdown-link${page === s.href.replace(".html","") ? " active" : ""}`}
+                  >
+                    {s.icon && <span className="nav-dropdown-icon"><Icon name={s.icon} /></span>}
+                    {s.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
         ))}
-        <a className="btn btn-primary btn-sm nav-cta" href="start.html">
-          Start a Conversation
+        <a className="btn btn-primary btn-sm nav-cta" href="join.html">
+          Join Us
         </a>
       </div>
     </nav>
@@ -271,8 +299,15 @@ const TensionsBlock = ({ items }) => (
 
 /* ---------- CTA Band ---------- */
 
-const CTABand = ({ eyebrow, title, body, cta, tone = "sand" }) => (
+const CTABand = ({ eyebrow, title, body, cta, tone = "sand", calli }) => (
   <section className={`cta-band cta-${tone}`}>
+    {calli && (
+      <div
+        className={`calli ${calli.cls || ""}`}
+        style={{ backgroundImage: `url('assets/backgrounds/${calli.file}')` }}
+        aria-hidden="true"
+      />
+    )}
     <div className="container cta-band-inner">
       {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
       <h2 className="cta-band-title" dangerouslySetInnerHTML={{ __html: title }} />
@@ -303,16 +338,16 @@ const Footer = () => (
       </div>
       <div className="footer-col">
         <h6>Explore</h6>
+        <a href="about.html">About</a>
+        <a href="vision.html">Vision</a>
+        <a href="conversations.html">Coherence Conversations</a>
         <a href="who-for.html">Who For</a>
-        <a href="what-we-do.html">What We Do</a>
-        <a href="event.html">Coherence Conversations Event</a>
         <a href="join.html">Join Us</a>
       </div>
       <div className="footer-col">
         <h6>Get in touch</h6>
         <a href="start.html">Start a Conversation</a>
-        <a href="mailto:hello@coherence.tv">hello@coherence.tv</a>
-        <a href="#" onClick={e => e.preventDefault()}>LinkedIn</a>
+        <a href="https://www.linkedin.com/company/the-coherence-company/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="#" onClick={e => e.preventDefault()}>Newsletter</a>
       </div>
       <div className="footer-col">

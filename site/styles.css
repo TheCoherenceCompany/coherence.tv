@@ -95,6 +95,72 @@ img { max-width: 100%; display: block; }
   margin-left: 8px;
 }
 
+/* ---------- nav dropdown ---------- */
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nav-link.has-sub { display: flex; align-items: center; gap: 4px; }
+.nav-chevron {
+  font-size: 11px; color: var(--ink-400); line-height: 1;
+  transition: transform 200ms var(--ease-out);
+  transform: rotate(90deg);
+  display: inline-block;
+}
+.nav-item:hover .nav-chevron { transform: rotate(270deg); }
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 210px;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-2);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-6px);
+  transition: opacity 180ms var(--ease-out), transform 180ms var(--ease-out);
+  z-index: 100;
+}
+.nav-dropdown.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ink-700);
+  text-decoration: none;
+  transition: background 140ms, color 140ms;
+}
+.nav-dropdown-link:hover,
+.nav-dropdown-link.active {
+  background: var(--teal-050, #f0fdfa);
+  color: var(--teal-800);
+}
+.nav-dropdown-icon {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: var(--teal-600);
+  flex-shrink: 0;
+}
+
 /* ---------- buttons ---------- */
 .btn {
   font-family: inherit; font-weight: 400; font-size: 14px;
@@ -138,7 +204,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* ---------- calligraphy accents ----------
-   Black ink on white paper PNGs. On light surfaces we use `multiply` to drop
+   Black ink on white paper (JPEG). On light surfaces we use `multiply` to drop
    the paper and keep the ink, then dial in low opacity so it reads as a
    charcoal whisper (matches the brand mark's vocabulary). On dark surfaces
    we invert + use `screen` so the ink shows up as a soft white wash. */
@@ -165,6 +231,24 @@ img { max-width: 100%; display: block; }
   opacity: 0.09;
 }
 .calli.subtle { opacity: 0.045; }
+.calli.faint  { opacity: 0.035; }
+
+/* ---------- calligraphy position/scale variants ----------
+   Reusable placements so motifs are never stamped in the same spot.
+   Pair a variant with a motif file (and optionally `on-dark`/`subtle`/`faint`). */
+.calli.v-edge-right { width: 720px; height: 720px; right: -180px; top: 18%; }
+.calli.v-edge-left  { width: 720px; height: 720px; left: -180px;  top: 22%; }
+.calli.v-wide-top   { width: 1400px; height: 480px; left: 50%; top: 34%; transform: translateX(-50%); }
+.calli.v-corner-br  { width: 600px;  height: 600px; right: -140px; bottom: -160px; }
+.calli.v-corner-bl  { width: 600px;  height: 600px; left: -140px;  bottom: -160px; }
+.calli.v-full       { width: 940px;  height: 940px; right: -180px; top: 50%; transform: translateY(-50%); }
+
+@media (max-width: 960px) {
+  .calli.v-edge-right, .calli.v-edge-left,
+  .calli.v-corner-br, .calli.v-corner-bl,
+  .calli.v-full { width: 460px; height: 460px; }
+  .calli.v-wide-top { width: 900px; height: 320px; }
+}
 .hero-vertical {
   position: absolute;
   right: 28px; top: 0; bottom: 0;
@@ -240,7 +324,7 @@ img { max-width: 100%; display: block; }
 .problem .calli {
   width: 720px; height: 720px;
   right: -180px; top: 40%;
-  background-image: url('../assets/backgrounds/calligraphy-23.png');
+  background-image: url('../assets/backgrounds/calligraphy-23.jpg');
 }
 .stats {
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -347,7 +431,7 @@ img { max-width: 100%; display: block; }
   width: 1400px; height: 480px;
   left: 50%; top: 38%;
   transform: translateX(-50%);
-  background-image: url('../assets/backgrounds/calligraphy-32.png');
+  background-image: url('../assets/backgrounds/calligraphy-32.jpg');
   opacity: 0.055;
 }
 .journey-track {

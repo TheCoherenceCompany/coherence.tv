@@ -14,11 +14,11 @@ const PageHome = () => (
       primaryCTA={{ label: "Explore Coherence Conversations", href: "event.html" }}
       secondaryCTA={{ label: "Join the Build", href: "join.html" }}
       meta={["Early-stage · Building in public", "Pilots open", "Remote · global"]}
-      calli="calligraphy-30.png"
+      calli="calligraphy-31.jpg"
     />
 
     {/* 1.2 Coordination Gap */}
-    <Section tone="white" calli={{ file: "calligraphy-23.png", style: { width: 720, height: 720, right: -180, top: "20%" } }}>
+    <Section tone="white" calli={{ file: "calligraphy-23.jpg", cls: "v-edge-right" }}>
       <SectionHead
         eyebrow="The coordination gap"
         title="More connected,<br/><em>less coordinated.</em>"
@@ -37,7 +37,7 @@ const PageHome = () => (
     </Section>
 
     {/* 1.3 What We Build */}
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-29.jpg", cls: "faint v-corner-bl" }}>
       <SectionHead
         eyebrow="What we build"
         title="What turns talk<br/><em>into traction?</em>"
@@ -55,8 +55,7 @@ const PageHome = () => (
     </Section>
 
     {/* 1.4 The Coherence Journey */}
-    <Section id="journey" tone="teal" calli={{ file: "calligraphy-32.png", cls: "subtle",
-      style: { width: 1400, height: 480, left: "50%", top: "38%", transform: "translateX(-50%)" } }}>
+    <Section id="journey" tone="teal" calli={{ file: "calligraphy-11.jpg", cls: "subtle v-wide-top" }}>
       <SectionHead
         eyebrow="The Coherence Journey"
         title="From first contact to<br/><em>shared action.</em>"
@@ -119,7 +118,7 @@ const PageHome = () => (
         </div>
       </div>
       <div style={{ marginTop: 48, textAlign: "center" }}>
-        <a className="btn btn-primary btn-lg" href="event.html">See How It Works <Icon name="arrow-right" /></a>
+        <a className="btn btn-primary btn-lg" href="conversations.html">See How It Works <Icon name="arrow-right" /></a>
       </div>
     </Section>
 
@@ -143,7 +142,7 @@ const PageHome = () => (
     </Section>
 
     {/* 1.8 The Bigger Dream */}
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-26.jpg", cls: "faint v-corner-br" }}>
       <SectionHead
         eyebrow="The bigger dream"
         title="Where is<br/><em>this going?</em>"
@@ -160,7 +159,7 @@ const PageHome = () => (
     </Section>
 
     {/* 1.9 Join the Build */}
-    <Section tone="ink">
+    <Section tone="ink" calli={{ file: "calligraphy-29.jpg", cls: "on-dark v-corner-br" }}>
       <SectionHead
         eyebrow="Join the build"
         title="Help build the product, the company,<br/><em>and the field.</em>"
@@ -173,6 +172,7 @@ const PageHome = () => (
 
     {/* 1.10 Start a Conversation */}
     <CTABand
+      calli={{ file: "calligraphy-22.jpg", cls: "faint v-corner-br" }}
       eyebrow="Start a conversation"
       title="What are you trying<br/><em>to coordinate?</em>"
       body="Are you building an event, company gathering, transformation programme, member network, civic process, community, partnership, or ecosystem where the right conversations matter? Start with a conversation. That seems appropriate."
@@ -195,11 +195,11 @@ const PageVision = () => (
       primaryCTA={{ label: "Explore Coherence Conversations", href: "event.html" }}
       secondaryCTA={{ label: "Join the Build", href: "join.html" }}
       meta={["Collaboration infrastructure for the AI age", "Building in public", "Remote · global"]}
-      calli="calligraphy-30.png"
+      calli="calligraphy-24.jpg"
     />
 
     {/* 2.2 The missing layer is coordination */}
-    <Section tone="white" calli={{ file: "calligraphy-23.png", style: { width: 720, height: 720, right: -180, top: "18%" } }}>
+    <Section tone="white" calli={{ file: "calligraphy-01.jpg", cls: "v-edge-left" }}>
       <SectionHead
         eyebrow="The missing layer"
         title="The missing layer is <em>coordination.</em>"
@@ -277,8 +277,7 @@ const PageVision = () => (
     </Section>
 
     {/* 2.6 The Coherence Journey */}
-    <Section id="journey" tone="white" calli={{ file: "calligraphy-32.png", cls: "subtle",
-      style: { width: 1400, height: 480, left: "50%", top: "38%", transform: "translateX(-50%)" } }}>
+    <Section id="journey" tone="white" calli={{ file: "calligraphy-32.jpg", cls: "subtle v-wide-top" }}>
       <SectionHead
         eyebrow="The Coherence Journey"
         title="From connection <em>to action.</em>"
@@ -294,7 +293,7 @@ const PageVision = () => (
     </Section>
 
     {/* 2.7 Agency at the edge */}
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-03.jpg", cls: "faint v-corner-bl" }}>
       <SectionHead
         eyebrow="Agency at the edge"
         title="More people should be <em>able to act.</em>"
@@ -392,7 +391,7 @@ const PageVision = () => (
     </Section>
 
     {/* 2.12 Invitation */}
-    <Section tone="ink">
+    <Section tone="ink" calli={{ file: "calligraphy-07.jpg", cls: "on-dark v-full" }}>
       <SectionHead
         eyebrow="Invitation"
         title="Help build <em>what comes next.</em>"
@@ -404,6 +403,7 @@ const PageVision = () => (
     </Section>
 
     <CTABand
+      calli={{ file: "calligraphy-26.jpg", cls: "faint v-corner-bl" }}
       eyebrow="Start a conversation"
       title="The door is <em>a conversation.</em>"
       body="Whether you want to join the build, pilot Coherence Conversations, partner, or invest — the best next step is the same."
@@ -426,7 +426,7 @@ const PageConversations = () => (
       primaryCTA={{ label: "Start a Conversation", href: "start.html" }}
       secondaryCTA={{ label: "Explore Use Cases", href: "who-for.html" }}
       meta={["Pilots open", "Consent-based", "Designed with hosts"]}
-      calli="calligraphy-29.png"
+      calli="calligraphy-28.jpg"
     />
 
     {/* 3.G Visual flow */}
@@ -447,7 +447,7 @@ const PageConversations = () => (
     </Section>
 
     {/* 3.2 What it is */}
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-34.jpg", cls: "faint v-corner-br" }}>
       <SectionHead
         eyebrow="What it is"
         title="A guided dialogue format for groups that need <em>more than attendance.</em>"
@@ -468,7 +468,7 @@ const PageConversations = () => (
     </Section>
 
     {/* 3.3 Why it matters */}
-    <Section tone="white" calli={{ file: "calligraphy-23.png", style: { width: 700, height: 700, right: -180, top: "20%" } }}>
+    <Section tone="white" calli={{ file: "calligraphy-35.jpg", cls: "v-edge-right" }}>
       <SectionHead
         eyebrow="Why start with conversation"
         title="Because conversation is where <em>trust begins.</em>"
@@ -555,7 +555,7 @@ const PageConversations = () => (
     </Section>
 
     {/* 3.7 What hosts receive */}
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-30.jpg", cls: "faint v-corner-bl" }}>
       <SectionHead
         eyebrow="Host experience"
         title="A clearer view of the people and <em>possibilities in your field.</em>"
@@ -622,7 +622,7 @@ const PageConversations = () => (
     </Section>
 
     {/* 3.10 Trust, privacy, and consent */}
-    <Section tone="ink">
+    <Section tone="ink" calli={{ file: "calligraphy-30.jpg", cls: "on-dark v-corner-bl" }}>
       <SectionHead
         eyebrow="Trust, privacy, and consent"
         title="Trust is not a feature. <em>It is the foundation.</em>"
@@ -707,6 +707,7 @@ const PageConversations = () => (
     </Section>
 
     <CTABand
+      calli={{ file: "calligraphy-24.jpg", cls: "faint v-corner-br" }}
       eyebrow="Start a conversation"
       title="What are you trying <em>to coordinate?</em>"
       body="Tell us about your event, organisation, network, or civic process — and we'll suggest the most relevant next step."
@@ -729,11 +730,11 @@ const PageWhoFor = () => (
       primaryCTA={{ label: "Find Your Context", href: "#find-context" }}
       secondaryCTA={{ label: "Start a Conversation", href: "start.html" }}
       meta={["Events · Organisations · Networks · Civic"]}
-      calli="calligraphy-25.png"
+      calli="calligraphy-25.jpg"
     />
 
     {/* 2.2 Shared Problem */}
-    <Section tone="white" calli={{ file: "calligraphy-23.png", style: { width: 720, height: 720, right: -180, top: "20%" } }}>
+    <Section tone="white" calli={{ file: "calligraphy-03.jpg", cls: "v-edge-left" }}>
       <SectionHead
         eyebrow="The shared problem"
         title="Why do good groups <em>still get stuck?</em>"
@@ -752,7 +753,7 @@ const PageWhoFor = () => (
     </Section>
 
     {/* 2.3 Four First Markets */}
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-10.jpg", cls: "faint v-corner-br" }}>
       <SectionHead
         eyebrow="Four first markets"
         title="Where coherence <em>begins.</em>"
@@ -775,8 +776,7 @@ const PageWhoFor = () => (
     </Section>
 
     {/* 2.4 Common Journey */}
-    <Section tone="teal" calli={{ file: "calligraphy-32.png", cls: "subtle",
-      style: { width: 1400, height: 480, left: "50%", top: "38%", transform: "translateX(-50%)" } }}>
+    <Section tone="teal" calli={{ file: "calligraphy-33.jpg", cls: "subtle v-wide-top" }}>
       <SectionHead
         eyebrow="The Coherence Journey"
         title="Different contexts, <em>one shared movement.</em>"
@@ -872,6 +872,7 @@ const PageWhoFor = () => (
     </Section>
 
     <CTABand
+      calli={{ file: "calligraphy-27.jpg", cls: "faint v-corner-bl" }}
       eyebrow="Start a conversation"
       title="What are you trying <em>to coordinate?</em>"
       body="The first conversation is not about selling you software. It is about understanding the system you are trying to activate. Tell us what you are bringing together and we will suggest the most relevant next step."
@@ -884,10 +885,10 @@ const PageWhoFor = () => (
 /* ====================================================================
    2A. WHO FOR · Event Organisers
    ==================================================================== */
-const SegmentHero = ({ eyebrow, title, sub, primaryCTA }) => (
+const SegmentHero = ({ eyebrow, title, sub, primaryCTA, calli = "calligraphy-26.jpg" }) => (
   <section className="page-hero">
     <div className="calli in-gradient"
-      style={{ backgroundImage: "url('assets/backgrounds/calligraphy-21.png')",
+      style={{ backgroundImage: `url('assets/backgrounds/${calli}')`,
                width: 820, height: 820, right: -120, top: 0 }}
       aria-hidden="true" />
     <div className="container">
@@ -905,6 +906,7 @@ const SegmentHero = ({ eyebrow, title, sub, primaryCTA }) => (
 const PageWhoForEvents = () => (
   <>
     <SegmentHero
+      calli="calligraphy-26.jpg"
       eyebrow="Segment 2A · Event Organisers"
       title="Activate your participant network <em>before anyone enters the room.</em>"
       sub="For conferences, summits, retreats, and gatherings where the real value is not only content, but who meets whom and what becomes possible afterwards."
@@ -924,7 +926,7 @@ const PageWhoForEvents = () => (
       ]} />
     </Section>
 
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-35.jpg", cls: "faint v-corner-bl" }}>
       <SectionHead
         eyebrow="The problem"
         title="Events promise connection. Too often, <em>connection is left to chance.</em>"
@@ -1020,6 +1022,7 @@ const PageWhoForEvents = () => (
     </Section>
 
     <CTABand
+      calli={{ file: "calligraphy-28.jpg", cls: "faint v-corner-br" }}
       title="Bringing the right people into the room is <em>only the beginning.</em>"
       cta={{ label: "Start a Pilot", href: "start.html" }}
       tone="sand"
@@ -1033,6 +1036,7 @@ const PageWhoForEvents = () => (
 const PageWhoForCompanies = () => (
   <>
     <SegmentHero
+      calli="calligraphy-27.jpg"
       eyebrow="Segment 2B · Companies & AI-Native Organisations"
       title="Use company gatherings to create <em>real alignment</em> before people enter the room."
       sub="Coherence Conversations Event helps teams clarify context, surface priorities, build trust, and arrive at offsites, onboarding moments, and strategy sessions ready for better decisions and deeper collaboration."
@@ -1052,7 +1056,7 @@ const PageWhoForCompanies = () => (
       ]} />
     </Section>
 
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-22.jpg", cls: "faint v-corner-br" }}>
       <SectionHead
         eyebrow="The problem"
         title="Most company gatherings <em>start too late.</em>"
@@ -1154,6 +1158,7 @@ const PageWhoForCompanies = () => (
     </Section>
 
     <CTABand
+      calli={{ file: "calligraphy-10.jpg", cls: "faint v-corner-bl" }}
       title="Ready to <em>work on how you work?</em>"
       cta={{ label: "Start a Conversation", href: "start.html" }}
       tone="sand"
@@ -1167,6 +1172,7 @@ const PageWhoForCompanies = () => (
 const PageWhoForNetworks = () => (
   <>
     <SegmentHero
+      calli="calligraphy-10.jpg"
       eyebrow="Segment 2C · Networks & Professional Communities"
       title="Turn membership into <em>meaningful connection and shared intelligence.</em>"
       sub="Coherence Conversations Event helps networks and professional communities reveal member interests, needs, offers, and collaboration opportunities before important gatherings or programmes."
@@ -1185,7 +1191,7 @@ const PageWhoForNetworks = () => (
       ]} />
     </Section>
 
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-29.jpg", cls: "faint v-corner-bl" }}>
       <SectionHead
         eyebrow="The problem"
         title="Many networks have members. <em>Fewer have activation.</em>"
@@ -1291,6 +1297,7 @@ const PageWhoForNetworks = () => (
     </Section>
 
     <CTABand
+      calli={{ file: "calligraphy-34.jpg", cls: "faint v-corner-br" }}
       title="Ready to <em>activate your community?</em>"
       cta={{ label: "Start a Conversation", href: "start.html" }}
       tone="sand"
@@ -1304,6 +1311,7 @@ const PageWhoForNetworks = () => (
 const PageWhoForCivic = () => (
   <>
     <SegmentHero
+      calli="calligraphy-34.jpg"
       eyebrow="Segment 2D · Civic & Civil Society Ecosystems"
       title="Help civic dialogue become <em>shared sensemaking and action.</em>"
       sub="Coherence Conversations Event helps civic and civil society ecosystems listen across difference, surface shared concerns, map stakeholders, and build pathways from participation to coordinated action."
@@ -1323,7 +1331,7 @@ const PageWhoForCivic = () => (
       ]} />
     </Section>
 
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-26.jpg", cls: "faint v-corner-br" }}>
       <SectionHead
         eyebrow="The problem"
         title="Dialogue is not enough if <em>nothing coherent can move afterwards.</em>"
@@ -1422,6 +1430,7 @@ const PageWhoForCivic = () => (
     </Section>
 
     <CTABand
+      calli={{ file: "calligraphy-03.jpg", cls: "faint v-corner-bl" }}
       title="Ready to move from <em>dialogue to coordinated action?</em>"
       cta={{ label: "Start a Conversation", href: "start.html" }}
       tone="sand"
@@ -1436,7 +1445,7 @@ const PageWhatWeDo = () => (
   <>
     <section className="page-hero">
       <div className="calli in-gradient"
-        style={{ backgroundImage: "url('assets/backgrounds/calligraphy-33.png')",
+        style={{ backgroundImage: "url('assets/backgrounds/calligraphy-35.jpg')",
                  width: 900, height: 900, right: -160, top: 0 }}
         aria-hidden="true" />
       <div className="container">
@@ -1448,7 +1457,7 @@ const PageWhatWeDo = () => (
           and act together.
         </p>
         <div className="page-hero-ctas">
-          <a className="btn btn-primary btn-lg" href="event.html">See the product <Icon name="arrow-right" /></a>
+          <a className="btn btn-primary btn-lg" href="conversations.html">See the product <Icon name="arrow-right" /></a>
           <a className="btn btn-ghost btn-lg" href="start.html">Start a Pilot Conversation</a>
         </div>
       </div>
@@ -1497,7 +1506,7 @@ const PageWhatWeDo = () => (
       </div>
     </Section>
 
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-03.jpg", cls: "faint v-corner-bl" }}>
       <SectionHead
         eyebrow="Collective sensemaking"
         title="Groups need better ways to <em>see what they know together.</em>"
@@ -1517,7 +1526,7 @@ const PageWhatWeDo = () => (
         dek="It uses guided conversations and AI-supported synthesis to prepare participants, support hosts, and create richer collaboration fields."
       />
       <div style={{ marginTop: 32 }}>
-        <a className="btn btn-primary btn-lg" href="event.html">Explore Coherence Conversations Event <Icon name="arrow-right" /></a>
+        <a className="btn btn-primary btn-lg" href="conversations.html">Explore Coherence Conversations Event <Icon name="arrow-right" /></a>
       </div>
     </Section>
 
@@ -1556,6 +1565,7 @@ const PageWhatWeDo = () => (
     </Section>
 
     <CTABand
+      calli={{ file: "calligraphy-35.jpg", cls: "faint v-corner-br" }}
       title="Have a real gathering coming up? <em>Let's design a pilot.</em>"
       cta={{ label: "Start a Pilot Conversation", href: "start.html" }}
       tone="sand"
@@ -1575,7 +1585,7 @@ const PageEvent = () => (
       primaryCTA={{ label: "Start a Pilot", href: "start.html" }}
       secondaryCTA={{ label: "Talk to us", href: "start.html" }}
       meta={["Pilots open", "Designed with hosts", "Consent-based"]}
-      calli="calligraphy-29.png"
+      calli="calligraphy-25.jpg"
     />
 
     <Section tone="white">
@@ -1586,7 +1596,7 @@ const PageEvent = () => (
       />
     </Section>
 
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-34.jpg", cls: "faint v-corner-br" }}>
       <SectionHead
         eyebrow="How it works"
         title="Three simple movements <em>before the event begins.</em>"
@@ -1684,7 +1694,7 @@ const PageEvent = () => (
       ]} />
     </Section>
 
-    <Section tone="ink">
+    <Section tone="ink" calli={{ file: "calligraphy-34.jpg", cls: "on-dark v-corner-br" }}>
       <SectionHead
         eyebrow="Privacy, consent, and trust"
         title="Trust is <em>part of the product.</em>"
@@ -1701,6 +1711,7 @@ const PageEvent = () => (
     </Section>
 
     <CTABand
+      calli={{ file: "calligraphy-33.jpg", cls: "faint v-corner-bl" }}
       title="Planning a gathering where <em>connection really matters?</em>"
       cta={{ label: "Start a Pilot", href: "start.html" }}
       tone="sand"
@@ -1715,7 +1726,7 @@ const PageJoin = () => (
   <>
     <section className="page-hero">
       <div className="calli in-gradient"
-        style={{ backgroundImage: "url('assets/backgrounds/calligraphy-11.png')",
+        style={{ backgroundImage: "url('assets/backgrounds/calligraphy-36.jpg')",
                  width: 820, height: 820, left: -160, top: 0 }}
         aria-hidden="true" />
       <div className="container">
@@ -1747,7 +1758,7 @@ const PageJoin = () => (
       ]} />
     </Section>
 
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-30.jpg", cls: "faint v-corner-bl" }}>
       <SectionHead
         eyebrow="The company we are building"
         title="A company for <em>AI-supported collective intelligence.</em>"
@@ -1770,27 +1781,150 @@ const PageJoin = () => (
       ]} />
     </Section>
 
+    {/* Current quests — intro */}
     <Section tone="white">
       <SectionHead
         eyebrow="Current quests"
         title="Enter through a mission, <em>not vague enthusiasm.</em>"
+        dek="Our current quests are First Revenue Path, Internal Beta, and Audax OS v0.1. Together, they focus the company on revenue learning, product readiness, and the operating system needed to onboard the first 20 collaborators."
       />
       <CardGrid cols={3} items={[
-        { num: "Q01", icon: "sparkles", title: "Coherence Conversations Event product",
-          body: "Help shape the product itself — design, AI, conversation flows, host tools." },
-        { num: "Q02", icon: "calendar", title: "Event pilot design & delivery",
-          body: "Bring a gathering. Co-design a pilot. Help us learn through real use." },
-        { num: "Q03", icon: "compass", title: "Market segment development",
-          body: "Sharpen positioning, ICPs, partnerships, and go-to-market for each segment." },
-        { num: "Q04", icon: "pen-tool", title: "Public narrative & storytelling",
-          body: "Help articulate the field, the company, and the work in public." },
-        { num: "Q05", icon: "git-merge", title: "Partnership & ecosystem building",
-          body: "Open doors to organisers, networks, civic actors, and aligned platforms." },
-        { num: "Q06", icon: "layers", title: "Audax OS & internal operating model",
-          body: "Help us build the way we build — quests, contribution, AI coordination." },
-        { num: "Q07", icon: "cpu", title: "AI agent design & prototyping",
-          body: "Prototype the agents that support the Coherence Journey." },
+        { num: "Q1", icon: "trending-up", title: "First Revenue Path",
+          body: "Develop the first revenue path by speaking with first clients and users, shaping the sales approach, and designing the path towards first revenue.",
+          link: { label: "See this quest", href: "#q1" } },
+        { num: "Q2", icon: "sparkles", title: "Internal Beta",
+          body: "Get the product, experience, prompts, outputs, and flows ready for external beta testing. Not perfect — ready.",
+          link: { label: "See this quest", href: "#q2" } },
+        { num: "Q3", icon: "layers", title: "Audax OS v0.1",
+          body: "Create a thriving operating system for the current team, quests, mission-based collaborators, and contractors — enabling onboarding of the first 20 collaborators.",
+          link: { label: "See this quest", href: "#q3" } },
       ]} />
+      <div className="manifesto">
+        <p>These three quests are one system: <em>talk to the market, ready the product, build the operating system.</em> That is the current edge.</p>
+      </div>
+    </Section>
+
+    {/* Quest 1 */}
+    <Section id="q1" tone="off">
+      <SectionHead
+        eyebrow="Quest 1 · Owner: Antonio"
+        title="First Revenue Path"
+        dek="Develop the first revenue path by speaking with first clients and users, shaping the sales approach, and designing the path towards first revenue. The task is not to perfect the theory — it is to get close enough to customers that we learn what they actually value, what they might pay for, and what kind of beta path can lead to revenue."
+      />
+      <div className="two-col">
+        <div>
+          <h4 style={{ fontFamily: "var(--font-display)", fontSize: 20, margin: "0 0 12px", color: "var(--ink-700)" }}>Key missions</h4>
+          <ul className="trust-list">
+            <li>Find potential users for beta testing</li>
+            <li>Onboard collaborators for beta testing and potential sales</li>
+            <li>Run beta tests with first users</li>
+            <li>Structure feedback from first beta testers</li>
+            <li>Develop the sales conversation and first customer pathway</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style={{ fontFamily: "var(--font-display)", fontSize: 20, margin: "0 0 12px", color: "var(--ink-700)" }}>What this quest needs</h4>
+          <ul className="trust-list">
+            <li>Commercial instinct and customer discovery skills</li>
+            <li>Sales confidence and market research ability</li>
+            <li>Enough product understanding to talk to early users</li>
+            <li>Curious, direct, adaptive — comfortable learning in the open</li>
+          </ul>
+        </div>
+      </div>
+      <div className="manifesto">
+        <p>First revenue is not only money. It is proof that someone outside the founding field has a real enough problem, enough trust, and enough perceived value to engage. <em>Without this quest, the company risks becoming clear in theory but vague in the market.</em></p>
+      </div>
+    </Section>
+
+    {/* Quest 2 */}
+    <Section id="q2" tone="white">
+      <SectionHead
+        eyebrow="Quest 2 · Owner: Christine · ~1.5 months"
+        title="Internal Beta"
+        dek="Get the product ready for external beta. Test live settings, training flows, prompts, AI Guide outputs, and the full internal experience until it is strong enough to invite external users with confidence. Not perfect — ready."
+      />
+      <div className="two-col">
+        <div>
+          <h4 style={{ fontFamily: "var(--font-display)", fontSize: 20, margin: "0 0 12px", color: "var(--ink-700)" }}>Key missions</h4>
+          <ul className="trust-list">
+            <li>Test live settings, training flows, and internal experience</li>
+            <li>Test and iterate prompts and AI Guide outputs</li>
+            <li>Upgrade and test relevant versions, menus, forms, and flows</li>
+            <li>Prepare consent forms and beta onboarding flow</li>
+            <li>Refine the internal testing process before external beta</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style={{ fontFamily: "var(--font-display)", fontSize: 20, margin: "0 0 12px", color: "var(--ink-700)" }}>What this quest needs</h4>
+          <ul className="trust-list">
+            <li>Product testing and UX thinking</li>
+            <li>Facilitation sensitivity and prompt iteration</li>
+            <li>Documentation and consent awareness</li>
+            <li>Technical coordination with the product team</li>
+            <li>Ability to turn messy learning into a usable beta flow</li>
+          </ul>
+        </div>
+      </div>
+      <div className="manifesto">
+        <p>External beta is a trust moment. If people are going to enter meaningful conversations and allow AI Guides to support synthesis, the experience must feel coherent, respectful, and useful from the beginning. <em>This quest protects the first impression.</em></p>
+      </div>
+    </Section>
+
+    {/* Quest 3 */}
+    <Section id="q3" tone="off">
+      <SectionHead
+        eyebrow="Quest 3 · Owner: Victor · ~1.5 months"
+        title="Audax OS v0.1"
+        dek="Create a thriving operating system for the current team, quests, mission-based collaborators, and contractors — enabling onboarding of the first 20 collaborators. The goal is not bureaucracy. It is enough structure for people to join, understand the work, find their place, and contribute without founders repeating context by hand."
+      />
+      <div className="two-col">
+        <div>
+          <h4 style={{ fontFamily: "var(--font-display)", fontSize: 20, margin: "0 0 12px", color: "var(--ink-700)" }}>Key missions</h4>
+          <ul className="trust-list">
+            <li>Culture and human connection through online experiences and rituals</li>
+            <li>Tech Team Manual</li>
+            <li>Fundraising Roadmap</li>
+            <li>Effective Slicing Pie implementation — process and culture</li>
+            <li>OS Agents v0.001</li>
+            <li>Contributor onboarding system</li>
+            <li>Internal coordination rhythms and quest operating practices</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style={{ fontFamily: "var(--font-display)", fontSize: 20, margin: "0 0 12px", color: "var(--ink-700)" }}>What this quest needs</h4>
+          <ul className="trust-list">
+            <li>Organisational design and operations</li>
+            <li>Documentation and culture design</li>
+            <li>AI workflow design and contributor onboarding</li>
+            <li>Governance thinking and practical discipline</li>
+            <li>Build the minimum OS — not the beautiful one nobody uses</li>
+          </ul>
+        </div>
+      </div>
+      <div className="manifesto">
+        <p>If The Coherence Company is serious about becoming evidence of its own thesis, its internal operating system is not admin. <em>It is product R&D, culture infrastructure, and strategic proof.</em></p>
+      </div>
+    </Section>
+
+    {/* Open invitation */}
+    <Section tone="teal">
+      <SectionHead
+        eyebrow="Open invitation"
+        title="Which quest can <em>you help move?</em>"
+        dek="We are looking for contributors who can help one of these three quests move. The best contribution is not 'I support the vision.' The best contribution is specific."
+      />
+      <CardGrid cols={3} items={[
+        { icon: "trending-up", title: "Help Antonio",
+          body: "Open first customer conversations, test the sales approach, discover what early users actually value, and help design the path to first revenue." },
+        { icon: "sparkles", title: "Help Christine",
+          body: "Test and refine the internal beta, iterate prompts and AI Guide outputs, prepare consent flows, and get the product ready for external users." },
+        { icon: "layers", title: "Help Victor",
+          body: "Build the operating system for contributors and quests — onboarding, coordination rhythms, Slicing Pie culture, OS Agents, and internal documentation." },
+      ]} />
+      <div style={{ marginTop: 40, display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
+        <a className="btn btn-secondary btn-lg" href="start.html">Start a Conversation <Icon name="arrow-right" /></a>
+      </div>
     </Section>
 
     <Section tone="off">
@@ -1823,7 +1957,7 @@ const PageJoin = () => (
       ]} />
     </Section>
 
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-10.jpg", cls: "faint v-corner-br" }}>
       <SectionHead
         eyebrow="Team & collaborators"
         title="The people currently <em>holding the centre.</em>"
@@ -1845,6 +1979,7 @@ const PageJoin = () => (
     </Section>
 
     <CTABand
+      calli={{ file: "calligraphy-29.jpg", cls: "faint v-corner-br" }}
       title="Ready to <em>help us build?</em>"
       cta={{ label: "Start a Contributor Conversation", href: "start.html" }}
       tone="sand"
@@ -1875,7 +2010,7 @@ const PageStart = () => {
     <>
       <section className="page-hero">
         <div className="calli in-gradient"
-          style={{ backgroundImage: "url('assets/backgrounds/calligraphy-28.png')",
+          style={{ backgroundImage: "url('assets/backgrounds/calligraphy-30.jpg')",
                    width: 820, height: 820, right: -160, top: 0 }}
           aria-hidden="true" />
         <div className="container">
@@ -1939,7 +2074,7 @@ const PageStart = () => {
             <div className="field"><label>What kind of support are you looking for?</label><textarea rows="2" /></div>
             <div className="conv-form-actions">
               <button type="submit" className="btn btn-primary btn-lg">Send <Icon name="arrow-right" /></button>
-              <a className="btn btn-ghost btn-lg" href="mailto:hello@coherence.tv">Email instead</a>
+              <a className="btn btn-ghost btn-lg" href="https://www.linkedin.com/company/the-coherence-company/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
             </div>
           </form>
         )}
@@ -1958,17 +2093,17 @@ const PageStart = () => {
         ]} />
       </Section>
 
-      <Section tone="off">
+      <Section tone="off" calli={{ file: "calligraphy-35.jpg", cls: "faint v-corner-bl" }}>
         <SectionHead
           eyebrow="Alternative ways to connect"
           title="Prefer <em>another channel?</em>"
         />
-        <CardGrid cols={3} items={[
-          { icon: "mail", title: "Email", body: "hello@coherence.tv",
-            link: { label: "Send an email", href: "mailto:hello@coherence.tv" } },
-          { icon: "linkedin", title: "LinkedIn", body: "Follow the build in public.",
-            link: { label: "Visit profile", href: "#" } },
-          { icon: "send", title: "Newsletter", body: "Occasional field notes and updates.",
+        <CardGrid cols={2} items={[
+          { icon: "linkedin", title: "LinkedIn",
+            body: "Follow the build in public — updates, thinking, and progress from The Coherence Company.",
+            link: { label: "Follow on LinkedIn", href: "https://www.linkedin.com/company/the-coherence-company/" } },
+          { icon: "send", title: "Newsletter",
+            body: "Occasional field notes, product updates, and thinking on collaboration, AI, and coordination.",
             link: { label: "Subscribe", href: "#" } },
         ]} />
       </Section>
@@ -1989,11 +2124,11 @@ const PageAbout = () => (
       primaryCTA={{ label: "Explore Coherence Conversations", href: "conversations.html" }}
       secondaryCTA={{ label: "Join the Build", href: "join.html" }}
       meta={["Early-stage · Building in public", "Pilots open", "Remote · global"]}
-      calli="calligraphy-30.png"
+      calli="calligraphy-21.jpg"
     />
 
     {/* 5.2 Why We Exist */}
-    <Section tone="white" calli={{ file: "calligraphy-23.png", style: { width: 720, height: 720, right: -180, top: "20%" } }}>
+    <Section tone="white" calli={{ file: "calligraphy-29.jpg", cls: "v-edge-right" }}>
       <SectionHead
         eyebrow="Why we exist"
         title="Connection has scaled.<br/><em>Coordination has not.</em>"
@@ -2034,8 +2169,7 @@ const PageAbout = () => (
     </Section>
 
     {/* 5.4 Humans and AI, Wiser Together */}
-    <Section tone="teal" calli={{ file: "calligraphy-32.png", cls: "subtle",
-      style: { width: 1400, height: 480, left: "50%", top: "38%", transform: "translateX(-50%)" } }}>
+    <Section tone="teal" calli={{ file: "calligraphy-32.jpg", cls: "subtle v-wide-top" }}>
       <SectionHead
         eyebrow="The phrase that guides us"
         title="Humans and AI,<br/><em>wiser together.</em>"
@@ -2092,7 +2226,7 @@ const PageAbout = () => (
     </Section>
 
     {/* 5.6 How We Work */}
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-22.jpg", cls: "faint v-corner-br" }}>
       <SectionHead
         eyebrow="How we work"
         title="Building the company in the same spirit<br/><em>as the products we are creating.</em>"
@@ -2155,7 +2289,7 @@ const PageAbout = () => (
       </div>
       <div className="invite-note" style={{ marginTop: 32 }}>
         <div className="invite-note-icon"><Icon name="info" /></div>
-        <p>We are building in public and moving fast. Founding team profiles, collaborator bios, and origin story are being added as the company takes shape. Follow the build at <a href="join.html">Join the Build</a> or reach us at <a href="mailto:hello@coherence.tv">hello@coherence.tv</a>.</p>
+        <p>We are building in public and moving fast. Founding team profiles, collaborator bios, and origin story are being added as the company takes shape. Follow the build at <a href="join.html">Join the Build</a> or connect with us on <a href="https://www.linkedin.com/company/the-coherence-company/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
       </div>
     </Section>
 
@@ -2193,7 +2327,7 @@ const PageAbout = () => (
     </Section>
 
     {/* 5.10 Join the Build */}
-    <Section tone="ink">
+    <Section tone="ink" calli={{ file: "calligraphy-10.jpg", cls: "on-dark v-corner-bl" }}>
       <SectionHead
         eyebrow="Join the build"
         title="Help build what<br/><em>comes next.</em>"
@@ -2223,6 +2357,7 @@ const PageAbout = () => (
     </Section>
 
     <CTABand
+      calli={{ file: "calligraphy-30.jpg", cls: "faint v-corner-bl" }}
       eyebrow="The door is a conversation"
       title="Tell us what you are trying to coordinate,<br/><em>build, or contribute.</em>"
       body="Whether you want to pilot Coherence Conversations, partner, invest, or join the build — the best next step is the same."
@@ -2245,11 +2380,11 @@ const PageCoherenceJourney = () => (
       primaryCTA={{ label: "Explore Coherence Conversations", href: "conversations.html" }}
       secondaryCTA={{ label: "Back to About", href: "about.html" }}
       meta={["Five stages · Discover · Connect · Converge · Seed · Build"]}
-      calli="calligraphy-32.png"
+      calli="calligraphy-33.jpg"
     />
 
     {/* What it is */}
-    <Section tone="white" calli={{ file: "calligraphy-23.png", style: { width: 720, height: 720, right: -180, top: "20%" } }}>
+    <Section tone="white" calli={{ file: "calligraphy-23.jpg", cls: "v-edge-left" }}>
       <SectionHead
         eyebrow="What it is"
         title="A shared vocabulary for<br/><em>the work of coordination.</em>"
@@ -2268,8 +2403,7 @@ const PageCoherenceJourney = () => (
     </Section>
 
     {/* The track */}
-    <Section tone="teal" calli={{ file: "calligraphy-32.png", cls: "subtle",
-      style: { width: 1400, height: 480, left: "50%", top: "38%", transform: "translateX(-50%)" } }}>
+    <Section tone="teal" calli={{ file: "calligraphy-11.jpg", cls: "subtle v-wide-top" }}>
       <SectionHead
         eyebrow="The five stages"
         title="The movement from presence<br/><em>to shared action.</em>"
@@ -2470,7 +2604,7 @@ const PageCoherenceJourney = () => (
     </Section>
 
     {/* How Coherence Conversations supports it */}
-    <Section tone="off">
+    <Section tone="off" calli={{ file: "calligraphy-29.jpg", cls: "faint v-corner-bl" }}>
       <SectionHead
         eyebrow="How Coherence Conversations helps"
         title="Beginning the journey<br/><em>with guided dialogue.</em>"
@@ -2506,6 +2640,7 @@ const PageCoherenceJourney = () => (
     </Section>
 
     <CTABand
+      calli={{ file: "calligraphy-25.jpg", cls: "faint v-corner-br" }}
       eyebrow="Start the journey"
       title="Where is your group<br/><em>right now?</em>"
       body="Whether you are at the beginning of discovery or trying to sustain what you have already started — the right next step is usually a conversation about what your group needs to move."
