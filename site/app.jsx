@@ -3,6 +3,8 @@
 
 const PAGES = {
   "home":               () => window.PageHome,
+  "vision":             () => window.PageVision,
+  "conversations":      () => window.PageConversations,
   "who-for":            () => window.PageWhoFor,
   "who-for-events":     () => window.PageWhoForEvents,
   "who-for-companies":  () => window.PageWhoForCompanies,
@@ -12,6 +14,8 @@ const PAGES = {
   "event":              () => window.PageEvent,
   "join":               () => window.PageJoin,
   "start":              () => window.PageStart,
+  "about":              () => window.PageAbout,
+  "coherence-journey":  () => window.PageCoherenceJourney,
 };
 
 const App = () => {

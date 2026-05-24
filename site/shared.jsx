@@ -60,10 +60,12 @@ const Icon = ({ name }) => (
 );
 
 const NAV_LINKS = [
+  { href: "vision.html",      label: "Vision",       match: ["vision"] },
   { href: "who-for.html",     label: "Who For",      match: ["who-for"] },
   { href: "what-we-do.html",  label: "What We Do",   match: ["what-we-do"] },
-  { href: "event.html",       label: "Coherence Conversations Event", match: ["event"] },
+  { href: "conversations.html", label: "Coherence Conversations", match: ["conversations", "event"] },
   { href: "join.html",        label: "Join Us",      match: ["join"] },
+  { href: "about.html",       label: "About",        match: ["about"] },
 ];
 
 const Nav = () => {

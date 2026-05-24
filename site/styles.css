@@ -825,6 +825,7 @@ img { max-width: 100%; display: block; }
 }
 .section-ink .grid-card h3 { color: #fff; }
 .section-ink .grid-card p  { color: rgba(255,255,255,0.7); }
+.section-ink .trust-list li { color: rgba(255,255,255,0.82); }
 
 /* ---------- Tag list ---------- */
 .tag-list {
