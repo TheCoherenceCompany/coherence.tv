@@ -18,10 +18,6 @@ const App = () => {
   const key = window.PAGE || "home";
   const PageComponent = (PAGES[key] || PAGES["home"])();
 
-  React.useEffect(() => {
-    if (window.lucide) window.lucide.createIcons();
-  });
-
   return (
     <div className="page">
       <Nav />

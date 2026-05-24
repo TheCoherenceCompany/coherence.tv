@@ -93,7 +93,7 @@ const PageHome = () => (
           link: { label: "Read more", href: "who-for-civic.html" } },
       ]} />
       <div style={{ marginTop: 40, textAlign: "center" }}>
-        <a className="btn btn-secondary" href="who-for.html">Explore Who It's For <i data-lucide="arrow-right"></i></a>
+        <a className="btn btn-secondary" href="who-for.html">Explore Who It's For <Icon name="arrow-right" /></a>
       </div>
     </Section>
 
@@ -119,7 +119,7 @@ const PageHome = () => (
         </div>
       </div>
       <div style={{ marginTop: 48, textAlign: "center" }}>
-        <a className="btn btn-primary btn-lg" href="event.html">See how it works <i data-lucide="arrow-right"></i></a>
+        <a className="btn btn-primary btn-lg" href="event.html">See how it works <Icon name="arrow-right" /></a>
       </div>
     </Section>
 
@@ -145,7 +145,7 @@ const PageHome = () => (
         dek="The Coherence Company is early-stage, developing Coherence Conversations Event, working toward a planned fundraise in autumn, and inviting people who want to help build the product, company, field, and operating model."
       />
       <div style={{ marginTop: 40 }}>
-        <a className="btn btn-accent btn-lg" href="join.html">Join the Build <i data-lucide="arrow-right"></i></a>
+        <a className="btn btn-accent btn-lg" href="join.html">Join the Build <Icon name="arrow-right" /></a>
       </div>
     </Section>
 
@@ -248,19 +248,19 @@ const PageWhoFor = () => (
       <div className="routing-list">
         <a className="routing-card" href="who-for-events.html">
           <span className="routing-q">Are you organising a gathering where people need to meet the right others?</span>
-          <span className="routing-a">Event Organisers <i data-lucide="arrow-right"></i></span>
+          <span className="routing-a">Event Organisers <Icon name="arrow-right" /></span>
         </a>
         <a className="routing-card" href="who-for-companies.html">
           <span className="routing-q">Are you bringing a company team together for alignment, onboarding, or strategy?</span>
-          <span className="routing-a">Companies & AI-Native Orgs <i data-lucide="arrow-right"></i></span>
+          <span className="routing-a">Companies & AI-Native Orgs <Icon name="arrow-right" /></span>
         </a>
         <a className="routing-card" href="who-for-networks.html">
           <span className="routing-q">Are you activating members before a community moment or programme?</span>
-          <span className="routing-a">Networks & Communities <i data-lucide="arrow-right"></i></span>
+          <span className="routing-a">Networks & Communities <Icon name="arrow-right" /></span>
         </a>
         <a className="routing-card" href="who-for-civic.html">
           <span className="routing-q">Are you convening citizens, stakeholders, or civil society actors?</span>
-          <span className="routing-a">Civic Ecosystems <i data-lucide="arrow-right"></i></span>
+          <span className="routing-a">Civic Ecosystems <Icon name="arrow-right" /></span>
         </a>
       </div>
     </Section>
@@ -287,7 +287,7 @@ const SegmentHero = ({ eyebrow, title, sub, primaryCTA }) => (
       <h1 dangerouslySetInnerHTML={{ __html: title }} />
       <p className="page-hero-sub">{sub}</p>
       <div className="page-hero-ctas">
-        <a className="btn btn-primary btn-lg" href={primaryCTA.href}>{primaryCTA.label} <i data-lucide="arrow-right"></i></a>
+        <a className="btn btn-primary btn-lg" href={primaryCTA.href}>{primaryCTA.label} <Icon name="arrow-right" /></a>
         <a className="btn btn-ghost btn-lg" href="start.html">Start a Conversation</a>
       </div>
     </div>
@@ -840,7 +840,7 @@ const PageWhatWeDo = () => (
           and act together.
         </p>
         <div className="page-hero-ctas">
-          <a className="btn btn-primary btn-lg" href="event.html">See the product <i data-lucide="arrow-right"></i></a>
+          <a className="btn btn-primary btn-lg" href="event.html">See the product <Icon name="arrow-right" /></a>
           <a className="btn btn-ghost btn-lg" href="start.html">Start a Pilot Conversation</a>
         </div>
       </div>
@@ -909,7 +909,7 @@ const PageWhatWeDo = () => (
         dek="It uses guided conversations and AI-supported synthesis to prepare participants, support hosts, and create richer collaboration fields."
       />
       <div style={{ marginTop: 32 }}>
-        <a className="btn btn-primary btn-lg" href="event.html">Explore Coherence Conversations Event <i data-lucide="arrow-right"></i></a>
+        <a className="btn btn-primary btn-lg" href="event.html">Explore Coherence Conversations Event <Icon name="arrow-right" /></a>
       </div>
     </Section>
 
@@ -1119,7 +1119,7 @@ const PageJoin = () => (
           aligned contributors to help build the company now.
         </p>
         <div className="page-hero-ctas">
-          <a className="btn btn-primary btn-lg" href="start.html">Start a Contributor Conversation <i data-lucide="arrow-right"></i></a>
+          <a className="btn btn-primary btn-lg" href="start.html">Start a Contributor Conversation <Icon name="arrow-right" /></a>
         </div>
       </div>
     </section>
@@ -1192,7 +1192,7 @@ const PageJoin = () => (
         dek="At this stage, most contribution is not salaried. We use a Slicing Pie-style contribution model to track early risk and effort so contribution can translate into future equity when the company formalises, raises investment, or reaches the agreed conversion event."
       />
       <div className="invite-note" style={{ marginTop: 32 }}>
-        <div className="invite-note-icon"><i data-lucide="info"></i></div>
+        <div className="invite-note-icon"><Icon name="info" /></div>
         <p>
           <strong>Important:</strong> This website copy is not a legal agreement.
           Formal contribution terms are documented separately before meaningful work begins.
@@ -1301,7 +1301,7 @@ const PageStart = () => {
             >
               <span className="routing-q">{p}</span>
               <span className="routing-a">
-                {pathway === p ? "Selected" : "Choose"} <i data-lucide={pathway === p ? "check" : "arrow-right"}></i>
+                {pathway === p ? "Selected" : "Choose"} <Icon name={pathway === p ? "check" : "arrow-right"} />
               </span>
             </button>
           ))}
@@ -1315,7 +1315,7 @@ const PageStart = () => {
         />
         {submitted ? (
           <div className="invite-note" style={{ marginTop: 32 }}>
-            <div className="invite-note-icon"><i data-lucide="check"></i></div>
+            <div className="invite-note-icon"><Icon name="check" /></div>
             <p><strong>Thank you.</strong> We'll review your context and reply with the most relevant next conversation within a few days.</p>
           </div>
         ) : (
@@ -1330,7 +1330,7 @@ const PageStart = () => {
             <div className="field"><label>When is this happening?</label><input placeholder="Rough timeframe" /></div>
             <div className="field"><label>What kind of support are you looking for?</label><textarea rows="2" /></div>
             <div className="conv-form-actions">
-              <button type="submit" className="btn btn-primary btn-lg">Send <i data-lucide="arrow-right"></i></button>
+              <button type="submit" className="btn btn-primary btn-lg">Send <Icon name="arrow-right" /></button>
               <a className="btn btn-ghost btn-lg" href="mailto:hello@coherence.tv">Email instead</a>
             </div>
           </form>

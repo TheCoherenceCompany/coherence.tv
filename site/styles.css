@@ -116,7 +116,7 @@ img { max-width: 100%; display: block; }
 .btn-secondary:hover { border-color: var(--teal-800); color: var(--teal-800); }
 .btn-ghost { background: transparent; color: var(--ink-700); }
 .btn-ghost:hover { color: var(--ink-900); background: var(--ink-050); }
-.btn .lucide { width: 16px; height: 16px; stroke-width: 1.5; }
+.btn iconify-icon { font-size: 16px; display: inline-block; vertical-align: -2px; }
 .btn-lg { padding: 16px 28px; font-size: 15px; border-radius: 12px; }
 .btn-sm { padding: 9px 16px; font-size: 13px; border-radius: 8px; }
 
@@ -323,7 +323,7 @@ img { max-width: 100%; display: block; }
   color: var(--teal-900);
   margin-bottom: 28px;
 }
-.layer-icon svg { width: 26px; height: 26px; stroke-width: 1.5; }
+.layer-icon svg, .layer-icon iconify-icon { width: 26px; height: 26px; font-size: 26px; stroke-width: 1.5; }
 .layer-num {
   position: absolute; top: 28px; right: 32px;
   font-size: 11px; font-weight: 500; letter-spacing: 0.22em;
@@ -412,7 +412,7 @@ img { max-width: 100%; display: block; }
   background: var(--teal-050); color: var(--teal-800);
   display: flex; align-items: center; justify-content: center;
 }
-.journey-callout-icon svg { width: 22px; height: 22px; stroke-width: 1.5; }
+.journey-callout-icon svg, .journey-callout-icon iconify-icon { width: 22px; height: 22px; font-size: 22px; stroke-width: 1.5; }
 .journey-callout h4 {
   font-size: 16px; font-weight: 500; color: var(--ink-900);
   margin: 0 0 4px;
@@ -504,7 +504,7 @@ img { max-width: 100%; display: block; }
   color: var(--teal-800);
   flex-shrink: 0;
 }
-.invite-chip-icon svg { width: 18px; height: 18px; stroke-width: 1.5; }
+.invite-chip-icon svg, .invite-chip-icon iconify-icon { width: 18px; height: 18px; font-size: 18px; stroke-width: 1.5; }
 .invite-chip-text {
   font-size: 15px; font-weight: 400; color: var(--ink-900);
   letter-spacing: -0.005em;
@@ -523,7 +523,7 @@ img { max-width: 100%; display: block; }
   background: #fff; color: var(--teal-800);
   display: flex; align-items: center; justify-content: center;
 }
-.invite-note-icon svg { width: 22px; height: 22px; stroke-width: 1.5; }
+.invite-note-icon svg, .invite-note-icon iconify-icon { width: 22px; height: 22px; font-size: 22px; stroke-width: 1.5; }
 .invite-note p {
   font-size: 16px; font-weight: 300; color: var(--ink-700);
   line-height: 1.6; margin: 0;
@@ -628,7 +628,7 @@ img { max-width: 100%; display: block; }
   display: inline-flex; align-items: center; gap: 8px;
   letter-spacing: 0.04em;
 }
-.join-rsvp-item svg { width: 14px; height: 14px; stroke-width: 1.5; color: var(--teal-800); }
+.join-rsvp-item svg, .join-rsvp-item iconify-icon { width: 14px; height: 14px; font-size: 14px; stroke-width: 1.5; color: var(--teal-800); }
 
 /* ---------- footer ---------- */
 .footer {
@@ -677,7 +677,7 @@ img { max-width: 100%; display: block; }
   z-index: 200;
   animation: toastIn 280ms var(--ease-out);
 }
-.toast svg { width: 16px; height: 16px; stroke-width: 2; color: var(--teal-300); }
+.toast svg, .toast iconify-icon { width: 16px; height: 16px; font-size: 16px; stroke-width: 2; color: var(--teal-300); }
 @keyframes toastIn { from { opacity: 0; transform: translate(-50%, 12px); } to { opacity:1; transform: translate(-50%, 0); } }
 
 /* ---------- modal ---------- */
@@ -793,7 +793,7 @@ img { max-width: 100%; display: block; }
   background: var(--teal-050); color: var(--teal-900);
   margin-bottom: 24px;
 }
-.grid-card-icon svg { width: 24px; height: 24px; stroke-width: 1.5; }
+.grid-card-icon svg, .grid-card-icon iconify-icon { width: 24px; height: 24px; font-size: 24px; stroke-width: 1.5; }
 .grid-card h3 {
   font-family: var(--font-display);
   font-size: 22px; font-weight: 400; color: var(--ink-900);
@@ -810,7 +810,7 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-.grid-card-link svg { width: 14px; height: 14px; stroke-width: 1.75; }
+.grid-card-link svg, .grid-card-link iconify-icon { width: 14px; height: 14px; font-size: 14px; stroke-width: 1.75; }
 .grid-card-link:hover { color: var(--teal-900); }
 
 .card-grid.cols-4 .grid-card { padding: 28px 24px 30px; }
@@ -889,7 +889,7 @@ img { max-width: 100%; display: block; }
 }
 .fit-col.fit-strong .fit-head { color: var(--teal-900); }
 .fit-col.fit-poor   .fit-head { color: var(--ink-500); }
-.fit-head svg { width: 18px; height: 18px; stroke-width: 1.5; }
+.fit-head svg, .fit-head iconify-icon { width: 18px; height: 18px; font-size: 18px; stroke-width: 1.5; }
 .fit-col ul {
   list-style: none; padding: 0; margin: 0;
   display: flex; flex-direction: column; gap: 12px;
@@ -1022,7 +1022,7 @@ img { max-width: 100%; display: block; }
   font-size: 13px; font-weight: 500; color: var(--teal-800);
   letter-spacing: 0.02em;
 }
-.routing-a svg { width: 16px; height: 16px; stroke-width: 1.75; }
+.routing-a svg, .routing-a iconify-icon { width: 16px; height: 16px; font-size: 16px; stroke-width: 1.75; }
 
 /* ---------- Two-column editorial ---------- */
 .two-col {

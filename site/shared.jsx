@@ -5,6 +5,60 @@
 const LOREM = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 const LOREM_SHORT = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.";
 
+/* ---------- Icon system — Iconoir via Iconify ---------- */
+const ICON_MAP = {
+  'arrow-right':      'arrow-tr',
+  'check':            'check',
+  'check-circle-2':   'check-circle',
+  'circle-slash':     'xmark-circle',
+  'info':             'info-circle',
+  'compass':          'compass',
+  'git-merge':        'git-merge',
+  'sparkles':         'spark-solid',
+  'calendar-check':   'calendar',
+  'calendar':         'calendar',
+  'network':          'network-left',
+  'building-2':       'building',
+  'users':            'community',
+  'globe':            'globe',
+  'pen-tool':         'design-pencil',
+  'layers':           'layers-plus',
+  'cpu':              'cpu',
+  'microscope':       'microscope',
+  'trending-up':      'trending-up',
+  'bar-chart-3':      'bar-chart',
+  'mic':              'mic',
+  'handshake':        'handshake',
+  'smile':            'emoji-satisfied-solid',
+  'search':           'search',
+  'message-circle':   'chat-bubble',
+  'clock':            'clock',
+  'user-plus':        'user-plus',
+  'target':           'target',
+  'git-branch':       'git-branch',
+  'rocket':           'rocket',
+  'alert-triangle':   'warning-triangle',
+  'heart-handshake':  'handshake',
+  'brain':            'brain',
+  'shuffle':          'shuffle',
+  'ear':              'sound-high',
+  'heart':            'heart',
+  'message-square':   'chat-lines',
+  'flag':             'flag',
+  'book-open':        'book',
+  'eye':              'eye',
+  'link':             'link',
+  'fast-forward':     'fast-arrow-right',
+  'trees':            'tree',
+  'mail':             'mail',
+  'linkedin':         'linkedin',
+  'send':             'send-diagonal',
+};
+
+const Icon = ({ name }) => (
+  <iconify-icon icon={`iconoir:${ICON_MAP[name] || name}`}></iconify-icon>
+);
+
 const NAV_LINKS = [
   { href: "who-for.html",     label: "Who For",      match: ["who-for"] },
   { href: "what-we-do.html",  label: "What We Do",   match: ["what-we-do"] },
@@ -98,7 +152,7 @@ const HeroLight = ({ eyebrow, title, sub, primaryCTA, secondaryCTA, meta, calli 
       <div className="hero-ctas reveal reveal-3">
         {primaryCTA && (
           <a className="btn btn-primary btn-lg" href={primaryCTA.href}>
-            {primaryCTA.label} <i data-lucide="arrow-right"></i>
+            {primaryCTA.label} <Icon name="arrow-right" />
           </a>
         )}
         {secondaryCTA && (
@@ -128,13 +182,13 @@ const CardGrid = ({ cols = 3, items, variant = "default" }) => (
       <article key={i} className="grid-card">
         {it.num && <span className="grid-card-num">{it.num}</span>}
         {it.icon && (
-          <div className="grid-card-icon"><i data-lucide={it.icon}></i></div>
+          <div className="grid-card-icon"><Icon name={it.icon} /></div>
         )}
         <h3>{it.title}</h3>
         {it.body && <p>{it.body}</p>}
         {it.link && (
           <a className="grid-card-link" href={it.link.href}>
-            {it.link.label} <i data-lucide="arrow-right"></i>
+            {it.link.label} <Icon name="arrow-right" />
           </a>
         )}
       </article>
@@ -184,14 +238,14 @@ const FitCompare = ({ strong, poor }) => (
   <div className="fit-compare">
     <div className="fit-col fit-strong">
       <div className="fit-head">
-        <i data-lucide="check-circle-2"></i>
+        <Icon name="check-circle-2" />
         <span>Strong fit</span>
       </div>
       <ul>{strong.map((s, i) => <li key={i}>{s}</li>)}</ul>
     </div>
     <div className="fit-col fit-poor">
       <div className="fit-head">
-        <i data-lucide="circle-slash"></i>
+        <Icon name="circle-slash" />
         <span>Poor fit</span>
       </div>
       <ul>{poor.map((s, i) => <li key={i}>{s}</li>)}</ul>
@@ -223,7 +277,7 @@ const CTABand = ({ eyebrow, title, body, cta, tone = "sand" }) => (
       {body && <p className="cta-band-body">{body}</p>}
       {cta && (
         <a className="btn btn-primary btn-lg" href={cta.href}>
-          {cta.label} <i data-lucide="arrow-right"></i>
+          {cta.label} <Icon name="arrow-right" />
         </a>
       )}
     </div>
@@ -273,7 +327,7 @@ const Footer = () => (
 );
 
 Object.assign(window, {
-  LOREM, LOREM_SHORT,
+  LOREM, LOREM_SHORT, ICON_MAP, Icon,
   Nav, Footer, Eyebrow, SectionHead, Section, HeroLight,
   CardGrid, TagList, JourneyTrack, Timeline, FitCompare,
   TensionsBlock, CTABand,
