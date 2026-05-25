@@ -101,6 +101,17 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
 }
+/* Transparent bridge that extends the hit area over the gap between the
+   nav link and the dropdown, preventing mouseleave from firing mid-hover. */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -12px;
+  right: -12px;
+  height: 18px;
+  pointer-events: auto;
+}
 .nav-link.has-sub { display: flex; align-items: center; gap: 4px; }
 .nav-chevron {
   font-size: 11px; color: var(--ink-400); line-height: 1;
@@ -113,7 +124,6 @@ img { max-width: 100%; display: block; }
   position: absolute;
   top: calc(100% + 14px);
   left: 50%;
-  transform: translateX(-50%);
   min-width: 210px;
   background: rgba(255,255,255,0.97);
   backdrop-filter: blur(14px);
@@ -132,6 +142,13 @@ img { max-width: 100%; display: block; }
   z-index: 100;
 }
 .nav-dropdown.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+/* CSS hover as a secondary layer — shows the dropdown via :hover in addition
+   to the JS .open class, so it stays visible even if React state lags. */
+.nav-item:hover .nav-dropdown {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);

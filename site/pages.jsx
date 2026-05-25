@@ -917,7 +917,7 @@ const PageWhoForEvents = () => (
       <SectionHead
         eyebrow="Segment overview"
         title="For gatherings where <em>connection is the real value.</em>"
-        dek={LOREM_SHORT}
+        dek="Coherence Conversations Event is built for gatherings where who meets whom is as important as what is said — and where the real work of connection begins before anyone enters the room."
       />
       <TagList items={[
         "Business conferences", "Industry summits", "Innovation gatherings",
@@ -932,12 +932,12 @@ const PageWhoForEvents = () => (
         title="Events promise connection. Too often, <em>connection is left to chance.</em>"
       />
       <CardGrid cols={3} items={[
-        { num: "01", title: "Weak pre-event engagement", body: LOREM_SHORT },
-        { num: "02", title: "Generic participant profiles", body: LOREM_SHORT },
-        { num: "03", title: "Missed high-value connections", body: LOREM_SHORT },
-        { num: "04", title: "Unsure who they should meet", body: LOREM_SHORT },
-        { num: "05", title: "No insight into participant interests", body: LOREM_SHORT },
-        { num: "06", title: "Dead or transactional networking apps", body: LOREM_SHORT },
+        { num: "01", title: "Weak pre-event engagement", body: "Participants arrive having done nothing to prepare for who else is in the room. A pre-event webinar with forty people is technically engagement — but it does not create relational energy." },
+        { num: "02", title: "Generic participant profiles", body: "Short bios and job titles reveal almost nothing about what participants actually need, offer, or want to explore. Nobody fills in another form carefully." },
+        { num: "03", title: "Missed high-value connections", body: "For large events, the probability of finding the right person becomes lottery-ticket level. That is a structural failure, not a UX inconvenience." },
+        { num: "04", title: "Unsure who they should meet", body: "Participants scan a list of names with no way to judge relevance, and default to whoever is easiest to reach or already known." },
+        { num: "05", title: "No insight into participant interests", body: "Organisers walk into the event knowing less about their audience than a short structured conversation round would reveal." },
+        { num: "06", title: "Dead or transactional networking apps", body: "Most event networking tools are either unused or reduce connection to a badge-scan — without the context that makes an introduction worth having." },
       ]} />
     </Section>
 
@@ -948,9 +948,9 @@ const PageWhoForEvents = () => (
         dek="Coherence Conversations Event helps participants have useful guided conversations before the event. AI-supported synthesis turns those into profiles, themes, matching signals, and event-level insight."
       />
       <div className="flow-steps">
-        <div className="flow-step"><h4>Guided conversations</h4><p>{LOREM_SHORT}</p></div>
-        <div className="flow-step"><h4>Synthesis & matching</h4><p>{LOREM_SHORT}</p></div>
-        <div className="flow-step"><h4>Insight to organisers</h4><p>{LOREM_SHORT}</p></div>
+        <div className="flow-step"><h4>Guided conversations</h4><p>Participants receive guided prompts — not another form to fill in, but a conversation worth having. They surface intent, context, expertise, and what they most hope the gathering makes possible.</p></div>
+        <div className="flow-step"><h4>Synthesis & matching</h4><p>AI-supported synthesis turns many individual conversations into patterns: shared themes, relevant matches, offers, needs, and collective intelligence the organiser can actually use.</p></div>
+        <div className="flow-step"><h4>Insight to organisers</h4><p>Organisers receive a clear picture of the field before the doors open — what participants care about, who should meet whom, and where the most generative moments might happen.</p></div>
       </div>
     </Section>
 
@@ -960,12 +960,12 @@ const PageWhoForEvents = () => (
         title="More insight, more relevance, <em>more value from the same room.</em>"
       />
       <CardGrid cols={3} items={[
-        { icon: "trending-up", title: "Stronger pre-event engagement", body: LOREM_SHORT },
-        { icon: "users-round", title: "Better participant matching", body: LOREM_SHORT },
-        { icon: "bar-chart-3", title: "Richer audience intelligence", body: LOREM_SHORT },
-        { icon: "mic", title: "More authentic event content", body: LOREM_SHORT },
-        { icon: "handshake", title: "Improved sponsor value", body: LOREM_SHORT },
-        { icon: "smile", title: "Higher participant satisfaction", body: LOREM_SHORT },
+        { icon: "trending-up", title: "Stronger pre-event engagement", body: "Guided conversations give participants a reason to engage before the event opens. Unlike a webinar or a poll, the conversation itself is worth having." },
+        { icon: "users-round", title: "Better participant matching", body: "Matches are built from real context — what someone is actually working on, seeking, or offering — not just a job title and a headshot." },
+        { icon: "bar-chart-3", title: "Richer audience intelligence", body: "Organisers gain demand intelligence for live curation: what participants actually care about, in time to shape the programme around it." },
+        { icon: "mic", title: "More authentic event content", body: "Participants talking about why they are attending creates far more useful pre-event signal than generic reposts of event marketing." },
+        { icon: "handshake", title: "Improved sponsor value", body: "Clearer audience insight means sponsors can see real relevance — not just attendance numbers, but who is in the room and what they are there for." },
+        { icon: "smile", title: "Higher participant satisfaction", body: "Participants who arrive with shared context and a short list of people worth meeting leave with more to show for the time they invested." },
       ]} />
     </Section>
 
@@ -975,12 +975,12 @@ const PageWhoForEvents = () => (
         title="Less random networking. <em>More useful connection.</em>"
       />
       <CardGrid cols={3} items={[
-        { icon: "compass", title: "Clarify their intention before the event", body: LOREM_SHORT },
-        { icon: "search", title: "Discover relevant people earlier", body: LOREM_SHORT },
-        { icon: "message-circle", title: "Move beyond first-contact small talk", body: LOREM_SHORT },
-        { icon: "user-check", title: "Build visibility through better profiles", body: LOREM_SHORT },
-        { icon: "clock", title: "Use event time more intelligently", body: LOREM_SHORT },
-        { icon: "arrow-right-circle", title: "Stronger follow-up pathways", body: LOREM_SHORT },
+        { icon: "compass", title: "Clarify their intention before the event", body: "A guided conversation helps participants name what they are actually there for — not just the topic, but the specific conversation, person, or outcome they are hoping to find." },
+        { icon: "search", title: "Discover relevant people earlier", body: "AI-supported synthesis surfaces people worth meeting based on real intent, shared context, and complementary needs or offers — not just titles." },
+        { icon: "message-circle", title: "Move beyond first-contact small talk", body: "With shared context established before the event, conversations can begin at second- or third-conversation depth — no credentials exchange, no wasted first hour." },
+        { icon: "user-check", title: "Build visibility through better profiles", body: "Profiles built from conversation give other participants a real reason to reach out — and a clearer basis for the first conversation." },
+        { icon: "clock", title: "Use event time more intelligently", body: "Arriving with a short list of relevant people and questions turns event time from luck into intention." },
+        { icon: "arrow-right-circle", title: "Stronger follow-up pathways", body: "Context established before the event creates a thread worth continuing — rather than a business card in a pile and a fading memory." },
       ]} />
     </Section>
 
@@ -1011,13 +1011,13 @@ const PageWhoForEvents = () => (
         title="A lightweight pilot, <em>designed around your gathering.</em>"
       />
       <Timeline steps={[
-        { title: "Event discovery",          body: LOREM_SHORT },
-        { title: "Participant journey design", body: LOREM_SHORT },
-        { title: "Conversation design",      body: LOREM_SHORT },
-        { title: "Pre-event activation",     body: LOREM_SHORT },
-        { title: "AI-supported synthesis",   body: LOREM_SHORT },
-        { title: "Event support",            body: LOREM_SHORT },
-        { title: "Post-event learning report", body: LOREM_SHORT },
+        { title: "Event discovery",          body: "A focused conversation to understand your gathering, your participant cohort, your goals, and where the connection layer currently fails." },
+        { title: "Participant journey design", body: "We design the pre-event arc: what participants are invited to do, when, and how — shaped around your event's timeline and audience." },
+        { title: "Conversation design",      body: "We build the guided conversation prompts tailored to your cohort — what they are likely holding, what you want the field to reveal." },
+        { title: "Pre-event activation",     body: "Participants receive a clear, consent-based invitation to a conversation they can complete in under twenty minutes — on their own time, before the event opens." },
+        { title: "AI-supported synthesis",   body: "We synthesise the field and prepare host-facing insight: themes, matches, emerging questions, and a picture of who is actually in the room." },
+        { title: "Event support",            body: "We stay close through the event — available to hosts, responsive to what the field reveals, ready to surface patterns as the gathering unfolds." },
+        { title: "Post-event learning report", body: "A structured debrief on what worked, what the field revealed, and what a next iteration could test." },
       ]} />
     </Section>
 
@@ -1047,7 +1047,7 @@ const PageWhoForCompanies = () => (
       <SectionHead
         eyebrow="Segment overview"
         title="For organisations trying to <em>coordinate across complexity.</em>"
-        dek={LOREM_SHORT}
+        dek="Coherence Conversations Event helps companies prepare their people to gather well — surfacing context, priorities, tensions, and trust before the live moment has to carry all of it."
       />
       <TagList items={[
         "Distributed teams", "AI-native startups", "Fractional organisations",
@@ -1063,12 +1063,12 @@ const PageWhoForCompanies = () => (
         dek="Offsites, onboarding sessions, and strategy gatherings often begin with people carrying unspoken assumptions, unclear priorities, uneven context, and hidden tensions. The live moment is then forced to do too much."
       />
       <CardGrid cols={3} items={[
-        { num: "01", title: "Different assumptions on arrival", body: LOREM_SHORT },
-        { num: "02", title: "Tensions discovered too late", body: LOREM_SHORT },
-        { num: "03", title: "Onboarding is context-light", body: LOREM_SHORT },
-        { num: "04", title: "Strategy without shared field awareness", body: LOREM_SHORT },
-        { num: "05", title: "Lost trust between distributed gatherings", body: LOREM_SHORT },
-        { num: "06", title: "AI used individually, not collectively", body: LOREM_SHORT },
+        { num: "01", title: "Different assumptions on arrival", body: "When team members enter the room holding different versions of the situation, the first day is spent discovering that — not making progress." },
+        { num: "02", title: "Tensions discovered too late", body: "Unspoken friction surfaces in the room when there is no time to address it carefully, leading to sessions that stall or close prematurely." },
+        { num: "03", title: "Onboarding is context-light", body: "New contributors often arrive without a clear picture of what the company is actually holding, creating a slow and costly orientation period." },
+        { num: "04", title: "Strategy without shared field awareness", body: "Strategy conversations produce better outcomes when participants have already shared what they are seeing, what they doubt, and where they feel energy or concern." },
+        { num: "05", title: "Lost trust between distributed gatherings", body: "In distributed teams, connection erodes between live moments. The rare gathering is then asked to repair as well as progress." },
+        { num: "06", title: "AI used individually, not collectively", body: "Most AI use in companies is individual. The opportunity to use AI to support shared memory, synthesis, and orientation remains largely untouched." },
       ]} />
     </Section>
 
@@ -1079,12 +1079,12 @@ const PageWhoForCompanies = () => (
         dek="Coherence Conversations Event helps company participants clarify what they are holding, what they need, what they see, and where they feel energy or tension — before the live gathering begins."
       />
       <CardGrid cols={3} items={[
-        { icon: "calendar", title: "Pre-offsite conversations", body: LOREM_SHORT },
-        { icon: "user-plus", title: "Onboarding conversations", body: LOREM_SHORT },
-        { icon: "target", title: "Mission alignment dialogues", body: LOREM_SHORT },
-        { icon: "layers", title: "Team sensemaking", body: LOREM_SHORT },
-        { icon: "git-branch", title: "Priority & tension mapping", body: LOREM_SHORT },
-        { icon: "arrow-right-circle", title: "Follow-through pathways", body: LOREM_SHORT },
+        { icon: "calendar", title: "Pre-offsite conversations", body: "Guided conversations before an offsite help participants surface what they are holding, what they need from the gathering, and where they feel energy or tension." },
+        { icon: "user-plus", title: "Onboarding conversations", body: "A structured conversation before a new contributor's first week surfaces context, culture, and connection — reducing the time it takes to feel genuinely oriented." },
+        { icon: "target", title: "Mission alignment dialogues", body: "Guided conversations help teams explore whether they share a real understanding of the mission — and where the gaps, doubts, or divergences sit." },
+        { icon: "layers", title: "Team sensemaking", body: "AI-supported synthesis helps teams see the patterns across individual perspectives — surfacing shared concerns, emerging priorities, and overlooked tensions." },
+        { icon: "git-branch", title: "Priority & tension mapping", body: "Before a strategy session, a guided conversation round helps map where priorities converge, where they conflict, and what needs to be named before the live discussion begins." },
+        { icon: "arrow-right-circle", title: "Follow-through pathways", body: "After a gathering, guided conversation rounds help teams maintain connection, track commitments, and surface what has shifted since the room closed." },
       ]} />
     </Section>
 
@@ -1112,11 +1112,11 @@ const PageWhoForCompanies = () => (
       <div className="two-col">
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--ink-900)" }}>Humans hold</h4>
-          <p>Judgement, relationship, accountability, meaning, and consent. The AI does not replace these. {LOREM_SHORT}</p>
+          <p>Judgement, relationship, accountability, meaning, and consent. These are not processes you can automate. They require human presence, discretion, and lived context — and they determine whether organisational change actually takes hold.</p>
         </div>
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--teal-800)" }}>Agents support</h4>
-          <p>Memory, synthesis, pattern-finding, translation, and orientation. {LOREM_SHORT}</p>
+          <p>Memory, synthesis, pattern-finding, translation, and orientation. AI earns its place here not by replacing human work, but by making it possible for more of the organisation's real intelligence to surface and become useful.</p>
         </div>
       </div>
     </Section>
@@ -1127,12 +1127,12 @@ const PageWhoForCompanies = () => (
         title="Better gatherings. Clearer missions. <em>Stronger follow-through.</em>"
       />
       <CardGrid cols={3} items={[
-        { icon: "calendar-check", title: "Better offsite preparation", body: LOREM_SHORT },
-        { icon: "rocket", title: "Faster onboarding", body: LOREM_SHORT },
-        { icon: "list-checks", title: "Clearer shared priorities", body: LOREM_SHORT },
-        { icon: "alert-triangle", title: "More visible tensions & opportunities", body: LOREM_SHORT },
-        { icon: "heart-handshake", title: "Stronger team trust", body: LOREM_SHORT },
-        { icon: "brain", title: "Useful AI-supported memory", body: LOREM_SHORT },
+        { icon: "calendar-check", title: "Better offsite preparation", body: "Teams arrive at offsites with shared context, named tensions, and a clearer picture of the field — so live time can be spent making progress, not catching up." },
+        { icon: "rocket", title: "Faster onboarding", body: "New contributors who have already gone through a guided conversation arrive with more context, clearer anchors, and a warmer sense of where they fit." },
+        { icon: "list-checks", title: "Clearer shared priorities", body: "AI-supported synthesis turns individual perspectives into a visible shared map — so strategy conversations start from a more honest foundation." },
+        { icon: "alert-triangle", title: "More visible tensions & opportunities", body: "What is unspoken becomes visible before it becomes a problem. Teams can address friction early, when it is easier to work with." },
+        { icon: "heart-handshake", title: "Stronger team trust", body: "The practice of sharing honestly — even briefly — builds the kind of trust that makes distributed teams more coherent between live gatherings." },
+        { icon: "brain", title: "Useful AI-supported memory", body: "AI can hold and synthesise what has been said, decided, and shifted across gatherings — reducing the costly repetition of shared context." },
       ]} />
     </Section>
 
@@ -1197,12 +1197,12 @@ const PageWhoForNetworks = () => (
         title="Many networks have members. <em>Fewer have activation.</em>"
       />
       <CardGrid cols={3} items={[
-        { num: "01", title: "Stale or underused directories", body: LOREM_SHORT },
-        { num: "02", title: "New members struggle to orient", body: LOREM_SHORT },
-        { num: "03", title: "No insight into member needs", body: LOREM_SHORT },
-        { num: "04", title: "Engagement clusters around the same few", body: LOREM_SHORT },
-        { num: "05", title: "Invisible collaboration opportunities", body: LOREM_SHORT },
-        { num: "06", title: "Event energy that fades afterwards", body: LOREM_SHORT },
+        { num: "01", title: "Stale or underused directories", body: "Member directories capture what people were doing when they joined. They rarely reflect what members are actually seeking or offering now." },
+        { num: "02", title: "New members struggle to orient", body: "Without a structured way to understand the landscape of the community, new members default to the loudest voices or the easiest connections." },
+        { num: "03", title: "No insight into member needs", body: "Network leaders rarely have a live picture of what their members most need, find difficult, or wish the community would offer." },
+        { num: "04", title: "Engagement clusters around the same few", body: "In most networks, a small core is highly active and the majority remains peripheral — not for lack of interest, but lack of a useful entry point." },
+        { num: "05", title: "Invisible collaboration opportunities", body: "The most valuable collaborations in a network are often the ones no one knew were possible — because the right context was never surfaced." },
+        { num: "06", title: "Event energy that fades afterwards", body: "Gatherings generate momentum, but without shared context and follow-through infrastructure, the energy dissipates within days." },
       ]} />
     </Section>
 
@@ -1213,9 +1213,9 @@ const PageWhoForNetworks = () => (
         dek="Guided conversations and AI-supported synthesis help surface what members care about, who should meet, and what themes or opportunities are emerging across the community."
       />
       <div className="flow-steps">
-        <div className="flow-step"><h4>Invite & guide</h4><p>{LOREM_SHORT}</p></div>
-        <div className="flow-step"><h4>Capture context</h4><p>{LOREM_SHORT}</p></div>
-        <div className="flow-step"><h4>Synthesise & match</h4><p>{LOREM_SHORT}</p></div>
+        <div className="flow-step"><h4>Invite & guide</h4><p>Members receive a short guided conversation invitation — not another form or forum post, but a conversation worth having that surfaces what they actually care about right now.</p></div>
+        <div className="flow-step"><h4>Capture context</h4><p>Each conversation captures interests, needs, offers, questions, expertise, and collaboration intentions — in the member's own words. No form, no dropdown, no shallow profile.</p></div>
+        <div className="flow-step"><h4>Synthesise & match</h4><p>AI-supported synthesis reveals what the network is actually holding: emerging themes, relevant matches, and patterns that help leaders understand and activate the community.</p></div>
       </div>
     </Section>
 
@@ -1266,12 +1266,12 @@ const PageWhoForNetworks = () => (
         title="Stronger engagement, better insight, <em>more useful community moments.</em>"
       />
       <CardGrid cols={3} items={[
-        { icon: "user-plus", title: "Better member onboarding", body: LOREM_SHORT },
-        { icon: "shuffle", title: "More relevant introductions", body: LOREM_SHORT },
-        { icon: "calendar", title: "Stronger event & programme design", body: LOREM_SHORT },
-        { icon: "git-merge", title: "Clearer collaboration opportunities", body: LOREM_SHORT },
-        { icon: "ear", title: "Better understanding of needs", body: LOREM_SHORT },
-        { icon: "heart", title: "Increased retention & belonging", body: LOREM_SHORT },
+        { icon: "user-plus", title: "Better member onboarding", body: "A guided conversation on joining gives new members an early way to be heard, find relevant others, and understand where they fit — rather than absorbing culture from the edges." },
+        { icon: "shuffle", title: "More relevant introductions", body: "Introductions built from real context — shared interests, complementary needs, specific offers — have a reason to happen and a foundation to build on." },
+        { icon: "calendar", title: "Stronger event & programme design", body: "Understanding what members are actually holding and seeking lets programmes respond to real community needs rather than what the organiser assumes matters." },
+        { icon: "git-merge", title: "Clearer collaboration opportunities", body: "The most valuable collaborations in a network are often the ones nobody knew were possible. AI-supported synthesis helps make them visible." },
+        { icon: "ear", title: "Better understanding of needs", body: "Network leaders gain a live picture of member concerns, frustrations, and opportunities — beyond what usage data, event attendance, or annual surveys can reveal." },
+        { icon: "heart", title: "Increased retention & belonging", body: "Members who feel heard, matched well, and connected to others who share their concerns are more likely to stay, contribute, and bring others in." },
       ]} />
     </Section>
 
@@ -1352,14 +1352,14 @@ const PageWhoForCivic = () => (
         title="Sensemaking infrastructure for <em>civic collaboration.</em>"
       />
       <CardGrid cols={3} items={[
-        { icon: "users-round", title: "Stakeholder discovery", body: LOREM_SHORT },
-        { icon: "message-square", title: "Guided civic conversations", body: LOREM_SHORT },
-        { icon: "git-merge", title: "Thematic synthesis", body: LOREM_SHORT },
-        { icon: "heart-handshake", title: "Relationship & trust mapping", body: LOREM_SHORT },
-        { icon: "layers", title: "Participatory sensemaking", body: LOREM_SHORT },
-        { icon: "flag", title: "Working group formation", body: LOREM_SHORT },
-        { icon: "book-open", title: "Public learning outputs", body: LOREM_SHORT },
-        { icon: "arrow-right-circle", title: "Follow-through pathways", body: LOREM_SHORT },
+        { icon: "users-round", title: "Stakeholder discovery", body: "Guided conversations help map who is in the field — concerns, capacities, intentions, and connections — before any convening begins." },
+        { icon: "message-square", title: "Guided civic conversations", body: "Structured, consent-based conversations give each stakeholder a way to share what they are actually holding — beyond what meetings, consultations, or surveys can capture." },
+        { icon: "git-merge", title: "Thematic synthesis", body: "AI-supported synthesis surfaces shared priorities, contested terrain, and emerging concerns across many distinct voices — without flattening the differences." },
+        { icon: "heart-handshake", title: "Relationship & trust mapping", body: "Coherence helps reveal where trust already exists, where it is absent, and where relationship-building matters most before the room can do real work." },
+        { icon: "layers", title: "Participatory sensemaking", body: "Instead of collecting input and processing it invisibly, the emerging patterns are made visible to the participants who created them." },
+        { icon: "flag", title: "Working group formation", body: "The platform helps civic actors discover who else cares about the same concern — and whether there is enough shared energy to begin doing something about it." },
+        { icon: "book-open", title: "Public learning outputs", body: "Synthesised insights can be shared publicly, creating transparency about what the process found and inviting broader civic engagement." },
+        { icon: "arrow-right-circle", title: "Follow-through pathways", body: "After a convening, guided rounds help participants stay connected to each other and to the commitments that emerged — reducing the evaporation that follows most civic gatherings." },
       ]} />
     </Section>
 
@@ -1397,12 +1397,12 @@ const PageWhoForCivic = () => (
         title="From many voices to <em>shared capacity.</em>"
       />
       <CardGrid cols={3} items={[
-        { icon: "ear", title: "Better stakeholder understanding", body: LOREM_SHORT },
-        { icon: "users", title: "Inclusive, structured participation", body: LOREM_SHORT },
-        { icon: "eye", title: "Visibility of shared concerns", body: LOREM_SHORT },
-        { icon: "heart-handshake", title: "Stronger inter-group trust", body: LOREM_SHORT },
-        { icon: "link", title: "Continuity between meetings", body: LOREM_SHORT },
-        { icon: "book-open", title: "Actionable public learning", body: LOREM_SHORT },
+        { icon: "ear", title: "Better stakeholder understanding", body: "Civic leaders gain a more honest map of the field — who is present, what they actually hold, and where the real tensions run — rather than only hearing from the loudest or most organised voices." },
+        { icon: "users", title: "Inclusive, structured participation", body: "Guided conversations give every participant a way to contribute that does not privilege those who can travel, speak publicly, or are already inside the room." },
+        { icon: "eye", title: "Visibility of shared concerns", body: "Synthesis helps stakeholders see what they share — which is often significantly more than the most visible conflicts suggest." },
+        { icon: "heart-handshake", title: "Stronger inter-group trust", body: "Being heard, synthesised fairly, and connected to others builds inter-group trust more reliably than statements of commitment alone." },
+        { icon: "link", title: "Continuity between meetings", body: "Guided follow-through rounds help civic processes maintain momentum between live gatherings — reducing the fade that turns participation into performance." },
+        { icon: "book-open", title: "Actionable public learning", body: "Well-synthesised civic conversations produce outputs that can inform policy, funding priorities, and future programme design — not just reports that are filed and forgotten." },
       ]} />
     </Section>
 
@@ -1497,11 +1497,11 @@ const PageWhatWeDo = () => (
       <div className="two-col">
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--ink-500)" }}>Individual AI</h4>
-          <p>{LOREM}</p>
+          <p>Individual AI tools help each person think, produce, and move faster. Genuinely useful. But they optimise at the individual level. When everyone uses AI separately, each person becomes more capable in isolation — while the organisation's collective coherence may actually decrease.</p>
         </div>
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--teal-800)" }}>Collaborative AI</h4>
-          <p>{LOREM}</p>
+          <p>Collaborative AI is designed to help groups, not just individuals. It holds shared memory across conversations, surfaces patterns across many perspectives, identifies relevant connections, and helps groups move from distributed understanding toward shared commitment. The result is not faster individuals. It is a more capable collective.</p>
         </div>
       </div>
     </Section>
@@ -1554,13 +1554,13 @@ const PageWhatWeDo = () => (
         dek="The product is developed through practical pilots where real coordination challenges reveal what the system needs to support."
       />
       <Timeline steps={[
-        { title: "Discovery conversation", body: LOREM_SHORT },
-        { title: "Context mapping",        body: LOREM_SHORT },
-        { title: "Conversation design",    body: LOREM_SHORT },
-        { title: "Activation",             body: LOREM_SHORT },
-        { title: "Synthesis & insight",    body: LOREM_SHORT },
-        { title: "Live support",           body: LOREM_SHORT },
-        { title: "Learning report",        body: LOREM_SHORT },
+        { title: "Discovery conversation", body: "A focused conversation to understand the work, the people involved, the coordination challenge, and what a pilot might usefully test." },
+        { title: "Context mapping",        body: "We map the relevant field — participants, relationships, dynamics, existing practices — to understand where the system needs to fit." },
+        { title: "Conversation design",    body: "We design the guided conversation prompts and participant journey, calibrated to the specific coordination challenge and cohort." },
+        { title: "Activation",             body: "Participants are invited into the experience — with clear framing, consent, and a guided structure that fits their context and time." },
+        { title: "Synthesis & insight",    body: "We synthesise the field — themes, patterns, needs, offers, matches, and tensions — and prepare insight that participants and leaders can act on." },
+        { title: "Live support",           body: "We stay close during the live moment — available to hosts, responsive to emerging questions, and ready to surface what the field is showing." },
+        { title: "Learning report",        body: "A structured reflection on what the pilot revealed — about the tool, the field, the design, and what a next iteration might explore." },
       ]} />
     </Section>
 
@@ -1623,12 +1623,12 @@ const PageEvent = () => (
         title="Participants arrive <em>clearer, warmer, and better connected.</em>"
       />
       <CardGrid cols={3} items={[
-        { icon: "compass", title: "Clarify why they are attending", body: LOREM_SHORT },
-        { icon: "search", title: "Discover relevant people", body: LOREM_SHORT },
-        { icon: "message-circle", title: "Share more meaningful context", body: LOREM_SHORT },
-        { icon: "user-check", title: "Generate better profiles & intros", body: LOREM_SHORT },
-        { icon: "fast-forward", title: "Move faster into useful conversations", body: LOREM_SHORT },
-        { icon: "arrow-right-circle", title: "Stronger pathways after the event", body: LOREM_SHORT },
+        { icon: "compass", title: "Clarify why they are attending", body: "A guided conversation helps participants name what they are actually there for — not just the topic, but the specific person, conversation, or outcome they are hoping to find." },
+        { icon: "search", title: "Discover relevant people", body: "AI-supported synthesis surfaces people worth meeting based on real intent, shared context, and complementary needs or offers — not just titles." },
+        { icon: "message-circle", title: "Share more meaningful context", body: "Participants share what a bio cannot hold: what they are working on now, what they are questioning, and what they would value most from the gathering." },
+        { icon: "user-check", title: "Generate better profiles & intros", body: "Profiles built from conversation give other participants a real reason to reach out — and a clearer foundation for the first conversation." },
+        { icon: "fast-forward", title: "Move faster into useful conversations", body: "With shared context established before the event, conversations can begin at second- or third-conversation depth — no credentials exchange, no wasted first hour." },
+        { icon: "arrow-right-circle", title: "Stronger pathways after the event", body: "Context established before the event creates a thread worth continuing — rather than a business card in a pile and a fading memory." },
       ]} />
     </Section>
 
@@ -1667,14 +1667,14 @@ const PageEvent = () => (
         title="Designed for gatherings where <em>connection matters.</em>"
       />
       <CardGrid cols={4} items={[
-        { icon: "calendar", title: "Conferences", body: LOREM_SHORT },
-        { icon: "flag", title: "Summits", body: LOREM_SHORT },
-        { icon: "trees", title: "Retreats", body: LOREM_SHORT },
-        { icon: "rocket", title: "Founder & investor events", body: LOREM_SHORT },
-        { icon: "building-2", title: "Company offsites", body: LOREM_SHORT },
-        { icon: "users", title: "Community gatherings", body: LOREM_SHORT },
-        { icon: "network", title: "Professional networks", body: LOREM_SHORT },
-        { icon: "globe", title: "Civic convenings", body: LOREM_SHORT },
+        { icon: "calendar", title: "Conferences", body: "High-intent professional gatherings where who meets whom is as strategically important as what is said from the stage." },
+        { icon: "flag", title: "Summits", body: "High-stakes convenings where arriving with shared context and aligned intentions allows the room to do real work rather than catch up." },
+        { icon: "trees", title: "Retreats", body: "Small, high-trust gatherings where the depth of connection is the work — and where shared context before arrival transforms what becomes possible." },
+        { icon: "rocket", title: "Founder & investor events", body: "Curated gatherings where the right introduction, at the right moment, can shift a company's trajectory." },
+        { icon: "building-2", title: "Company offsites", body: "Strategic gatherings where surfacing assumptions, tensions, and priorities before arrival means live time can be spent making progress." },
+        { icon: "users", title: "Community gatherings", body: "Events where the community is the product — and where activation, belonging, and member-to-member relevance determine whether the gathering created anything lasting." },
+        { icon: "network", title: "Professional networks", body: "Network events where value depends entirely on participant relevance, and where meaningful connection requires more than a badge and a room." },
+        { icon: "globe", title: "Civic convenings", body: "Multi-stakeholder gatherings where structured listening and shared synthesis across difference are the preconditions for anything useful happening afterwards." },
       ]} />
     </Section>
 
@@ -1684,13 +1684,13 @@ const PageEvent = () => (
         title="Start with a <em>focused pilot.</em>"
       />
       <Timeline steps={[
-        { title: "Discovery conversation",  body: LOREM_SHORT },
-        { title: "Event context mapping",   body: LOREM_SHORT },
-        { title: "Conversation design",     body: LOREM_SHORT },
-        { title: "Participant activation",  body: LOREM_SHORT },
-        { title: "Synthesis & insight",     body: LOREM_SHORT },
-        { title: "Event support",           body: LOREM_SHORT },
-        { title: "Learning report",         body: LOREM_SHORT },
+        { title: "Discovery conversation",  body: "A focused conversation to understand your event, your participant cohort, your goals, and where the connection layer currently breaks down." },
+        { title: "Event context mapping",   body: "We map your audience, the event arc, and the key coordination gaps — so what we build fits your gathering specifically, not a generic template." },
+        { title: "Conversation design",     body: "We write the guided prompts and design the participant journey for your specific cohort — calibrated to what they are likely holding and what you want the field to reveal." },
+        { title: "Participant activation",  body: "Participants receive a clear, consent-based invitation to a conversation they can complete in under twenty minutes — before the event, on their own time." },
+        { title: "Synthesis & insight",     body: "We synthesise the field — themes, matches, offers, needs, and host-facing insight — and deliver it before the event opens." },
+        { title: "Event support",           body: "We remain available through the event to support hosts, respond to emerging field questions, and help surface what the cohort is showing." },
+        { title: "Learning report",         body: "A structured debrief on what the pilot revealed — about the tool, the audience, the design, and what a next iteration could test." },
       ]} />
     </Section>
 
@@ -1948,12 +1948,12 @@ const PageJoin = () => (
         title="Builders, operators, sensemakers, designers, facilitators, <em>and field-weavers.</em>"
       />
       <CardGrid cols={3} items={[
-        { icon: "cpu", title: "Product & AI builders", body: LOREM_SHORT },
-        { icon: "calendar", title: "Event & community builders", body: LOREM_SHORT },
-        { icon: "compass", title: "Strategic operators", body: LOREM_SHORT },
-        { icon: "pen-tool", title: "Designers & storytellers", body: LOREM_SHORT },
-        { icon: "microscope", title: "Researchers & sensemakers", body: LOREM_SHORT },
-        { icon: "git-merge", title: "Partnership & ecosystem builders", body: LOREM_SHORT },
+        { icon: "cpu", title: "Product & AI builders", body: "Engineers, product thinkers, and AI practitioners who can help build the guided conversation experience, synthesis layer, and the infrastructure that turns many conversations into shared intelligence." },
+        { icon: "calendar", title: "Event & community builders", body: "Practitioners who have run real gatherings, activated communities, or designed participant journeys — and understand from experience where the connection layer breaks down." },
+        { icon: "compass", title: "Strategic operators", body: "People who can hold multiple threads simultaneously — across market, product, organisation, and field — and who are comfortable building in conditions where almost nothing is settled." },
+        { icon: "pen-tool", title: "Designers & storytellers", body: "Designers and communicators who can give form to genuinely new work — and understand that making it clear is the hardest design problem here." },
+        { icon: "microscope", title: "Researchers & sensemakers", body: "People drawn to the harder questions behind the product: collective intelligence, AI and human agency, trust as infrastructure, and what better coordination actually requires." },
+        { icon: "git-merge", title: "Partnership & ecosystem builders", body: "Relationship holders who can open doors in the markets and communities where Coherence belongs — and who understand that this field is built through trust, not reach." },
       ]} />
     </Section>
 
@@ -1964,9 +1964,9 @@ const PageJoin = () => (
       />
       <div className="profile-grid">
         {[
-          { initials: "—", name: "Name pending", role: "Founder · Product", bio: LOREM_SHORT },
-          { initials: "—", name: "Name pending", role: "Co-founder · AI", bio: LOREM_SHORT },
-          { initials: "—", name: "Name pending", role: "Field & partnerships", bio: LOREM_SHORT },
+          { initials: "—", name: "Name pending", role: "Founder · Product", bio: "Building the product vision, the participant experience, and the conversation design layer that makes Coherence real." },
+          { initials: "—", name: "Name pending", role: "Co-founder · AI", bio: "Leading the AI synthesis architecture, the agent design, and the technical infrastructure that turns conversations into shared intelligence." },
+          { initials: "—", name: "Name pending", role: "Field & partnerships", bio: "Holding the network of pilots, partners, and early adopters — and translating field learning back into product and company." },
         ].map((p, i) => (
           <div key={i} className="profile-card">
             <div className="profile-avatar">{p.initials}</div>
@@ -2086,10 +2086,10 @@ const PageStart = () => {
           title="After you <em>reach out.</em>"
         />
         <Timeline steps={[
-          { title: "We review your context", body: LOREM_SHORT },
-          { title: "We suggest the most relevant next conversation", body: LOREM_SHORT },
-          { title: "We explore fit, timing, and possible pathways", body: LOREM_SHORT },
-          { title: "If useful, we shape a pilot, partnership, or contribution pathway", body: LOREM_SHORT },
+          { title: "We review your context", body: "We read what you have shared carefully — not to qualify you, but to understand the real coordination challenge and whether Coherence is the right tool for it." },
+          { title: "We suggest the most relevant next conversation", body: "We come back with a proposed conversation type, a question or two we want to explore, and a suggested next step shaped around your context." },
+          { title: "We explore fit, timing, and possible pathways", body: "A focused conversation to understand the coordination challenge in more depth, the timeline, and which pathway — pilot, partnership, or contribution — makes most sense." },
+          { title: "If useful, we shape a pilot, partnership, or contribution pathway", body: "If there is a real fit, we propose a concrete next step and move from there." },
         ]} />
       </Section>
 
