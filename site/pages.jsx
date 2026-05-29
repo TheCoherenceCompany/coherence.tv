@@ -421,7 +421,7 @@ const PageConversations = () => (
     {/* 3.1 Hero */}
     <HeroLight
       eyebrow="The first product · Coherence Conversations"
-      title='Dialogue that becomes <em>sensemaking matchmaking &amp; action</em>'
+      title='Dialogue that becomes <em>sensemaking matchmaking &amp; action.</em>'
       sub="Coherence Conversations turns guided one-to-one dialogue into shared intelligence, relevant connections, and practical next steps. People speak with each other; AI Guides help reveal the patterns, themes, needs, offers, and matches emerging across those conversations; hosts receive a clearer view of the human field they are convening."
       primaryCTA={{ label: "Start a Conversation", href: "start.html" }}
       secondaryCTA={{ label: "Explore Use Cases", href: "who-for.html" }}
@@ -446,8 +446,53 @@ const PageConversations = () => (
       ]} />
     </Section>
 
-    {/* 3.2 What it is */}
-    <Section tone="off" calli={{ file: "calligraphy-34.jpg", cls: "faint v-corner-br" }}>
+    {/* 3.6 What participants experience */}
+    <Section tone="white">
+      <SectionHead
+        eyebrow="Participant experience"
+        title="A conversation that is <em>useful in itself.</em>"
+        dek="Participants are not just feeding a platform. They are meeting another person, clarifying their own intentions, and becoming more visible to the group. A participant may come away with clarity, a richer profile, useful reflections, suggested people to meet, shared themes, possible collaborations, and practical next steps."
+      />
+      <CardGrid cols={4} items={[
+        { icon: "calendar", title: "For an event participant",
+          body: "Arriving with more context and warmer connections already forming, instead of starting cold." },
+        { icon: "building-2", title: "For an employee",
+          body: "Being heard in a more human way than a survey allows, with room for nuance and honesty." },
+        { icon: "users", title: "For a network member",
+          body: "Finding relevant peers, collaborators, mentors, partners, or shared questions across the community." },
+        { icon: "globe", title: "For a citizen",
+          body: "Seeing that their concern may be part of a wider pattern — and that others may be ready to act." },
+      ]} />
+      <div className="manifesto">
+        <p>No forced networking theatre. No dead profile form. <em>Just a better way to begin.</em></p>
+      </div>
+    </Section>
+
+    {/* 3.7 What hosts receive */}
+    <Section tone="off" calli={{ file: "calligraphy-30.jpg", cls: "faint v-corner-bl" }}>
+      <SectionHead
+        eyebrow="Host experience"
+        title="A clearer view of the people and <em>possibilities in your field.</em>"
+        dek="Depending on the context, hosts receive a synthesis of who is present and what is emerging — built from guided conversation rather than static self-description."
+      />
+      <CardGrid cols={3} items={[
+        { icon: "users", title: "Participant profiles",
+          body: "Richer, more human profiles based on guided conversation rather than static self-description." },
+        { icon: "network", title: "Themes and patterns",
+          body: "A synthesis of what participants care about, which questions recur, and where energy is gathering." },
+        { icon: "shuffle", title: "Matchmaking insight",
+          body: "Suggested introductions based on relevance, not random proximity or shallow tags." },
+        { icon: "sparkles", title: "Needs and offers",
+          body: "A clearer map of what people are looking for and what they can contribute." },
+        { icon: "compass", title: "Demand intelligence",
+          body: "Insight into what the group actually wants or needs before a gathering or programme begins." },
+        { icon: "fast-forward", title: "Follow-up opportunities",
+          body: "A view of possible collaborations, commitments, next steps, and where further facilitation may help." },
+      ]} />
+    </Section>
+
+    {/* 3.2 What it is - NOW DARK */}
+    <Section tone="ink" calli={{ file: "calligraphy-34.jpg", cls: "on-dark v-corner-br" }}>
       <SectionHead
         eyebrow="What it is"
         title="A guided dialogue format for groups that need <em>more than attendance.</em>"
@@ -486,30 +531,28 @@ const PageConversations = () => (
       </div>
     </Section>
 
-    {/* 3.4 How it works */}
-    <Section tone="off">
+    {/* 3.11 Why this is different */}
+    <Section tone="white">
       <SectionHead
-        eyebrow="How it works"
-        title="Six movements, <em>before or inside the moment.</em>"
-        dek="Coherence Conversations can be used before an event, inside an organisation, across a network, or within a civic process. The basic flow is simple."
+        eyebrow="Why this is different"
+        title="Beyond surveys, networking apps, <em>and meeting notes.</em>"
+        dek="Coherence Conversations is not just another form, chatbot, survey, networking app, or transcription tool."
       />
-      <Timeline steps={[
-        { title: "Invite people into guided dialogue",
-          body: "Structured one-to-one conversations with prompts that go beyond small talk without becoming heavy or artificial — context, intentions, questions, needs, offers, and possible directions." },
-        { title: "Capture the meaning, not just the transcript",
-          body: "The conversation is treated as a human exchange with consent and purpose. AI Guides identify what matters: themes, intentions, connections, useful signals, and follow-up opportunities." },
-        { title: "Generate participant insight",
-          body: "Each participant can receive a richer profile or reflection — their interests, current work, questions, offers, collaboration needs, and suggested ways to connect." },
-        { title: "Reveal group-level patterns",
-          body: "Across many conversations, AI Guides surface what is emerging: common themes, shared concerns, demand signals, collaboration opportunities, and clusters of interest." },
-        { title: "Suggest relevant matches",
-          body: "The goal is not generic networking. It is relevance — connecting people whose intentions, needs, offers, experience, timing, or questions make a conversation genuinely useful." },
-        { title: "Support next steps",
-          body: "Coherence Conversations should not end with 'that was nice.' It helps identify people to meet, questions to explore, commitments to remember, and opportunities to carry forward." },
+      <CardGrid cols={3} items={[
+        { num: "01", title: "More human than a survey",
+          body: "Surveys flatten people into predefined questions. Coherence Conversations allows nuance, story, emotion, context, contradiction, and surprise." },
+        { num: "02", title: "More intentional than networking",
+          body: "Networking depends on luck, status, or whoever stands near the coffee. Coherence Conversations helps people find relevance before the room becomes noisy." },
+        { num: "03", title: "More collective than meeting intelligence",
+          body: "Most meeting tools summarise individual calls. Coherence Conversations reveals patterns across many conversations — local dialogue becomes group-level insight." },
+        { num: "04", title: "More action-oriented than discussion",
+          body: "Many communities can talk forever without moving. Coherence Conversations surfaces next steps, possible matches, and commitments." },
+        { num: "05", title: "More trustworthy than extraction",
+          body: "The purpose is not to mine conversation for hidden control. It is to help people and groups see themselves clearly, connect intelligently, and act with shared context." },
       ]} />
     </Section>
 
-    {/* 3.5 What AI Guides do */}
+    {/* 3.4 What AI Guides do */}
     <Section tone="teal">
       <SectionHead
         eyebrow="AI Guides"
@@ -528,78 +571,11 @@ const PageConversations = () => (
         <li>Group-level synthesis</li>
       </ul>
       <div className="manifesto">
-        <p>A spreadsheet can store names. A directory can list members. A chatbot can answer questions. <em>Coherence Conversations helps a group begin to understand itself.</em></p>
+        <p>A spreadsheet stores names. A directory lists members. A chatbot answers questions. <em>Coherence Conversations help a group to understand itself.</em></p>
       </div>
     </Section>
 
-    {/* 3.6 What participants experience */}
-    <Section tone="white">
-      <SectionHead
-        eyebrow="Participant experience"
-        title="A conversation that is <em>useful in itself.</em>"
-        dek="Participants are not just feeding a platform. They are meeting another person, clarifying their own intentions, and becoming more visible to the group. A participant may come away with clarity, a richer profile, useful reflections, suggested people to meet, shared themes, possible collaborations, and practical next steps."
-      />
-      <CardGrid cols={4} items={[
-        { icon: "calendar", title: "For an event participant",
-          body: "Arriving with more context and warmer connections already forming, instead of starting cold." },
-        { icon: "building-2", title: "For an employee",
-          body: "Being heard in a more human way than a survey allows, with room for nuance and honesty." },
-        { icon: "users", title: "For a network member",
-          body: "Finding relevant peers, collaborators, mentors, partners, or shared questions across the community." },
-        { icon: "globe", title: "For a citizen",
-          body: "Seeing that their concern may be part of a wider pattern — and that others may be ready to act." },
-      ]} />
-      <div className="manifesto">
-        <p>No forced networking theatre. No dead profile form. <em>Just a better way to begin.</em></p>
-      </div>
-    </Section>
-
-    {/* 3.7 What hosts receive */}
-    <Section tone="off" calli={{ file: "calligraphy-30.jpg", cls: "faint v-corner-bl" }}>
-      <SectionHead
-        eyebrow="Host experience"
-        title="A clearer view of the people and <em>possibilities in your field.</em>"
-        dek="Depending on the context, hosts receive a synthesis of who is present and what is emerging — built from guided conversation rather than static self-description."
-      />
-      <CardGrid cols={3} items={[
-        { icon: "user-check", title: "Participant profiles",
-          body: "Richer, more human profiles based on guided conversation rather than static self-description." },
-        { icon: "git-merge", title: "Themes and patterns",
-          body: "A synthesis of what participants care about, which questions recur, and where energy is gathering." },
-        { icon: "shuffle", title: "Matchmaking insight",
-          body: "Suggested introductions based on relevance, not random proximity or shallow tags." },
-        { icon: "target", title: "Needs and offers",
-          body: "A clearer map of what people are looking for and what they can contribute." },
-        { icon: "bar-chart-3", title: "Demand intelligence",
-          body: "Insight into what the group actually wants or needs before a gathering or programme begins." },
-        { icon: "arrow-right-circle", title: "Follow-up opportunities",
-          body: "A view of possible collaborations, commitments, next steps, and where further facilitation may help." },
-      ]} />
-    </Section>
-
-    {/* 3.8 Core outputs · three layers of value */}
-    <Section tone="white">
-      <SectionHead
-        eyebrow="Core outputs"
-        title="Three layers of value, <em>from one conversation.</em>"
-        dek="The exact outputs depend on the use case, but the core product generates value at the level of the individual, the relationship, and the group — with host-level synthesis on top."
-      />
-      <JourneyTrack steps={[
-        { name: "Individual clarity",     note: "Reflections, richer profiles, personal themes, suggested next steps." },
-        { name: "Relationship relevance", note: "Relevant matches, intro prompts, complementary needs and offers.", highlight: true },
-        { name: "Group intelligence",     note: "Emerging themes, shared questions, tensions, clusters, demand signals." },
-      ]} />
-      <div style={{ marginTop: 48 }}>
-        <CardGrid cols={2} items={[
-          { num: "01", title: "Host outputs",
-            body: "Participant intelligence, matchmaking maps, programme insights, communication assets, follow-up opportunities, and reporting for sponsors, leaders, partners, or civic stakeholders." },
-          { num: "02", title: "Future outputs",
-            body: "Over time, part of a larger Coherence layer: shared memory, commitment tracking, group profiles, personal Coherence accounts, and AI Guides that support more of the Coherence Journey." },
-        ]} />
-      </div>
-    </Section>
-
-    {/* 3.9 Use cases */}
+    {/* 3.8 Use cases */}
     <Section tone="off">
       <SectionHead
         eyebrow="Use cases"
@@ -638,27 +614,6 @@ const PageConversations = () => (
         <li>How they can opt out or correct information</li>
         <li>What boundaries protect them from misuse</li>
       </ul>
-    </Section>
-
-    {/* 3.11 Why this is different */}
-    <Section tone="white">
-      <SectionHead
-        eyebrow="Why this is different"
-        title="Beyond surveys, networking apps, <em>and meeting notes.</em>"
-        dek="Coherence Conversations is not just another form, chatbot, survey, networking app, or transcription tool."
-      />
-      <CardGrid cols={3} items={[
-        { num: "01", title: "More human than a survey",
-          body: "Surveys flatten people into predefined questions. Coherence Conversations allows nuance, story, emotion, context, contradiction, and surprise." },
-        { num: "02", title: "More intentional than networking",
-          body: "Networking depends on luck, status, or whoever stands near the coffee. Coherence Conversations helps people find relevance before the room becomes noisy." },
-        { num: "03", title: "More collective than meeting intelligence",
-          body: "Most meeting tools summarise individual calls. Coherence Conversations reveals patterns across many conversations — local dialogue becomes group-level insight." },
-        { num: "04", title: "More action-oriented than discussion",
-          body: "Many communities can talk forever without moving. Coherence Conversations surfaces next steps, possible matches, and commitments." },
-        { num: "05", title: "More trustworthy than extraction",
-          body: "The purpose is not to mine conversation for hidden control. It is to help people and groups see themselves clearly, connect intelligently, and act with shared context." },
-      ]} />
     </Section>
 
     {/* 3.12 How it fits the bigger vision */}
@@ -701,9 +656,6 @@ const PageConversations = () => (
           "Groups unwilling to act on what surfaces",
         ]}
       />
-      <div className="manifesto">
-        <p>The first step is not a demo theatre ritual. <em>The first step is a conversation about what you are trying to coordinate.</em></p>
-      </div>
     </Section>
 
     <CTABand
@@ -978,9 +930,9 @@ const PageWhoForEvents = () => (
         { icon: "compass", title: "Clarify their intention before the event", body: "A guided conversation helps participants name what they are actually there for — not just the topic, but the specific conversation, person, or outcome they are hoping to find." },
         { icon: "search", title: "Discover relevant people earlier", body: "AI-supported synthesis surfaces people worth meeting based on real intent, shared context, and complementary needs or offers — not just titles." },
         { icon: "message-circle", title: "Move beyond first-contact small talk", body: "With shared context established before the event, conversations can begin at second- or third-conversation depth — no credentials exchange, no wasted first hour." },
-        { icon: "user-check", title: "Build visibility through better profiles", body: "Profiles built from conversation give other participants a real reason to reach out — and a clearer basis for the first conversation." },
+        { icon: "eye", title: "Build visibility through better profiles", body: "Profiles built from conversation give other participants a real reason to reach out — and a clearer basis for the first conversation." },
         { icon: "clock", title: "Use event time more intelligently", body: "Arriving with a short list of relevant people and questions turns event time from luck into intention." },
-        { icon: "arrow-right-circle", title: "Stronger follow-up pathways", body: "Context established before the event creates a thread worth continuing — rather than a business card in a pile and a fading memory." },
+        { icon: "fast-forward", title: "Stronger follow-up pathways", body: "Context established before the event creates a thread worth continuing — rather than a business card in a pile and a fading memory." },
       ]} />
     </Section>
 
@@ -1084,7 +1036,7 @@ const PageWhoForCompanies = () => (
         { icon: "target", title: "Mission alignment dialogues", body: "Guided conversations help teams explore whether they share a real understanding of the mission — and where the gaps, doubts, or divergences sit." },
         { icon: "layers", title: "Team sensemaking", body: "AI-supported synthesis helps teams see the patterns across individual perspectives — surfacing shared concerns, emerging priorities, and overlooked tensions." },
         { icon: "git-branch", title: "Priority & tension mapping", body: "Before a strategy session, a guided conversation round helps map where priorities converge, where they conflict, and what needs to be named before the live discussion begins." },
-        { icon: "arrow-right-circle", title: "Follow-through pathways", body: "After a gathering, guided conversation rounds help teams maintain connection, track commitments, and surface what has shifted since the room closed." },
+        { icon: "fast-forward", title: "Follow-through pathways", body: "After a gathering, guided conversation rounds help teams maintain connection, track commitments, and surface what has shifted since the room closed." },
       ]} />
     </Section>
 
@@ -1359,7 +1311,7 @@ const PageWhoForCivic = () => (
         { icon: "layers", title: "Participatory sensemaking", body: "Instead of collecting input and processing it invisibly, the emerging patterns are made visible to the participants who created them." },
         { icon: "flag", title: "Working group formation", body: "The platform helps civic actors discover who else cares about the same concern — and whether there is enough shared energy to begin doing something about it." },
         { icon: "book-open", title: "Public learning outputs", body: "Synthesised insights can be shared publicly, creating transparency about what the process found and inviting broader civic engagement." },
-        { icon: "arrow-right-circle", title: "Follow-through pathways", body: "After a convening, guided rounds help participants stay connected to each other and to the commitments that emerged — reducing the evaporation that follows most civic gatherings." },
+        { icon: "fast-forward", title: "Follow-through pathways", body: "After a convening, guided rounds help participants stay connected to each other and to the commitments that emerged — reducing the evaporation that follows most civic gatherings." },
       ]} />
     </Section>
 
@@ -1626,9 +1578,9 @@ const PageEvent = () => (
         { icon: "compass", title: "Clarify why they are attending", body: "A guided conversation helps participants name what they are actually there for — not just the topic, but the specific person, conversation, or outcome they are hoping to find." },
         { icon: "search", title: "Discover relevant people", body: "AI-supported synthesis surfaces people worth meeting based on real intent, shared context, and complementary needs or offers — not just titles." },
         { icon: "message-circle", title: "Share more meaningful context", body: "Participants share what a bio cannot hold: what they are working on now, what they are questioning, and what they would value most from the gathering." },
-        { icon: "user-check", title: "Generate better profiles & intros", body: "Profiles built from conversation give other participants a real reason to reach out — and a clearer foundation for the first conversation." },
+        { icon: "eye", title: "Generate better profiles & intros", body: "Profiles built from conversation give other participants a real reason to reach out — and a clearer foundation for the first conversation." },
         { icon: "fast-forward", title: "Move faster into useful conversations", body: "With shared context established before the event, conversations can begin at second- or third-conversation depth — no credentials exchange, no wasted first hour." },
-        { icon: "arrow-right-circle", title: "Stronger pathways after the event", body: "Context established before the event creates a thread worth continuing — rather than a business card in a pile and a fading memory." },
+        { icon: "fast-forward", title: "Stronger pathways after the event", body: "Context established before the event creates a thread worth continuing — rather than a business card in a pile and a fading memory." },
       ]} />
     </Section>
 

@@ -26,6 +26,7 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase; color: var(--ink-500);
   margin: 0 0 28px;
 }
+.hero .eyebrow { color: var(--ink-700); }
 .section { padding: 48px 0; overflow: hidden; }
 .section-tight { padding: 40px 0; overflow: hidden; }
 
@@ -517,10 +518,10 @@ img { max-width: 100%; display: block; }
   padding-bottom: 0;
 }
 .flow-step-num {
-  font-size: 32px;
+  font-size: 48px;
   font-weight: 300;
   color: var(--teal-700);
-  min-width: 48px;
+  min-width: 64px;
   text-align: center;
   line-height: 1;
   padding-top: 4px;
@@ -1249,6 +1250,8 @@ img { max-width: 100%; display: block; }
   text-wrap: balance;
 }
 .manifesto p em { font-style: italic; color: var(--teal-800); }
+.section-ink .manifesto p { color: #fff; }
+.section-ink .manifesto p em { color: var(--teal-300); }
 
 /* ---------- Form (Start a Conversation) ---------- */
 .conv-form {
