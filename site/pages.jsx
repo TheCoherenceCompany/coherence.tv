@@ -436,10 +436,10 @@ const PageConversations = () => (
         title="From a single conversation to <em>shared intelligence.</em>"
         dek="Better conversations before the moment that matters, and better coordination after it."
       />
-      <JourneyTrack steps={[
+      <FlowSteps steps={[
         { name: "Invite",       note: "People are invited into guided one-to-one dialogue." },
         { name: "Converse",     note: "Structured prompts surface intent, needs, offers, and questions." },
-        { name: "Synthesise",   note: "AI Guides reveal themes, patterns, and matches.", highlight: true },
+        { name: "Synthesise",   note: "AI Guides reveal themes, patterns, and matches." },
         { name: "Profile",      note: "Richer profiles and reflections for each participant." },
         { name: "Match",        note: "Relevant introductions, not random proximity." },
         { name: "Act",          note: "Practical next steps, commitments, and follow-through." },

@@ -363,9 +363,25 @@ const Footer = () => (
   </footer>
 );
 
+/* ---------- Flow Steps (simple list format) ---------- */
+
+const FlowSteps = ({ steps }) => (
+  <div className="flow-steps">
+    {steps.map((s, i) => (
+      <div key={i} className="flow-step-item">
+        <div className="flow-step-num">{String(i + 1).padStart(2, "0")}</div>
+        <div className="flow-step-content">
+          <h4>{s.name}</h4>
+          <p>{s.note}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+);
+
 Object.assign(window, {
   LOREM, LOREM_SHORT, ICON_MAP, Icon,
   Nav, Footer, Eyebrow, SectionHead, Section, HeroLight,
   CardGrid, TagList, JourneyTrack, Timeline, FitCompare,
-  TensionsBlock, CTABand,
+  TensionsBlock, CTABand, FlowSteps,
 });

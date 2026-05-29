@@ -26,8 +26,8 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase; color: var(--ink-500);
   margin: 0 0 28px;
 }
-.section { padding: 144px 0; }
-.section-tight { padding: 96px 0; }
+.section { padding: 48px 0; overflow: hidden; }
+.section-tight { padding: 40px 0; overflow: hidden; }
 
 .section-title {
   font-family: var(--font-display);
@@ -256,8 +256,8 @@ img { max-width: 100%; display: block; }
 .calli.v-edge-right { width: 720px; height: 720px; right: -180px; top: 18%; }
 .calli.v-edge-left  { width: 720px; height: 720px; left: -180px;  top: 22%; }
 .calli.v-wide-top   { width: 1400px; height: 480px; left: 50%; top: 34%; transform: translateX(-50%); }
-.calli.v-corner-br  { width: 600px;  height: 600px; right: -140px; bottom: -160px; }
-.calli.v-corner-bl  { width: 600px;  height: 600px; left: -140px;  bottom: -160px; }
+.calli.v-corner-br  { width: 600px;  height: 600px; right: -140px; bottom: -80px; }
+.calli.v-corner-bl  { width: 600px;  height: 600px; left: -140px;  bottom: -80px; }
 .calli.v-full       { width: 940px;  height: 940px; right: -180px; top: 50%; transform: translateY(-50%); }
 
 @media (max-width: 960px) {
@@ -497,6 +497,49 @@ img { max-width: 100%; display: block; }
 .journey-step.void .journey-current {
   color: var(--teal-900); font-weight: 500; font-style: italic;
 }
+/* ---------- Flow Steps (simpler list format) ---------- */
+.flow-steps {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 880px;
+}
+.flow-step-item {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border-2);
+}
+.flow-step-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.flow-step-num {
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--teal-700);
+  min-width: 48px;
+  text-align: center;
+  line-height: 1;
+  padding-top: 4px;
+}
+.flow-step-content h4 {
+  font-size: 21px;
+  font-weight: 400;
+  color: var(--ink-900);
+  margin: 0 0 8px 0;
+  letter-spacing: -0.01em;
+}
+.flow-step-content p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--ink-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
 .journey-callout {
   margin-top: 80px;
   background: #fff;
