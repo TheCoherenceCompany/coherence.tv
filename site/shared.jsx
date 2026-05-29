@@ -62,8 +62,8 @@ const Icon = ({ name }) => (
 const NAV_LINKS = [
   { href: "about.html",         label: "About",                   match: ["about", "coherence-journey"] },
   { href: "vision.html",        label: "Vision",                  match: ["vision"] },
-  { href: "conversations.html", label: "Coherence Conversations", match: ["conversations", "event"] },
-  { href: "who-for.html",       label: "Who For",                 match: ["who-for"],
+  { href: "conversations.html", label: "Coherence Conversations", match: ["conversations", "coherenceconversations"] },
+  { href: "who-for.html",       label: "Who Is This For?",        match: ["who-for"],
     sub: [
       { href: "who-for.html",          label: "Overview",         icon: "compass" },
       { href: "who-for-events.html",   label: "Events",           icon: "calendar" },
@@ -331,8 +331,8 @@ const Footer = () => (
         <div>
           <div className="footer-brand-name">The Coherence Company</div>
           <div className="footer-brand-tag" style={{ marginTop: 8 }}>
-            AI-supported collaboration infrastructure for collective sensemaking,
-            coherent gatherings, and coordinated action.
+            AI-powered collaboration infrastructure for collective sensemaking,
+            coherent gatherings &amp; coordinated action.
           </div>
         </div>
       </div>

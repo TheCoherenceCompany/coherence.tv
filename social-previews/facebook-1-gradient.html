@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lexend:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1200px; height: 630px;
+      overflow: hidden;
+      font-family: 'Lexend', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .canvas {
+      position: relative;
+      width: 1200px; height: 630px;
+      background: linear-gradient(180deg, #4BDBDB 0%, #B1EFEF 22%, #D6F6F6 38%, #EEFBFB 55%, #ffffff 80%);
+      overflow: hidden;
+    }
+    .watermark {
+      position: absolute;
+      right: -100px; top: -80px;
+      width: 520px; height: 520px;
+      opacity: 0.07;
+    }
+    .vertical-text {
+      position: absolute;
+      right: 30px; top: 0; bottom: 0;
+      display: flex; align-items: center;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #555555;
+    }
+    .logo {
+      position: absolute;
+      top: 52px; left: 56px;
+      width: 76px; height: 76px;
+    }
+    .content {
+      position: absolute;
+      left: 56px; bottom: 60px;
+      max-width: 680px;
+    }
+    .overline {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #555555;
+      margin-bottom: 20px;
+    }
+    .headline {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-weight: 400;
+      font-size: 70px;
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      color: #0F0F0F;
+      margin-bottom: 22px;
+    }
+    .headline em {
+      font-style: italic;
+      color: #1F9A9A;
+    }
+    .subline {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.55;
+      color: #333333;
+      max-width: 580px;
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas">
+    <img src="../assets/coherence-logo-white.svg" class="watermark" alt="">
+    <div class="vertical-text">The Coherence Company</div>
+    <img src="../assets/coherence-logo-white.svg" class="logo" alt="The Coherence Company">
+    <div class="content">
+      <div class="overline">The Coherence Company</div>
+      <h1 class="headline">Humans and AI,<br><em>wiser together.</em></h1>
+      <p class="subline">AI-supported collaboration that helps groups turn dialogue into shared intelligence, useful relationships, and coordinated action.</p>
+    </div>
+  </div>
+</body>
+</html>

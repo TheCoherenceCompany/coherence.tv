@@ -10,8 +10,8 @@ const PageHome = () => (
     <HeroLight
       eyebrow="The Coherence Company"
       title='Humans and AI,<br/><em>wiser together.</em>'
-      sub="The Coherence Company creates Coherence Conversations, AI Guides, and collaboration practices that help groups turn dialogue into shared intelligence, useful relationships, and coordinated action."
-      primaryCTA={{ label: "Explore Coherence Conversations", href: "event.html" }}
+      sub="The Coherence Company offers Coherence Conversations, AI guides and collaboration tools that turn dialogue into shared intelligence, the right relationships and coordinated action."
+      primaryCTA={{ label: "Explore Coherence Conversations", href: "coherenceconversations.html" }}
       secondaryCTA={{ label: "Join the Build", href: "join.html" }}
       meta={["Early-stage · Building in public", "Pilots open", "Remote · global"]}
       calli="calligraphy-31.jpg"
@@ -50,7 +50,7 @@ const PageHome = () => (
           body: "AI Guides help people orient, prepare, remember, connect, and act. They hold context, surface patterns, suggest relevant introductions, capture commitments, and help people see what is emerging. They support the journey without taking it over." },
         { icon: "git-merge", title: "Sensemaking from many voices",
           body: "When many conversations happen, patterns begin to appear. Themes emerge. Shared questions become visible. Needs and offers become easier to match. Hosts and community stewards can see the living pattern underneath the noise.",
-          link: { label: "See Coherence Conversations", href: "event.html" } },
+          link: { label: "See Coherence Conversations", href: "coherenceconversations.html" } },
       ]} />
     </Section>
 
@@ -192,7 +192,7 @@ const PageVision = () => (
       eyebrow="Vision"
       title='Humans and AI,<br/><em>wiser together.</em>'
       sub="The Coherence Company exists to help people, organisations, communities, and AI Guides become more capable together. The next chapter of AI should not only make individuals faster — it should help groups listen better, make sense of complexity, build trust, and turn good intentions into action."
-      primaryCTA={{ label: "Explore Coherence Conversations", href: "event.html" }}
+      primaryCTA={{ label: "Explore Coherence Conversations", href: "coherenceconversations.html" }}
       secondaryCTA={{ label: "Join the Build", href: "join.html" }}
       meta={["Collaboration infrastructure for the AI age", "Building in public", "Remote · global"]}
       calli="calligraphy-24.jpg"
@@ -421,7 +421,7 @@ const PageConversations = () => (
     {/* 3.1 Hero */}
     <HeroLight
       eyebrow="The first product · Coherence Conversations"
-      title='Dialogue that becomes <em>sensemaking, matchmaking, and action.</em>'
+      title='Dialogue that becomes <em>sensemaking matchmaking &amp; action</em>'
       sub="Coherence Conversations turns guided one-to-one dialogue into shared intelligence, relevant connections, and practical next steps. People speak with each other; AI Guides help reveal the patterns, themes, needs, offers, and matches emerging across those conversations; hosts receive a clearer view of the human field they are convening."
       primaryCTA={{ label: "Start a Conversation", href: "start.html" }}
       secondaryCTA={{ label: "Explore Use Cases", href: "who-for.html" }}
@@ -1581,7 +1581,7 @@ const PageEvent = () => (
     <HeroLight
       eyebrow="The product · Coherence Conversations Event"
       title='Activate the people in your event <em>before they arrive.</em>'
-      sub="Coherence Conversations Event helps participants clarify intent, discover relevant others, and arrive with shared context before the gathering begins."
+      sub="Coherence Conversations help event participants clarify their intent, find the right people, and arrive with shared context before the gathering begins."
       primaryCTA={{ label: "Start a Pilot", href: "start.html" }}
       secondaryCTA={{ label: "Talk to us", href: "start.html" }}
       meta={["Pilots open", "Designed with hosts", "Consent-based"]}
@@ -2015,7 +2015,7 @@ const PageStart = () => {
           aria-hidden="true" />
         <div className="container">
           <Eyebrow>Start a conversation</Eyebrow>
-          <h1>Start with Coherence Conversations Event, <em>or tell us what you are trying to coordinate.</em></h1>
+          <h1>Start a Coherence Conversations event, <em>or tell us what you are trying to coordinate.</em></h1>
           <p className="page-hero-sub">
             Whether you are planning an event, activating a network, bringing a team together,
             convening stakeholders, joining the build, or exploring partnership — the best next
@@ -2104,7 +2104,7 @@ const PageStart = () => {
             link: { label: "Follow on LinkedIn", href: "https://www.linkedin.com/company/the-coherence-company/" } },
           { icon: "send", title: "Newsletter",
             body: "Occasional field notes, product updates, and thinking on collaboration, AI, and coordination.",
-            link: { label: "Subscribe", href: "#" } },
+            link: { label: "Subscribe", href: "https://luma.com/thecoherenceco" } },
         ]} />
       </Section>
     </>
@@ -2120,7 +2120,7 @@ const PageAbout = () => (
     <HeroLight
       eyebrow="About The Coherence Company"
       title='Building coordination infrastructure<br/><em>for the agentic age.</em>'
-      sub="The Coherence Company exists to help humans and AI become wiser together. We create Coherence Conversations, AI Guides, and collaboration practices that help groups turn dialogue into shared intelligence, useful relationships, and coordinated action."
+      sub="Humans and AI, wiser together - the design principle behind everything we build: Coherence Conversations, CoCo AI and collaboration tools that turn dialogue into shared intelligence, the right relationships and coordinated action."
       primaryCTA={{ label: "Explore Coherence Conversations", href: "conversations.html" }}
       secondaryCTA={{ label: "Join the Build", href: "join.html" }}
       meta={["Early-stage · Building in public", "Pilots open", "Remote · global"]}

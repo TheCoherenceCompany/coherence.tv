@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lexend:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1200px; height: 630px;
+      overflow: hidden;
+      font-family: 'Lexend', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    /*
+      LinkedIn link preview: 1200×630. LinkedIn sometimes crops to
+      a 1:1 square from the centre — keep key content within x 285–915.
+      Safe-zone guide: left 285px, right 915px.
+    */
+    .canvas {
+      position: relative;
+      width: 1200px; height: 630px;
+      background: linear-gradient(180deg, #4BDBDB 0%, #B1EFEF 22%, #D6F6F6 38%, #EEFBFB 55%, #ffffff 80%);
+      overflow: hidden;
+    }
+    .watermark {
+      position: absolute;
+      right: -80px; top: -60px;
+      width: 480px; height: 480px;
+      opacity: 0.07;
+    }
+    .vertical-text {
+      position: absolute;
+      right: 30px; top: 0; bottom: 0;
+      display: flex; align-items: center;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: #555555;
+    }
+    /* Content centred in safe zone */
+    .content {
+      position: absolute;
+      left: 0; right: 0; bottom: 0; top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 100px;
+      text-align: center;
+    }
+    .logo {
+      width: 68px; height: 68px;
+      margin-bottom: 28px;
+    }
+    .overline {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: #555555;
+      margin-bottom: 18px;
+    }
+    .headline {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-weight: 400; font-size: 58px;
+      line-height: 1.05; letter-spacing: -0.02em;
+      color: #0F0F0F;
+      margin-bottom: 22px;
+    }
+    .headline em { font-style: italic; color: #1F9A9A; }
+    .subline {
+      font-weight: 300; font-size: 17px;
+      line-height: 1.6; color: #333333;
+      max-width: 600px;
+      margin-bottom: 36px;
+    }
+    .chips {
+      display: flex; gap: 12px;
+      flex-wrap: wrap; justify-content: center;
+    }
+    .chip {
+      font-size: 12px; font-weight: 400;
+      letter-spacing: 0.04em;
+      padding: 8px 18px;
+      border: 1px solid #B1EFEF;
+      border-radius: 999px;
+      color: #1F9A9A;
+      background: rgba(75,219,219,0.07);
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas">
+    <img src="../assets/coherence-logo.svg" class="watermark" alt="">
+    <div class="vertical-text">The Coherence Company</div>
+    <div class="content">
+      <img src="../assets/coherence-logo.svg" class="logo" alt="The Coherence Company">
+      <div class="overline">AI-supported collaboration infrastructure</div>
+      <h1 class="headline">From first contact<br>to <em>coordinated action.</em></h1>
+      <p class="subline">Guided conversations, AI Guides, and synthesis tools that help organisations, events, and networks unlock the collective intelligence already in the room.</p>
+      <div class="chips">
+        <span class="chip">Guided Dialogue</span>
+        <span class="chip">AI Guides</span>
+        <span class="chip">Sensemaking</span>
+        <span class="chip">Matchmaking</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lexend:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1200px; height: 628px;
+      overflow: hidden;
+      font-family: 'Lexend', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .canvas { display: flex; width: 1200px; height: 628px; }
+
+    /* ── Narrow teal strip ── */
+    .strip {
+      width: 160px;
+      background: linear-gradient(180deg, #2BB8B8 0%, #156D6D 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 48px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .strip-logo { width: 72px; height: 72px; }
+    .strip-vertical {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 10px; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* ── Main panel ── */
+    .main {
+      flex: 1;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 72px;
+      position: relative;
+    }
+    .calli-bg {
+      position: absolute;
+      right: -60px; top: 0;
+      width: 400px; height: 100%;
+      object-fit: cover;
+      object-position: left;
+      opacity: 0.04;
+    }
+    .overline {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: #4BDBDB;
+      margin-bottom: 20px;
+    }
+    .headline {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-weight: 400; font-size: 64px;
+      line-height: 1.0; letter-spacing: -0.025em;
+      color: #0F0F0F;
+      margin-bottom: 24px;
+      max-width: 680px;
+    }
+    .headline em { font-style: italic; color: #1F9A9A; }
+    .subline {
+      font-weight: 300; font-size: 18px;
+      line-height: 1.55; color: #555555;
+      max-width: 580px;
+    }
+    .url {
+      margin-top: 36px;
+      font-size: 13px; font-weight: 400;
+      letter-spacing: 0.04em; color: #9A9A9A;
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="strip">
+      <img src="../assets/coherence-logo-white.svg" class="strip-logo" alt="">
+      <div class="strip-vertical">The Coherence Company</div>
+    </div>
+    <div class="main">
+      <img src="../assets/backgrounds/calligraphy-27.jpg" class="calli-bg" alt="">
+      <div class="overline">AI-supported collaboration</div>
+      <h1 class="headline">From first contact<br>to <em>shared action.</em></h1>
+      <p class="subline">Guided conversations and AI Guides that help groups discover, connect, and move from intention to impact.</p>
+      <div class="url">coherence.tv</div>
+    </div>
+  </div>
+</body>
+</html>

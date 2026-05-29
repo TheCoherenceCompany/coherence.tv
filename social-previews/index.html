@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social Preview Options — The Coherence Company</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lexend:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Lexend', sans-serif;
+      font-weight: 300;
+      background: #F8F8F8;
+      color: #333333;
+      padding: 48px 56px 80px;
+      -webkit-font-smoothing: antialiased;
+    }
+    header { margin-bottom: 56px; }
+    header h1 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-weight: 400; font-size: 36px;
+      letter-spacing: -0.02em; color: #0F0F0F;
+      margin-bottom: 12px;
+    }
+    header p {
+      font-size: 15px; font-weight: 300;
+      line-height: 1.6; color: #555555;
+      max-width: 680px;
+    }
+    header p strong { font-weight: 500; color: #0F0F0F; }
+    .note {
+      margin-top: 16px;
+      background: #EEFBFB;
+      border: 1px solid #B1EFEF;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 13px; color: #1F9A9A; line-height: 1.55;
+      max-width: 780px;
+    }
+    .channel { margin-bottom: 64px; }
+    .channel-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 6px;
+    }
+    .channel-title {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: #777777;
+    }
+    .channel-dims {
+      font-size: 12px; font-weight: 300;
+      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      color: #9A9A9A;
+    }
+    .channel-desc {
+      font-size: 14px; font-weight: 300;
+      color: #555555; line-height: 1.55;
+      margin-bottom: 24px;
+      max-width: 680px;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .option {}
+    .option-label {
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #9A9A9A;
+      margin-bottom: 10px;
+    }
+    .preview-link {
+      display: block;
+      text-decoration: none;
+      border: 1px solid #E6E6E6;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .preview-link:hover {
+      box-shadow: 0 8px 24px rgba(15,15,15,0.08);
+      border-color: #4BDBDB;
+    }
+    .preview-link iframe {
+      display: block;
+      width: 100%;
+      border: none;
+      pointer-events: none;
+    }
+    /* Scale iframes for display */
+    .fb-frame-wrap {
+      width: 100%;
+      height: 0;
+      padding-bottom: calc(630 / 1200 * 100%);
+      position: relative;
+      overflow: hidden;
+      border-radius: 11px;
+    }
+    .fb-frame-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1200px; height: 630px;
+      transform-origin: top left;
+    }
+    .tw-frame-wrap {
+      width: 100%;
+      height: 0;
+      padding-bottom: calc(628 / 1200 * 100%);
+      position: relative;
+      overflow: hidden;
+      border-radius: 11px;
+    }
+    .tw-frame-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1200px; height: 628px;
+      transform-origin: top left;
+    }
+    .open-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 12px; font-weight: 400;
+      letter-spacing: 0.04em;
+      color: #4BDBDB;
+      text-decoration: none;
+      border-bottom: 1px solid #B1EFEF;
+      transition: border-color 0.15s;
+    }
+    .open-link:hover { border-bottom-color: #4BDBDB; }
+    hr { border: 0; height: 1px; background: #E6E6E6; margin: 64px 0; }
+  </style>
+  <script>
+    function scaleFrames() {
+      document.querySelectorAll('.fb-frame-wrap, .tw-frame-wrap').forEach(wrap => {
+        const isFb = wrap.classList.contains('fb-frame-wrap');
+        const iframe = wrap.querySelector('iframe');
+        const scale = wrap.offsetWidth / 1200;
+        iframe.style.transform = `scale(${scale})`;
+        wrap.style.height = (isFb ? 630 : 628) * scale + 'px';
+        wrap.style.paddingBottom = '0';
+      });
+    }
+    window.addEventListener('load', scaleFrames);
+    window.addEventListener('resize', scaleFrames);
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Social Preview Options</h1>
+    <p>9 designs across 3 channels — <strong>3 options each</strong> for Facebook/LinkedIn link previews, LinkedIn (centred safe-zone layout), and Twitter/X cards. Open any design at full size to screenshot it for use as your <code>og:image</code>.</p>
+    <div class="note">
+      <strong>Next step:</strong> Pick one design per channel. Open it in Chrome at 100% zoom, then use <em>DevTools → Capture screenshot</em> (or a tool like Puppeteer) to export a PNG. Upload the PNGs to <code>assets/social/</code> and update the <code>og:image</code> and <code>twitter:image</code> meta tags already added to your HTML pages.
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════
+       FACEBOOK
+       ═══════════════════════════════════════════════ -->
+  <section class="channel">
+    <div class="channel-header">
+      <span class="channel-title">Facebook · Link preview</span>
+      <span class="channel-dims">1200 × 630 · og:image</span>
+    </div>
+    <p class="channel-desc">Shows when your URL is shared as a post or message. Facebook pairs it with the page title and description — keep messaging complementary, not duplicating.</p>
+
+    <div class="options">
+      <div class="option">
+        <div class="option-label">Option 1 — Gradient Hero</div>
+        <a class="preview-link" href="facebook-1-gradient.html" target="_blank" title="Open full size">
+          <div class="fb-frame-wrap">
+            <iframe src="facebook-1-gradient.html" scrolling="no"></iframe>
+          </div>
+        </a>
+        <a class="open-link" href="facebook-1-gradient.html" target="_blank">Open full size ↗</a>
+      </div>
+
+      <div class="option">
+        <div class="option-label">Option 2 — Split Panel</div>
+        <a class="preview-link" href="facebook-2-split.html" target="_blank">
+          <div class="fb-frame-wrap">
+            <iframe src="facebook-2-split.html" scrolling="no"></iframe>
+          </div>
+        </a>
+        <a class="open-link" href="facebook-2-split.html" target="_blank">Open full size ↗</a>
+      </div>
+
+      <div class="option">
+        <div class="option-label">Option 3 — Dark / Night</div>
+        <a class="preview-link" href="facebook-3-dark.html" target="_blank">
+          <div class="fb-frame-wrap">
+            <iframe src="facebook-3-dark.html" scrolling="no"></iframe>
+          </div>
+        </a>
+        <a class="open-link" href="facebook-3-dark.html" target="_blank">Open full size ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- ═══════════════════════════════════════════════
+       LINKEDIN
+       ═══════════════════════════════════════════════ -->
+  <section class="channel">
+    <div class="channel-header">
+      <span class="channel-title">LinkedIn · Link preview</span>
+      <span class="channel-dims">1200 × 630 · og:image · safe zone 630 × 630 centred</span>
+    </div>
+    <p class="channel-desc">LinkedIn uses the same OG image dimensions as Facebook, but sometimes crops to a square from the centre when displayed in the feed. These designs keep key content in the central 630px-wide safe zone and use a more B2B-professional tone.</p>
+
+    <div class="options">
+      <div class="option">
+        <div class="option-label">Option 1 — Gradient + Centred</div>
+        <a class="preview-link" href="linkedin-1-gradient.html" target="_blank">
+          <div class="fb-frame-wrap">
+            <iframe src="linkedin-1-gradient.html" scrolling="no"></iframe>
+          </div>
+        </a>
+        <a class="open-link" href="linkedin-1-gradient.html" target="_blank">Open full size ↗</a>
+      </div>
+
+      <div class="option">
+        <div class="option-label">Option 2 — Minimal White + Three Columns</div>
+        <a class="preview-link" href="linkedin-2-minimal-white.html" target="_blank">
+          <div class="fb-frame-wrap">
+            <iframe src="linkedin-2-minimal-white.html" scrolling="no"></iframe>
+          </div>
+        </a>
+        <a class="open-link" href="linkedin-2-minimal-white.html" target="_blank">Open full size ↗</a>
+      </div>
+
+      <div class="option">
+        <div class="option-label">Option 3 — Teal Authority Split</div>
+        <a class="preview-link" href="linkedin-3-teal-authority.html" target="_blank">
+          <div class="fb-frame-wrap">
+            <iframe src="linkedin-3-teal-authority.html" scrolling="no"></iframe>
+          </div>
+        </a>
+        <a class="open-link" href="linkedin-3-teal-authority.html" target="_blank">Open full size ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- ═══════════════════════════════════════════════
+       TWITTER / X
+       ═══════════════════════════════════════════════ -->
+  <section class="channel">
+    <div class="channel-header">
+      <span class="channel-title">Twitter / X · Card</span>
+      <span class="channel-dims">1200 × 628 · twitter:image · summary_large_image</span>
+    </div>
+    <p class="channel-desc">Twitter shows the image with rounded corners. Punchy, minimal copy works best — Twitter audiences scan fast and the image carries most of the weight. Add <code>twitter:image</code> to set a separate image from your OG default if desired.</p>
+
+    <div class="options">
+      <div class="option">
+        <div class="option-label">Option 1 — Bold Gradient</div>
+        <a class="preview-link" href="twitter-1-bold-gradient.html" target="_blank">
+          <div class="tw-frame-wrap">
+            <iframe src="twitter-1-bold-gradient.html" scrolling="no"></iframe>
+          </div>
+        </a>
+        <a class="open-link" href="twitter-1-bold-gradient.html" target="_blank">Open full size ↗</a>
+      </div>
+
+      <div class="option">
+        <div class="option-label">Option 2 — Left Strip</div>
+        <a class="preview-link" href="twitter-2-left-strip.html" target="_blank">
+          <div class="tw-frame-wrap">
+            <iframe src="twitter-2-left-strip.html" scrolling="no"></iframe>
+          </div>
+        </a>
+        <a class="open-link" href="twitter-2-left-strip.html" target="_blank">Open full size ↗</a>
+      </div>
+
+      <div class="option">
+        <div class="option-label">Option 3 — Dark Centred</div>
+        <a class="preview-link" href="twitter-3-dark-centered.html" target="_blank">
+          <div class="tw-frame-wrap">
+            <iframe src="twitter-3-dark-centered.html" scrolling="no"></iframe>
+          </div>
+        </a>
+        <a class="open-link" href="twitter-3-dark-centered.html" target="_blank">Open full size ↗</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

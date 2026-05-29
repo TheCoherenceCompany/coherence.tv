@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lexend:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1200px; height: 630px;
+      overflow: hidden;
+      font-family: 'Lexend', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .canvas { display: flex; width: 1200px; height: 630px; }
+
+    /* ── Left: deep teal authority panel ── */
+    .left {
+      width: 520px;
+      background: linear-gradient(155deg, #2BB8B8 0%, #156D6D 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 52px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    .left-watermark {
+      position: absolute;
+      right: -80px; bottom: -80px;
+      width: 360px; height: 360px;
+      opacity: 0.1;
+    }
+    .left-logo { width: 68px; height: 68px; }
+    .left-main { position: relative; z-index: 1; }
+    .left-overline {
+      font-size: 10px; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 16px;
+    }
+    .left-headline {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-weight: 400; font-size: 38px;
+      line-height: 1.1; letter-spacing: -0.02em;
+      color: #ffffff;
+      margin-bottom: 24px;
+    }
+    .left-headline em { font-style: italic; }
+    .left-tags {
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .left-tag {
+      font-size: 11px; font-weight: 400;
+      letter-spacing: 0.06em;
+      padding: 6px 14px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 999px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* ── Right: white detail panel ── */
+    .right {
+      flex: 1;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 56px 56px 56px 60px;
+      border-left: 1px solid #E6E6E6;
+    }
+    .right-overline {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: #4BDBDB;
+      margin-bottom: 20px;
+    }
+    .stack { display: flex; flex-direction: column; gap: 28px; }
+    .item {}
+    .item-title {
+      font-size: 15px; font-weight: 500;
+      color: #0F0F0F;
+      margin-bottom: 5px;
+    }
+    .item-body {
+      font-size: 14px; font-weight: 300;
+      line-height: 1.55; color: #555555;
+    }
+    .right-footer {
+      margin-top: 40px;
+      font-size: 13px; font-weight: 400;
+      letter-spacing: 0.04em;
+      color: #9A9A9A;
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="left">
+      <img src="../assets/coherence-logo-white.svg" class="left-logo" alt="">
+      <img src="../assets/coherence-logo-white.svg" class="left-watermark" alt="">
+      <div class="left-main">
+        <div class="left-overline">Coherence Conversations</div>
+        <h2 class="left-headline">For leaders who<br>bring people<br><em>together.</em></h2>
+        <div class="left-tags">
+          <span class="left-tag">Events</span>
+          <span class="left-tag">Organisations</span>
+          <span class="left-tag">Networks</span>
+          <span class="left-tag">Civic</span>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="right-overline">What we build</div>
+      <div class="stack">
+        <div class="item">
+          <div class="item-title">Coherence Conversations</div>
+          <div class="item-body">Guided pre-event conversations that reveal who is in the room — before they arrive.</div>
+        </div>
+        <div class="item">
+          <div class="item-title">AI Guides</div>
+          <div class="item-body">Context-aware AI that orients participants, suggests connections, and captures commitments.</div>
+        </div>
+        <div class="item">
+          <div class="item-title">Collective Sensemaking</div>
+          <div class="item-body">Themes, patterns, and shared questions surfaced from many conversations at once.</div>
+        </div>
+      </div>
+      <div class="right-footer">coherence.tv · Early-stage · Building in public</div>
+    </div>
+  </div>
+</body>
+</html>
