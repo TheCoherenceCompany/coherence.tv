@@ -20,7 +20,7 @@ const PageHome = () => (
     {/* 1.2 Our Thesis */}
     <Section tone="off">
       <SectionHead
-        eyebrow="Our thesis"
+        eyebrow="The opportunity"
         title="The next great frontier of AI is<br/><em>collaborative intelligence.</em>"
         dek="Most AI is being framed around speed, efficiency, and individual productivity. These uses are real. But they are not the whole story. The deeper opportunity is coordination."
       />
@@ -35,11 +35,10 @@ const PageHome = () => (
               <span>What AI is doing now</span>
             </div>
             <ul>
-              <li>Write faster</li>
-              <li>Code faster</li>
-              <li>Analyse faster</li>
-              <li>Summarise faster</li>
-              <li>Produce more output</li>
+              <li>Write and code faster</li>
+              <li>Analyse and summarise at scale</li>
+              <li>Amplify individual output</li>
+              <li>Serve one person at a time</li>
             </ul>
           </div>
           <div className="fit-col fit-strong">
@@ -48,14 +47,14 @@ const PageHome = () => (
               <span>What AI could do next</span>
             </div>
             <ul>
-              <li>Remember context across a group</li>
-              <li>Listen across many voices at once</li>
-              <li>Reveal emerging patterns and themes</li>
-              <li>Surface better connections</li>
-              <li>Build shared understanding</li>
-              <li>Support coordinated action</li>
-              <li>Translate across perspectives</li>
-              <li>Build trust and agency</li>
+              <li>Hold context across an entire group</li>
+              <li>Listen to many voices at once</li>
+              <li>Surface emerging patterns and themes</li>
+              <li>Find the connections people can't see yet</li>
+              <li>Build shared understanding across difference</li>
+              <li>Translate perspectives across a room</li>
+              <li>Grow trust between people</li>
+              <li>Turn dialogue into coordinated action</li>
             </ul>
           </div>
         </div>
