@@ -21,7 +21,7 @@ const PageHome = () => (
     <Section tone="white" calli={{ file: "calligraphy-23.jpg", cls: "v-edge-right" }}>
       <SectionHead
         eyebrow="The coordination gap"
-        title="More connected,<br/><em>less coordinated.</em>"
+        title="Beyond productivity.<br/>Enter <em>coherence.</em>"
         dek="We have built extraordinary tools for communication. People can gather across continents and reach thousands in seconds. The harder question is what happens after the signal arrives."
       />
       <div className="two-col">
@@ -59,7 +59,6 @@ const PageHome = () => (
       <SectionHead
         eyebrow="The Coherence Journey"
         title="From first contact to<br/><em>shared action.</em>"
-        dek="The Coherence Journey maps how groups move from 'Who is here?' to 'What can we build?' — beyond passive attendance, shallow networking, and endless discussion into clearer relationships, shared direction, and practical movement."
       />
       <JourneyTrack steps={[
         { name: "Discover", note: "See who is here and what is alive in the field." },
@@ -68,6 +67,11 @@ const PageHome = () => (
         { name: "Seed",     note: "Turn possibility into early commitments and next steps." },
         { name: "Build",    note: "Support sustained action, learning, and follow-through." },
       ]} />
+      <div style={{ marginTop: 56, marginBottom: 48, maxWidth: 880, position: "relative", zIndex: 2 }}>
+        <p style={{ marginBottom: 20 }}>Most groups dissolve in the fragile middle - the space between a promising conversation and a real working relationship. Energy dissipates. Commitments stay vague. The room disperses before the idea takes root.</p>
+        <p style={{ marginBottom: 20 }}>The Coherence Journey maps this passage. It describes how groups move from first contact to discovery, connection and convergence into seeding & building - turning resonance into trust, and trust into coordinated action.</p>
+        <p style={{ marginBottom: 0 }}>The Journey integrates and amplifies the tools, practices, and traditions of collaboration already in the world - giving them a shared map and a common grammar. At each stage, AI Guides support participants & organizers by surfacing patterns, suggesting connections, holding context and making the invisible visible - so the group moves with clarity, memory and momentum.</p>
+      </div>
     </Section>
 
     {/* 1.5 Who It's For */}
@@ -94,51 +98,6 @@ const PageHome = () => (
       <div style={{ marginTop: 40, textAlign: "center" }}>
         <a className="btn btn-secondary" href="who-for.html">Explore Who It's For <Icon name="arrow-right" /></a>
       </div>
-    </Section>
-
-    {/* 1.6 Coherence Conversations */}
-    <Section tone="off">
-      <SectionHead
-        eyebrow="Coherence Conversations"
-        title="What happens<br/><em>before people gather?</em>"
-        dek="Instead of asking people to complete another static profile, we invite them into guided conversations that reveal what they care about, why they are showing up, who they hope to meet, what they need, and what they can offer."
-      />
-      <div className="flow-steps">
-        <div className="flow-step">
-          <h4>Conversations before the moment</h4>
-          <p>Participants join structured conversations designed to uncover intentions, interests, questions, needs, offers, and context — in a more human way.</p>
-        </div>
-        <div className="flow-step">
-          <h4>Synthesis by AI Guides</h4>
-          <p>AI Guides help identify themes, participant patterns, possible matches, shared questions, and insights that hosts can use before everyone gathers.</p>
-        </div>
-        <div className="flow-step">
-          <h4>Better prepared, better connected</h4>
-          <p>People arrive with more context. Hosts understand the field before it gathers. The experience becomes less random, more relational, and more useful.</p>
-        </div>
-      </div>
-      <div style={{ marginTop: 48, textAlign: "center" }}>
-        <a className="btn btn-primary btn-lg" href="conversations.html">See How It Works <Icon name="arrow-right" /></a>
-      </div>
-    </Section>
-
-    {/* 1.7 Why Now */}
-    <Section tone="white">
-      <SectionHead
-        eyebrow="Why now"
-        title="What can AI do<br/><em>for groups?</em>"
-        dek="AI is already changing how individuals write, code, analyse, plan, and create. The deeper opportunity is collective: AI Guides that help groups listen better, remember more, translate across perspectives, detect patterns, build trust, and coordinate action across complexity."
-      />
-      <CardGrid cols={4} items={[
-        { icon: "calendar-check", title: "Events",
-          body: "Networking is often one of the main promises of an event, but too much is still left to luck. Coherence Conversations helps participants arrive with clearer intentions and more relevant connections already forming." },
-        { icon: "building-2", title: "Organisations",
-          body: "Transformation fails when leaders cannot hear what people really know, feel, resist, or see. Coherence Conversations helps surface trusted insight and connect it to culture, strategy, and change." },
-        { icon: "network", title: "Networks",
-          body: "Many communities contain enormous dormant value. People have skills, questions, offers, projects, and relationships that remain invisible because the network does not help them find one another intelligently." },
-        { icon: "globe", title: "Civic ecosystems",
-          body: "Public dialogue often produces energy, insight, and goodwill, then loses momentum when the room dissolves. Coherence Conversations can help communities turn many voices into visible priorities and shared pathways for action." },
-      ]} />
     </Section>
 
     {/* 1.8 The Bigger Dream */}

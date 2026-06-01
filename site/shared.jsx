@@ -234,17 +234,28 @@ const TagList = ({ items }) => (
 
 /* ---------- Journey track (5 stages) ---------- */
 
-const JourneyTrack = ({ steps }) => (
-  <div className="journey-track">
-    {steps.map((s, i) => (
-      <div key={i} className={`journey-step${s.highlight ? " void" : ""}`}>
-        <div className="journey-num">{String(i + 1).padStart(2, "0")}</div>
-        <div className="journey-name">{s.name}</div>
-        {s.note && <div className="journey-current">{s.note}</div>}
-      </div>
-    ))}
-  </div>
-);
+const JourneyTrack = ({ steps }) => {
+  const [selectedIndex, setSelectedIndex] = React.useState(
+    steps.findIndex(s => s.highlight) ?? 2
+  );
+
+  return (
+    <div className="journey-track">
+      {steps.map((s, i) => (
+        <div
+          key={i}
+          className={`journey-step${selectedIndex === i ? " void" : ""}`}
+          onClick={() => setSelectedIndex(i)}
+          style={{ cursor: "pointer" }}
+        >
+          <div className="journey-num">{String(i + 1).padStart(2, "0")}</div>
+          <div className="journey-name">{s.name}</div>
+          {s.note && <div className="journey-current">{s.note}</div>}
+        </div>
+      ))}
+    </div>
+  );
+};
 
 /* ---------- Timeline (vertical numbered) ---------- */
 
