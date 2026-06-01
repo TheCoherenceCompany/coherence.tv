@@ -17,12 +17,57 @@ const PageHome = () => (
       calli="calligraphy-31.jpg"
     />
 
-    {/* 1.2 Coordination Gap */}
-    <Section tone="white" calli={{ file: "calligraphy-23.jpg", cls: "v-edge-right" }}>
+    {/* 1.2 Our Thesis */}
+    <Section tone="off">
+      <SectionHead
+        eyebrow="Our thesis"
+        title="The next great frontier of AI is<br/><em>collaborative intelligence.</em>"
+        dek="Most AI is being framed around speed, efficiency, and individual productivity. These uses are real. But they are not the whole story. The deeper opportunity is coordination."
+      />
+      <div style={{ marginTop: 48, marginBottom: 48 }}>
+        <div className="manifesto" style={{ marginTop: 0, paddingTop: 0, marginBottom: 32 }}>
+          <p>AI in service of the group.. <em>Human agency, AI-supported.</em></p>
+        </div>
+        <div className="fit-compare">
+          <div className="fit-col fit-poor">
+            <div className="fit-head">
+              <Icon name="cpu" />
+              <span>What AI is doing now</span>
+            </div>
+            <ul>
+              <li>Write faster</li>
+              <li>Code faster</li>
+              <li>Analyse faster</li>
+              <li>Summarise faster</li>
+              <li>Produce more output</li>
+            </ul>
+          </div>
+          <div className="fit-col fit-strong">
+            <div className="fit-head">
+              <Icon name="sparkles" />
+              <span>What AI could do next</span>
+            </div>
+            <ul>
+              <li>Remember context across a group</li>
+              <li>Listen across many voices at once</li>
+              <li>Reveal emerging patterns and themes</li>
+              <li>Surface better connections</li>
+              <li>Build shared understanding</li>
+              <li>Support coordinated action</li>
+              <li>Translate across perspectives</li>
+              <li>Build trust and agency</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </Section>
+
+    {/* 1.3 Coordination Gap */}
+    <Section tone="ink" calli={{ file: "calligraphy-23.jpg", cls: "on-dark v-edge-right" }}>
       <SectionHead
         eyebrow="The coordination gap"
         title="Beyond productivity.<br/>Enter <em>coherence.</em>"
-        dek="We have built extraordinary tools for communication. People can gather across continents and reach thousands in seconds. The harder question is what happens after the signal arrives."
+        dek="Humans have built extraordinary tools for communication. People can gather across continents and reach thousands in seconds. The harder question is what happens after the signal arrives."
       />
       <div className="two-col">
         <div>
@@ -34,24 +79,6 @@ const PageHome = () => (
           <p>The problem is not a lack of people, platforms, or information. The missing layer is coordination: the human and technological infrastructure that helps groups make sense together, find the right relationships, and move from intention to action.</p>
         </div>
       </div>
-    </Section>
-
-    {/* 1.3 What We Build */}
-    <Section tone="off" calli={{ file: "calligraphy-29.jpg", cls: "faint v-corner-bl" }}>
-      <SectionHead
-        eyebrow="What we build"
-        title="What turns talk<br/><em>into traction?</em>"
-        dek="We build the conditions for collective intelligence to become practical. That means guided conversations, AI Guides, synthesis tools, matchmaking flows, facilitation patterns, and collaboration practices that help groups move from first contact into shared action."
-      />
-      <CardGrid cols={3} items={[
-        { icon: "message-circle", title: "Guided dialogue",
-          body: "Structured one-to-one and small-group conversations that help people speak from real context, not just polished profiles. No dead forms. No forced networking theatre. People talk, listen, reflect, and become visible to one another." },
-        { icon: "sparkles", title: "AI Guides",
-          body: "AI Guides help people orient, prepare, remember, connect, and act. They hold context, surface patterns, suggest relevant introductions, capture commitments, and help people see what is emerging. They support the journey without taking it over." },
-        { icon: "git-merge", title: "Sensemaking from many voices",
-          body: "When many conversations happen, patterns begin to appear. Themes emerge. Shared questions become visible. Needs and offers become easier to match. Hosts and community stewards can see the living pattern underneath the noise.",
-          link: { label: "See Coherence Conversations", href: "coherenceconversations.html" } },
-      ]} />
     </Section>
 
     {/* 1.4 The Coherence Journey */}
@@ -72,6 +99,24 @@ const PageHome = () => (
         <p style={{ marginBottom: 20 }}>The Coherence Journey maps this passage. It describes how groups move from first contact to discovery, connection and convergence into seeding & building - turning resonance into trust, and trust into coordinated action.</p>
         <p style={{ marginBottom: 0 }}>The Journey integrates and amplifies the tools, practices, and traditions of collaboration already in the world - giving them a shared map and a common grammar. At each stage, AI Guides support participants & organizers by surfacing patterns, suggesting connections, holding context and making the invisible visible - so the group moves with clarity, memory and momentum.</p>
       </div>
+    </Section>
+
+    {/* 1.3 What We Build */}
+    <Section tone="off" calli={{ file: "calligraphy-29.jpg", cls: "faint v-corner-bl" }}>
+      <SectionHead
+        eyebrow="What we build"
+        title="What turns talk<br/><em>into traction?</em>"
+        dek="We build the conditions for collective intelligence to become practical. That means guided conversations, AI Guides, synthesis tools, matchmaking flows, facilitation patterns, and collaboration practices that help groups move from first contact into shared action."
+      />
+      <CardGrid cols={3} items={[
+        { icon: "message-circle", title: "Guided dialogue",
+          body: "Structured one-to-one and small-group conversations that help people speak from real context, not just polished profiles. No dead forms. No forced networking theatre. People talk, listen, reflect, and become visible to one another." },
+        { icon: "sparkles", title: "AI Guides",
+          body: "AI Guides help people orient, prepare, remember, connect, and act. They hold context, surface patterns, suggest relevant introductions, capture commitments, and help people see what is emerging. They support the journey without taking it over." },
+        { icon: "git-merge", title: "Sensemaking from many voices",
+          body: "When many conversations happen, patterns begin to appear. Themes emerge. Shared questions become visible. Needs and offers become easier to match. Hosts and community stewards can see the living pattern underneath the noise.",
+          link: { label: "See Coherence Conversations", href: "coherenceconversations.html" } },
+      ]} />
     </Section>
 
     {/* 1.5 Who It's For */}
@@ -157,26 +202,7 @@ const PageVision = () => (
       calli="calligraphy-24.jpg"
     />
 
-    {/* 2.2 The missing layer is coordination */}
-    <Section tone="white" calli={{ file: "calligraphy-01.jpg", cls: "v-edge-left" }}>
-      <SectionHead
-        eyebrow="The missing layer"
-        title="The missing layer is <em>coordination.</em>"
-        dek="We live in an age of extraordinary communication. A message can cross the planet instantly. A hundred people can gather on a call in a day. A community can form around an idea before any institution notices it exists. And still, collaboration remains strangely hard."
-      />
-      <div className="two-col">
-        <div>
-          <p>Communication, connection, and computation have scaled — but our ability to coordinate human effort has not kept pace. The result is fragmentation at the very moment when working together well has become essential.</p>
-          <p>People can meet, but not know how to build trust. Teams can talk, but lose shared context. Networks can grow, but fail to become useful. Civic groups can gather concern, but struggle to create action. Organisations can collect feedback, but still fail to hear themselves.</p>
-        </div>
-        <div>
-          <p>The missing layer is not another communication tool.</p>
-          <p>It is coordination infrastructure: the practices, AI Guides, shared memory, sensemaking, trust structures, and collaboration pathways that help groups move from first contact into meaningful action.</p>
-        </div>
-      </div>
-    </Section>
-
-    {/* 2.3 From intelligence to wisdom */}
+    {/* 2.2 From intelligence to wisdom */}
     <Section tone="off">
       <SectionHead
         eyebrow="From intelligence to wisdom"
@@ -198,6 +224,25 @@ const PageVision = () => (
       </div>
     </Section>
 
+    {/* 2.3 The missing layer is coordination */}
+    <Section tone="white" calli={{ file: "calligraphy-01.jpg", cls: "v-edge-left" }}>
+      <SectionHead
+        eyebrow="The missing layer"
+        title="The missing layer is <em>coordination.</em>"
+        dek="We live in an age of extraordinary communication. A message can cross the planet instantly. A hundred people can gather on a call in a day. A community can form around an idea before any institution notices it exists. And still, collaboration remains strangely hard."
+      />
+      <div className="two-col">
+        <div>
+          <p>Communication, connection, and computation have scaled — but our ability to coordinate human effort has not kept pace. The result is fragmentation at the very moment when working together well has become essential.</p>
+          <p>People can meet, but not know how to build trust. Teams can talk, but lose shared context. Networks can grow, but fail to become useful. Civic groups can gather concern, but struggle to create action. Organisations can collect feedback, but still fail to hear themselves.</p>
+        </div>
+        <div>
+          <p>The missing layer is not another communication tool.</p>
+          <p>It is coordination infrastructure: the practices, AI Guides, shared memory, sensemaking, trust structures, and collaboration pathways that help groups move from first contact into meaningful action.</p>
+        </div>
+      </div>
+    </Section>
+
     {/* 2.4 AI as collaboration infrastructure */}
     <Section tone="white">
       <SectionHead
@@ -215,23 +260,6 @@ const PageVision = () => (
       </ul>
       <div className="manifesto">
         <p>This is AI as collaboration infrastructure. Not a control tower. Not a surveillance layer. Not a replacement for human judgement — <em>a support layer for collective intelligence.</em></p>
-      </div>
-    </Section>
-
-    {/* 2.5 Coherence Conversations is the first product */}
-    <Section tone="teal">
-      <SectionHead
-        eyebrow="The first product"
-        title="The first doorway: <em>conversation.</em>"
-        dek="The larger dream begins with something very old and very human. Conversation is where trust begins, context appears, and possibility becomes visible. In Coherence Conversations, people enter guided one-to-one dialogue — exploring what matters, why they are present, what they need, what they can offer, and who they may need to meet."
-      />
-      <div className="flow-steps">
-        <div className="flow-step"><h4>People speak</h4><p>Guided one-to-one dialogue surfaces intent, context, needs, offers, and the people each person hopes to meet.</p></div>
-        <div className="flow-step"><h4>AI Guides synthesise</h4><p>Conversations become shared themes, richer profiles, relevant matches, collective insight, and possible collaborations.</p></div>
-        <div className="flow-step"><h4>Groups act</h4><p>Commitments and next steps emerge — practical, simple, and usable today across events, organisations, networks, and civic ecosystems.</p></div>
-      </div>
-      <div className="manifesto">
-        <p>Coherence Conversations is not the whole company. <em>It is the first doorway into a larger architecture.</em></p>
       </div>
     </Section>
 
@@ -2054,28 +2082,6 @@ const PageAbout = () => (
           <p>The Coherence Company exists because the next chapter of technology should not only help individuals produce more. It should help groups understand more, trust more, coordinate better, and act with greater wisdom.</p>
           <p>The problem is not a lack of communication. The problem is the missing infrastructure for collaboration. That is the gap we are building into.</p>
         </div>
-      </div>
-    </Section>
-
-    {/* 5.3 Our Thesis */}
-    <Section tone="off">
-      <SectionHead
-        eyebrow="Our thesis"
-        title="The next great frontier of AI is<br/><em>collaborative intelligence.</em>"
-        dek="Most AI is being framed around speed, efficiency, and individual productivity. These uses are real. But they are not the whole story. The deeper opportunity is coordination."
-      />
-      <div className="two-col">
-        <div>
-          <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--ink-500)" }}>What AI is doing now</h4>
-          <p>Write faster. Code faster. Analyse faster. Produce more with fewer people. Useful. But not the whole story.</p>
-        </div>
-        <div>
-          <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--teal-800)" }}>What AI could do next</h4>
-          <p>Help groups listen across many voices, remember context, translate between perspectives, reveal patterns, support trust, and make better connections. Help people move from scattered conversation into shared understanding — and from shared understanding into action.</p>
-        </div>
-      </div>
-      <div className="manifesto">
-        <p>Not AI replacing humans. Not AI controlling groups from above. Not AI as a surveillance layer in softer clothing. <em>AI as a support layer for human agency, sensemaking, and coordination.</em></p>
       </div>
     </Section>
 
