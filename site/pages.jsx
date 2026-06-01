@@ -80,7 +80,30 @@ const PageHome = () => (
       </div>
     </Section>
 
-    {/* 1.4 The Coherence Journey */}
+    {/* 1.4 What We Are Building */}
+    <Section tone="white">
+      <SectionHead
+        eyebrow="What we are building"
+        title="A family of products and practices<br/><em>for collaborative intelligence.</em>"
+        dek="We begin with Coherence Conversations because conversation is where trust begins and context becomes visible. The larger architecture is coordination infrastructure for the agentic age."
+      />
+      <CardGrid cols={3} items={[
+        { num: "01", title: "Coherence Conversations",
+          body: "Our first product. Guided one-to-one dialogue becomes sensemaking, matchmaking, and practical next steps — for events, organisations, networks, and civic ecosystems.",
+          link: { label: "See Coherence Conversations", href: "conversations.html" } },
+        { num: "02", title: "AI Guides",
+          body: "AI Guides support people and groups through the work of sensemaking and coordination — turning many conversations into useful patterns, matches, insights, commitments, and next steps." },
+        { num: "03", title: "Collaboration practices",
+          body: "Technology alone is not enough. We design practices, prompts, formats, rituals, and workflows that help people listen better, meet with purpose, build trust, and move from possibility into action." },
+        { num: "04", title: "The Coherence Journey",
+          body: "Our map for how groups become capable together — from discovery and connection through convergence, seeding, building, and sustained action across many kinds of collaboration.",
+          link: { label: "See the journey", href: "coherence-journey.html" } },
+        { num: "05", title: "Future infrastructure",
+          body: "Shared memory, personal and group Coherence accounts, commitment tracking, agent-to-agent collaboration, and trust and consent protocols. The first doorway is conversation. The larger architecture is coordination infrastructure." },
+      ]} />
+    </Section>
+
+    {/* 1.5 The Coherence Journey */}
     <Section id="journey" tone="teal" calli={{ file: "calligraphy-11.jpg", cls: "subtle v-wide-top" }}>
       <SectionHead
         eyebrow="The Coherence Journey"
@@ -98,24 +121,6 @@ const PageHome = () => (
         <p style={{ marginBottom: 20 }}>The Coherence Journey maps this passage. It describes how groups move from first contact to discovery, connection and convergence into seeding & building - turning resonance into trust, and trust into coordinated action.</p>
         <p style={{ marginBottom: 0 }}>The Journey integrates and amplifies the tools, practices, and traditions of collaboration already in the world - giving them a shared map and a common grammar. At each stage, AI Guides support participants & organizers by surfacing patterns, suggesting connections, holding context and making the invisible visible - so the group moves with clarity, memory and momentum.</p>
       </div>
-    </Section>
-
-    {/* 1.3 What We Build */}
-    <Section tone="off" calli={{ file: "calligraphy-29.jpg", cls: "faint v-corner-bl" }}>
-      <SectionHead
-        eyebrow="What we build"
-        title="What turns talk<br/><em>into traction?</em>"
-        dek="We build the conditions for collective intelligence to become practical. That means guided conversations, AI Guides, synthesis tools, matchmaking flows, facilitation patterns, and collaboration practices that help groups move from first contact into shared action."
-      />
-      <CardGrid cols={3} items={[
-        { icon: "message-circle", title: "Guided dialogue",
-          body: "Structured one-to-one and small-group conversations that help people speak from real context, not just polished profiles. No dead forms. No forced networking theatre. People talk, listen, reflect, and become visible to one another." },
-        { icon: "sparkles", title: "AI Guides",
-          body: "AI Guides help people orient, prepare, remember, connect, and act. They hold context, surface patterns, suggest relevant introductions, capture commitments, and help people see what is emerging. They support the journey without taking it over." },
-        { icon: "git-merge", title: "Sensemaking from many voices",
-          body: "When many conversations happen, patterns begin to appear. Themes emerge. Shared questions become visible. Needs and offers become easier to match. Hosts and community stewards can see the living pattern underneath the noise.",
-          link: { label: "See Coherence Conversations", href: "coherenceconversations.html" } },
-      ]} />
     </Section>
 
     {/* 1.5 Who It's For */}
@@ -415,51 +420,12 @@ const PageConversations = () => (
       calli="calligraphy-28.jpg"
     />
 
-    {/* 3.G Visual flow */}
-    <Section tone="white">
-      <SectionHead
-        eyebrow="The flow"
-        title="From a single conversation to <em>shared intelligence.</em>"
-        dek="Better conversations before the moment that matters, and better coordination after it."
-      />
-      <FlowSteps steps={[
-        { name: "Invite",       note: "People are invited into guided one-to-one dialogue." },
-        { name: "Converse",     note: "Structured prompts surface intent, needs, offers, and questions." },
-        { name: "Synthesise",   note: "AI Guides reveal themes, patterns, and matches." },
-        { name: "Profile",      note: "Richer profiles and reflections for each participant." },
-        { name: "Match",        note: "Relevant introductions, not random proximity." },
-        { name: "Act",          note: "Practical next steps, commitments, and follow-through." },
-      ]} />
-    </Section>
-
-    {/* 3.6 What participants experience */}
-    <Section tone="white">
-      <SectionHead
-        eyebrow="Participant experience"
-        title="A conversation that is <em>useful in itself.</em>"
-        dek="Participants are not just feeding a platform. They are meeting another person, clarifying their own intentions, and becoming more visible to the group. A participant may come away with clarity, a richer profile, useful reflections, suggested people to meet, shared themes, possible collaborations, and practical next steps."
-      />
-      <CardGrid cols={4} items={[
-        { icon: "calendar", title: "For an event participant",
-          body: "Arriving with more context and warmer connections already forming, instead of starting cold." },
-        { icon: "building-2", title: "For an employee",
-          body: "Being heard in a more human way than a survey allows, with room for nuance and honesty." },
-        { icon: "users", title: "For a network member",
-          body: "Finding relevant peers, collaborators, mentors, partners, or shared questions across the community." },
-        { icon: "globe", title: "For a citizen",
-          body: "Seeing that their concern may be part of a wider pattern — and that others may be ready to act." },
-      ]} />
-      <div className="manifesto">
-        <p>No forced networking theatre. No dead profile form. <em>Just a better way to begin.</em></p>
-      </div>
-    </Section>
-
     {/* 3.7 What hosts receive */}
     <Section tone="off" calli={{ file: "calligraphy-30.jpg", cls: "faint v-corner-bl" }}>
       <SectionHead
-        eyebrow="Host experience"
+        eyebrow="Activation tech"
         title="A clearer view of the people and <em>possibilities in your field.</em>"
-        dek="Depending on the context, hosts receive a synthesis of who is present and what is emerging — built from guided conversation rather than static self-description."
+        dek="Themes, patterns, connections and possibilities surface through guided conversations & synthesize into a clear picture of who is present and what wants to happen."
       />
       <CardGrid cols={3} items={[
         { icon: "users", title: "Participant profiles",
@@ -474,6 +440,23 @@ const PageConversations = () => (
           body: "Insight into what the group actually wants or needs before a gathering or programme begins." },
         { icon: "fast-forward", title: "Follow-up opportunities",
           body: "A view of possible collaborations, commitments, next steps, and where further facilitation may help." },
+      ]} />
+    </Section>
+
+    {/* 3.G Visual flow */}
+    <Section tone="white">
+      <SectionHead
+        eyebrow="The flow"
+        title="From a single conversation to <em>shared intelligence.</em>"
+        dek="Better conversations before the moment that matters, and better coordination after it."
+      />
+      <FlowSteps steps={[
+        { name: "Invite",       note: "People are invited into guided one-to-one dialogue." },
+        { name: "Converse",     note: "Structured prompts surface intent, needs, offers, and questions." },
+        { name: "Synthesise",   note: "AI Guides reveal themes, patterns, and matches." },
+        { name: "Profile",      note: "Richer profiles and reflections for each participant." },
+        { name: "Match",        note: "Relevant introductions, not random proximity." },
+        { name: "Act",          note: "Practical next steps, commitments, and follow-through." },
       ]} />
     </Section>
 
@@ -494,7 +477,7 @@ const PageConversations = () => (
         <li>What questions or possibilities they are holding</li>
       </ul>
       <div className="manifesto">
-        <p>Coherence Conversations begins with one-to-one dialogue, but its purpose is <em>collective intelligence.</em> A conversation is the doorway. Coherence is what becomes possible beyond it.</p>
+        <p>Coherence Conversations begin with one-to-one dialogues, but their purpose is <em>collective intelligence.</em> A conversation is the doorway. Coherence is what becomes possible beyond that.</p>
       </div>
     </Section>
 
@@ -565,7 +548,8 @@ const PageConversations = () => (
     <Section tone="off">
       <SectionHead
         eyebrow="Use cases"
-        title="Wherever people need to become <em>more capable together.</em>"
+        title="For wherever people need to become <em>more capable together.</em>"
+        dek="Each participant leaves with clarity, richer connections and practical next steps. Across multiple conversations shared themes emerge, right relationships form and your group develops the understanding needed to move mountains together."
       />
       <CardGrid cols={2} items={[
         { icon: "calendar", title: "Events",
@@ -623,7 +607,7 @@ const PageConversations = () => (
     <Section tone="white">
       <SectionHead
         eyebrow="Start with a pilot"
-        title="Where could this <em>help your group?</em>"
+        title="How could this <em>help your group?</em>"
         dek="Coherence Conversations is best tested where the need for meaningful connection is already visible — a purpose-driven event, a leadership retreat, an AI adoption programme, a member network, a civic listening process, or a coalition trying to move from concern to action."
       />
       <FitCompare
@@ -902,7 +886,7 @@ const PageWhoForEvents = () => (
         { icon: "users-round", title: "Better participant matching", body: "Matches are built from real context — what someone is actually working on, seeking, or offering — not just a job title and a headshot." },
         { icon: "bar-chart-3", title: "Richer audience intelligence", body: "Organisers gain demand intelligence for live curation: what participants actually care about, in time to shape the programme around it." },
         { icon: "mic", title: "More authentic event content", body: "Participants talking about why they are attending creates far more useful pre-event signal than generic reposts of event marketing." },
-        { icon: "handshake", title: "Improved sponsor value", body: "Clearer audience insight means sponsors can see real relevance — not just attendance numbers, but who is in the room and what they are there for." },
+        { icon: "compass", title: "Improved sponsor value", body: "Clearer audience insight means sponsors can see real relevance — not just attendance numbers, but who is in the room and what they are there for." },
         { icon: "smile", title: "Higher participant satisfaction", body: "Participants who arrive with shared context and a short list of people worth meeting leave with more to show for the time they invested." },
       ]} />
     </Section>
@@ -1669,10 +1653,10 @@ const PageJoin = () => (
         aria-hidden="true" />
       <div className="container">
         <Eyebrow>Join us</Eyebrow>
-        <h1>Help us build Coherence Conversations Event <em>and the collaboration infrastructure behind it.</em></h1>
+        <h1>Help us build Coherence Conversations <em>and the collaboration infrastructure behind it.</em></h1>
         <p className="page-hero-sub">
-          The Coherence Company is early-stage, building its first product, developing its
-          operating model, and preparing for a planned fundraise in autumn. We are inviting
+          The Coherence Company is in its early stages, building its first product, developing its
+          operating model and preparing for a planned fundraise in Autumn 2026. We are inviting
           aligned contributors to help build the company now.
         </p>
         <div className="page-hero-ctas">
@@ -1681,27 +1665,35 @@ const PageJoin = () => (
       </div>
     </section>
 
-    <Section tone="white">
-      <SectionHead
-        eyebrow="Why join now"
-        title="Early contributors can still <em>shape what this becomes.</em>"
-        dek="We are at the stage where product, culture, systems, field, and market are still being formed. This is a rare window to help shape the company before the structure hardens."
-      />
-      <JourneyTrack steps={[
-        { name: "Now",       note: "Founding contributors" },
-        { name: "Pilots",    note: "Real gatherings, real learning" },
-        { name: "Fundraise", note: "Autumn", highlight: true },
-        { name: "Scale",     note: "Product and team grow" },
-        { name: "Field",     note: "Building the broader category" },
-      ]} />
-    </Section>
-
     <Section tone="off" calli={{ file: "calligraphy-30.jpg", cls: "faint v-corner-bl" }}>
       <SectionHead
         eyebrow="The company we are building"
         title="A company for <em>AI-supported collective intelligence.</em>"
         dek="We are building a company that uses AI to support human agency, collaborative intelligence, and collective sensemaking — while organising itself through the same principles it offers to others."
       />
+    </Section>
+
+    <Section tone="white">
+      <SectionHead
+        eyebrow="Why join now"
+        title="Early contributors can still <em>shape what this becomes.</em>"
+        dek="We are at the stage where product, culture, systems, field, and market are still being formed. This is a rare window to help shape the company before the structure hardens."
+      />
+    </Section>
+
+    <Section tone="ink" calli={{ file: "calligraphy-07.jpg", cls: "on-dark v-edge-right" }}>
+      <SectionHead
+        eyebrow="Who we are looking for"
+        title="Builders, operators, sensemakers, designers, facilitators, <em>and field-weavers.</em>"
+      />
+      <CardGrid cols={3} items={[
+        { icon: "cpu", title: "Product & AI builders", body: "Engineers, product thinkers, and AI practitioners who can help build the guided conversation experience, synthesis layer, and the infrastructure that turns many conversations into shared intelligence." },
+        { icon: "calendar", title: "Event & community builders", body: "Practitioners who have run real gatherings, activated communities, or designed participant journeys — and understand from experience where the connection layer breaks down." },
+        { icon: "compass", title: "Strategic operators", body: "People who can hold multiple threads simultaneously — across market, product, organisation, and field — and who are comfortable building in conditions where almost nothing is settled." },
+        { icon: "pen-tool", title: "Designers & storytellers", body: "Designers and communicators who can give form to genuinely new work — and understand that making it clear is the hardest design problem here." },
+        { icon: "microscope", title: "Researchers & sensemakers", body: "People drawn to the harder questions behind the product: collective intelligence, AI and human agency, trust as infrastructure, and what better coordination actually requires." },
+        { icon: "git-merge", title: "Partnership & ecosystem builders", body: "Relationship holders who can open doors in the markets and communities where Coherence belongs — and who understand that this field is built through trust, not reach." },
+      ]} />
     </Section>
 
     <Section tone="teal">
@@ -1727,13 +1719,13 @@ const PageJoin = () => (
         dek="Our current quests are First Revenue Path, Internal Beta, and Audax OS v0.1. Together, they focus the company on revenue learning, product readiness, and the operating system needed to onboard the first 20 collaborators."
       />
       <CardGrid cols={3} items={[
-        { num: "Q1", icon: "trending-up", title: "First Revenue Path",
+        { num: "Q1", icon: "compass", title: "First Revenue Path",
           body: "Develop the first revenue path by speaking with first clients and users, shaping the sales approach, and designing the path towards first revenue.",
           link: { label: "See this quest", href: "#q1" } },
         { num: "Q2", icon: "sparkles", title: "Internal Beta",
           body: "Get the product, experience, prompts, outputs, and flows ready for external beta testing. Not perfect — ready.",
           link: { label: "See this quest", href: "#q2" } },
-        { num: "Q3", icon: "layers", title: "Audax OS v0.1",
+        { num: "Q3", icon: "git-branch", title: "Audax OS v0.1",
           body: "Create a thriving operating system for the current team, quests, mission-based collaborators, and contractors — enabling onboarding of the first 20 collaborators.",
           link: { label: "See this quest", href: "#q3" } },
       ]} />
@@ -1752,7 +1744,7 @@ const PageJoin = () => (
       <div className="two-col">
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 20, margin: "0 0 12px", color: "var(--ink-700)" }}>Key missions</h4>
-          <ul className="trust-list">
+          <ul className="trust-list" style={{ gridTemplateColumns: "1fr" }}>
             <li>Find potential users for beta testing</li>
             <li>Onboard collaborators for beta testing and potential sales</li>
             <li>Run beta tests with first users</li>
@@ -1762,7 +1754,7 @@ const PageJoin = () => (
         </div>
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 20, margin: "0 0 12px", color: "var(--ink-700)" }}>What this quest needs</h4>
-          <ul className="trust-list">
+          <ul className="trust-list" style={{ gridTemplateColumns: "1fr" }}>
             <li>Commercial instinct and customer discovery skills</li>
             <li>Sales confidence and market research ability</li>
             <li>Enough product understanding to talk to early users</li>
@@ -1785,7 +1777,7 @@ const PageJoin = () => (
       <div className="two-col">
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 20, margin: "0 0 12px", color: "var(--ink-700)" }}>Key missions</h4>
-          <ul className="trust-list">
+          <ul className="trust-list" style={{ gridTemplateColumns: "1fr" }}>
             <li>Test live settings, training flows, and internal experience</li>
             <li>Test and iterate prompts and AI Guide outputs</li>
             <li>Upgrade and test relevant versions, menus, forms, and flows</li>
@@ -1795,7 +1787,7 @@ const PageJoin = () => (
         </div>
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 20, margin: "0 0 12px", color: "var(--ink-700)" }}>What this quest needs</h4>
-          <ul className="trust-list">
+          <ul className="trust-list" style={{ gridTemplateColumns: "1fr" }}>
             <li>Product testing and UX thinking</li>
             <li>Facilitation sensitivity and prompt iteration</li>
             <li>Documentation and consent awareness</li>
@@ -1819,7 +1811,7 @@ const PageJoin = () => (
       <div className="two-col">
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 20, margin: "0 0 12px", color: "var(--ink-700)" }}>Key missions</h4>
-          <ul className="trust-list">
+          <ul className="trust-list" style={{ gridTemplateColumns: "1fr" }}>
             <li>Culture and human connection through online experiences and rituals</li>
             <li>Tech Team Manual</li>
             <li>Fundraising Roadmap</li>
@@ -1831,7 +1823,7 @@ const PageJoin = () => (
         </div>
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 20, margin: "0 0 12px", color: "var(--ink-700)" }}>What this quest needs</h4>
-          <ul className="trust-list">
+          <ul className="trust-list" style={{ gridTemplateColumns: "1fr" }}>
             <li>Organisational design and operations</li>
             <li>Documentation and culture design</li>
             <li>AI workflow design and contributor onboarding</li>
@@ -1846,29 +1838,29 @@ const PageJoin = () => (
     </Section>
 
     {/* Open invitation */}
-    <Section tone="teal">
+    <Section tone="ink" calli={{ file: "calligraphy-29.jpg", cls: "on-dark v-corner-bl" }}>
       <SectionHead
         eyebrow="Open invitation"
         title="Which quest can <em>you help move?</em>"
         dek="We are looking for contributors who can help one of these three quests move. The best contribution is not 'I support the vision.' The best contribution is specific."
       />
       <CardGrid cols={3} items={[
-        { icon: "trending-up", title: "Help Antonio",
+        { icon: "compass", title: "Help Antonio",
           body: "Open first customer conversations, test the sales approach, discover what early users actually value, and help design the path to first revenue." },
-        { icon: "sparkles", title: "Help Christine",
+        { icon: "message-circle", title: "Help Christine",
           body: "Test and refine the internal beta, iterate prompts and AI Guide outputs, prepare consent flows, and get the product ready for external users." },
-        { icon: "layers", title: "Help Victor",
+        { icon: "users", title: "Help Victor",
           body: "Build the operating system for contributors and quests — onboarding, coordination rhythms, Slicing Pie culture, OS Agents, and internal documentation." },
       ]} />
       <div style={{ marginTop: 40, display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
-        <a className="btn btn-secondary btn-lg" href="start.html">Start a Conversation <Icon name="arrow-right" /></a>
+        <a className="btn btn-accent btn-lg" href="start.html">Start a Conversation <Icon name="arrow-right" /></a>
       </div>
     </Section>
 
     <Section tone="off">
       <SectionHead
         eyebrow="Slicing Pie & future equity"
-        title="How contribution is <em>recognised at this stage.</em>"
+        title="How contribution is <em>recognized at this stage.</em>"
         dek="At this stage, most contribution is not salaried. We use a Slicing Pie-style contribution model to track early risk and effort so contribution can translate into future equity when the company formalises, raises investment, or reaches the agreed conversion event."
       />
       <div className="invite-note" style={{ marginTop: 32 }}>
@@ -1880,21 +1872,7 @@ const PageJoin = () => (
       </div>
     </Section>
 
-    <Section tone="white">
-      <SectionHead
-        eyebrow="Who we are looking for"
-        title="Builders, operators, sensemakers, designers, facilitators, <em>and field-weavers.</em>"
-      />
-      <CardGrid cols={3} items={[
-        { icon: "cpu", title: "Product & AI builders", body: "Engineers, product thinkers, and AI practitioners who can help build the guided conversation experience, synthesis layer, and the infrastructure that turns many conversations into shared intelligence." },
-        { icon: "calendar", title: "Event & community builders", body: "Practitioners who have run real gatherings, activated communities, or designed participant journeys — and understand from experience where the connection layer breaks down." },
-        { icon: "compass", title: "Strategic operators", body: "People who can hold multiple threads simultaneously — across market, product, organisation, and field — and who are comfortable building in conditions where almost nothing is settled." },
-        { icon: "pen-tool", title: "Designers & storytellers", body: "Designers and communicators who can give form to genuinely new work — and understand that making it clear is the hardest design problem here." },
-        { icon: "microscope", title: "Researchers & sensemakers", body: "People drawn to the harder questions behind the product: collective intelligence, AI and human agency, trust as infrastructure, and what better coordination actually requires." },
-        { icon: "git-merge", title: "Partnership & ecosystem builders", body: "Relationship holders who can open doors in the markets and communities where Coherence belongs — and who understand that this field is built through trust, not reach." },
-      ]} />
-    </Section>
-
+    {false && (
     <Section tone="off" calli={{ file: "calligraphy-10.jpg", cls: "faint v-corner-br" }}>
       <SectionHead
         eyebrow="Team & collaborators"
@@ -1915,6 +1893,7 @@ const PageJoin = () => (
         ))}
       </div>
     </Section>
+    )}
 
     <CTABand
       calli={{ file: "calligraphy-29.jpg", cls: "faint v-corner-br" }}
@@ -2091,10 +2070,10 @@ const PageAbout = () => (
         title="Humans and AI,<br/><em>wiser together.</em>"
         dek="We use this phrase because intelligence alone is not enough. Wisdom includes context, judgement, care, timing, memory, trust, ethics, and the ability to act well inside complexity."
       />
-      <div className="two-col">
+      <div className="two-col" style={{ gap: 40 }}>
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--teal-900)" }}>Humans bring</h4>
-          <ul className="trust-list">
+          <ul className="trust-list" style={{ gridTemplateColumns: "1fr" }}>
             <li>Meaning and ethics</li>
             <li>Courage and care</li>
             <li>Judgement inside complexity</li>
@@ -2104,7 +2083,7 @@ const PageAbout = () => (
         </div>
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--teal-900)" }}>AI Guides bring</h4>
-          <ul className="trust-list">
+          <ul className="trust-list" style={{ gridTemplateColumns: "1fr" }}>
             <li>Memory and continuity</li>
             <li>Pattern recognition at scale</li>
             <li>Context across many conversations</li>
@@ -2114,35 +2093,12 @@ const PageAbout = () => (
         </div>
       </div>
       <div className="manifesto">
-        <p>Humans bring depth. AI Guides bring continuity. Together, they help groups move through the <a href="coherence-journey.html">Coherence Journey</a> without becoming less human. <em>More capable together.</em></p>
+        <p>Humans bring depth. AI Guides create continuity. By working together, groups move through the <a href="coherence-journey.html">Coherence Journey</a> with more clarity, more connection and a greater capacity to act.</p>
       </div>
     </Section>
 
-    {/* 5.5 What We Are Building */}
-    <Section tone="white">
-      <SectionHead
-        eyebrow="What we are building"
-        title="A family of products and practices<br/><em>for collaborative intelligence.</em>"
-        dek="We begin with Coherence Conversations because conversation is where trust begins and context becomes visible. The larger architecture is coordination infrastructure for the agentic age."
-      />
-      <CardGrid cols={3} items={[
-        { num: "01", title: "Coherence Conversations",
-          body: "Our first product. Guided one-to-one dialogue becomes sensemaking, matchmaking, and practical next steps — for events, organisations, networks, and civic ecosystems.",
-          link: { label: "See Coherence Conversations", href: "conversations.html" } },
-        { num: "02", title: "AI Guides",
-          body: "AI Guides support people and groups through the work of sensemaking and coordination — turning many conversations into useful patterns, matches, insights, commitments, and next steps." },
-        { num: "03", title: "Collaboration practices",
-          body: "Technology alone is not enough. We design practices, prompts, formats, rituals, and workflows that help people listen better, meet with purpose, build trust, and move from possibility into action." },
-        { num: "04", title: "The Coherence Journey",
-          body: "Our map for how groups become capable together — from discovery and connection through convergence, seeding, building, and sustained action across many kinds of collaboration.",
-          link: { label: "See the journey", href: "coherence-journey.html" } },
-        { num: "05", title: "Future infrastructure",
-          body: "Shared memory, personal and group Coherence accounts, commitment tracking, agent-to-agent collaboration, and trust and consent protocols. The first doorway is conversation. The larger architecture is coordination infrastructure." },
-      ]} />
-    </Section>
-
     {/* 5.6 How We Work */}
-    <Section tone="off" calli={{ file: "calligraphy-22.jpg", cls: "faint v-corner-br" }}>
+    <Section tone="ink" calli={{ file: "calligraphy-22.jpg", cls: "on-dark v-corner-br" }}>
       <SectionHead
         eyebrow="How we work"
         title="Building the company in the same spirit<br/><em>as the products we are creating.</em>"
@@ -2159,12 +2115,28 @@ const PageAbout = () => (
           body: "If AI Guides can support coordination, they should help us coordinate too: onboarding, memory, synthesis, mission clarity, and follow-through." },
         { icon: "heart", title: "Stay human while becoming AI-native",
           body: "AI should reduce unnecessary friction, not strip the work of care, judgement, humour, trust, or responsibility." },
-        { icon: "target", title: "Keep the dream connected to delivery",
+        { icon: "rocket", title: "Keep the dream connected to delivery",
           body: "A large vision is useful only if it helps us build. The dream needs rails. Otherwise it becomes expensive fog." },
       ]} />
     </Section>
 
-    {/* 5.7 Company as Proof */}
+    {/* 5.7 Team */}
+    <Section tone="white">
+      <SectionHead
+        eyebrow="Who is behind this"
+        title="People at the intersection of AI,<br/><em>collective intelligence, and coordination.</em>"
+        dek="The Coherence Company is being formed by people working at the intersection of AI, collective intelligence, facilitation, organisational design, community building, systems thinking, events, civic life, and regenerative futures."
+      />
+      <div className="manifesto">
+        <p>The founding story is still being written in public. What is clear is the shared conviction: AI should not only make isolated individuals faster. <em>It should help people think together, coordinate across difference, and build better futures together.</em></p>
+      </div>
+      <div className="invite-note" style={{ marginTop: 32 }}>
+        <div className="invite-note-icon"><Icon name="info" /></div>
+        <p>We are building in public and moving fast. Founding team profiles, collaborator bios, and origin story are being added as the company takes shape. Follow the build at <a href="join.html">Join the Build</a> or connect with us on <a href="https://www.linkedin.com/company/the-coherence-company/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+      </div>
+    </Section>
+
+    {/* 5.8 Company as Proof */}
     <Section tone="teal">
       <SectionHead
         eyebrow="The company as proof"
@@ -2190,22 +2162,6 @@ const PageAbout = () => (
       </div>
       <div className="manifesto">
         <p>The company is not just the container for the product. <em>It is part of the product's evidence.</em></p>
-      </div>
-    </Section>
-
-    {/* 5.8 Team */}
-    <Section tone="white">
-      <SectionHead
-        eyebrow="Who is behind this"
-        title="People at the intersection of AI,<br/><em>collective intelligence, and coordination.</em>"
-        dek="The Coherence Company is being formed by people working at the intersection of AI, collective intelligence, facilitation, organisational design, community building, systems thinking, events, civic life, and regenerative futures."
-      />
-      <div className="manifesto">
-        <p>The founding story is still being written in public. What is clear is the shared conviction: AI should not only make isolated individuals faster. <em>It should help people think together, coordinate across difference, and build better futures together.</em></p>
-      </div>
-      <div className="invite-note" style={{ marginTop: 32 }}>
-        <div className="invite-note-icon"><Icon name="info" /></div>
-        <p>We are building in public and moving fast. Founding team profiles, collaborator bios, and origin story are being added as the company takes shape. Follow the build at <a href="join.html">Join the Build</a> or connect with us on <a href="https://www.linkedin.com/company/the-coherence-company/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
       </div>
     </Section>
 

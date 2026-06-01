@@ -207,8 +207,8 @@ img { max-width: 100%; display: block; }
 /* ---------- hero ---------- */
 .hero {
   position: relative;
-  min-height: 760px;
-  padding: 80px 0 144px;
+  min-height: 660px;
+  padding: 80px 0 80px;
   background: var(--grad-hero);
   overflow: hidden;
 }
@@ -1223,8 +1223,8 @@ img { max-width: 100%; display: block; }
 /* ---------- Trust bullets ---------- */
 .trust-list {
   list-style: none; padding: 0; margin: 32px 0 0;
-  display: grid; grid-template-columns: repeat(2, 1fr);
-  gap: 14px 32px; position: relative; z-index: 2;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 420px));
+  gap: 14px 48px; position: relative; z-index: 2;
 }
 .trust-list li {
   font-size: 15px; font-weight: 300; color: var(--ink-800);

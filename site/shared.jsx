@@ -167,7 +167,7 @@ const HeroLight = ({ eyebrow, title, sub, primaryCTA, secondaryCTA, meta, calli 
         className="calli in-gradient"
         style={{
           backgroundImage: `url('assets/backgrounds/${calli}')`,
-          width: 940, height: 940, right: -160, top: 20
+          width: 860, height: 860, right: -140, top: 20
         }}
         aria-hidden="true"
       />
