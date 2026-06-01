@@ -26,7 +26,8 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase; color: var(--ink-500);
   margin: 0 0 28px;
 }
-.hero .eyebrow { color: var(--ink-700); }
+.hero .eyebrow,
+.page-hero .eyebrow { color: var(--ink-700); }
 .section { padding: 48px 0; overflow: hidden; }
 .section-tight { padding: 40px 0; overflow: hidden; }
 

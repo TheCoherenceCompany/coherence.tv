@@ -1667,7 +1667,7 @@ const PageJoin = () => (
 
     <Section tone="off" calli={{ file: "calligraphy-30.jpg", cls: "faint v-corner-bl" }}>
       <SectionHead
-        eyebrow="The company we are building"
+        eyebrow="The movement"
         title="A company for <em>AI-supported collective intelligence.</em>"
         dek="We are building a company that uses AI to support human agency, collaborative intelligence, and collective sensemaking — while organising itself through the same principles it offers to others."
       />
