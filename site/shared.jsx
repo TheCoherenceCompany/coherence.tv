@@ -363,8 +363,8 @@ const Footer = () => (
       </div>
       <div className="footer-col">
         <h6>Legal</h6>
-        <a href="#" onClick={e => e.preventDefault()}>Privacy &amp; Consent</a>
-        <a href="#" onClick={e => e.preventDefault()}>Terms</a>
+        <a href="privacy.html">Privacy &amp; Consent</a>
+        <a href="terms.html">Terms of Use</a>
       </div>
     </div>
     <div className="container footer-bottom">
