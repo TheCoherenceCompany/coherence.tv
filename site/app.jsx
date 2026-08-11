@@ -15,6 +15,7 @@ const PAGES = {
   "start":              () => window.PageStart,
   "about":              () => window.PageAbout,
   "coherence-journey":  () => window.PageCoherenceJourney,
+  "closedbeta2026":     () => window.PageClosedBeta,
 };
 
 const App = () => {

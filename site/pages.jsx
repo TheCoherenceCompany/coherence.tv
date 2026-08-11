@@ -2522,8 +2522,146 @@ const PageCoherenceJourney = () => (
   </>
 );
 
+/* ====================================================================
+   CLOSED BETA - invitation to join Coherence Conversations as a guest
+   Base layout: PageEvent (Coherence Conversations product page)
+   Voice per TCC background brief: positive, sentence case, hyphens,
+   American spelling, "we"/"you", no "help", no exclamation marks.
+   ==================================================================== */
+
+/* TODO: replace with the real external booking / application URL
+   (Luma, Calendly, Typeform, etc.) once confirmed. */
+const CLOSED_BETA_BOOKING_URL = "#request";
+
+const PageClosedBeta = () => (
+  <>
+    <HeroLight
+      eyebrow="Closed Beta · By invitation"
+      title='Host a Coherence Conversations <em>event.</em>'
+      sub="Bring your community, network, or event into a guided series of Coherence Conversations. We run it with you, turning scattered voices into connection, shared insight, and momentum for your people. Join the Closed Beta to be one of our first hosts, working closely with our team as the format grows."
+      primaryCTA={{ label: "Request your place", href: CLOSED_BETA_BOOKING_URL }}
+      secondaryCTA={{ label: "Talk to us first", href: "start.html" }}
+      meta={["By invitation", "We run it with you", "Limited places"]}
+      calli="calligraphy-21.jpg"
+    />
+
+    <Section tone="white">
+      <SectionHead
+        eyebrow="Why host"
+        title="Activate the people <em>already in your world.</em>"
+        dek="You hold something valuable: a community, a network, an event, a room full of people with more in common than they realize. A Coherence Conversations event turns that latent potential into connection, insight, and shared momentum."
+      />
+      <CardGrid cols={3} items={[
+        { icon: "users", title: "Activate your community", body: "Your members, guests, or team move from a list of names to a living network of real relationships and shared purpose." },
+        { icon: "link", title: "Connection that lasts", body: "Participants meet the right people through guided conversations, so the value carries on long after the event itself ends." },
+        { icon: "sparkles", title: "Insight across the whole field", body: "Our Coherence Engine synthesizes every conversation into patterns, themes, and shared intelligence you can act on." },
+        { icon: "book-open", title: "Published content from your event", body: "With consent, conversations become finished content, prepared and published through our IRIS pipeline to YouTube, LinkedIn, and beyond." },
+        { icon: "compass", title: "We equip you to run it", body: "Our templates and onboarding program walk you through crafting your questions, theme, and strategy, with our team alongside you from first idea to finished event." },
+        { icon: "pen-tool", title: "A place at the front", body: "As a Closed Beta host, you work directly with our founders and shape the format as it grows." },
+      ]} />
+    </Section>
+
+    <Section tone="ink" calli={{ file: "calligraphy-24.jpg", cls: "on-dark v-edge-right" }}>
+      <SectionHead
+        eyebrow="Why an event"
+        title="Your people already <em>know how to show up.</em>"
+        dek="The hardest part of any collaboration tool is adoption. An event asks nothing of that kind. People arrive with openness, expecting to be welcomed and guided, and a Coherence Conversation meets them there."
+      />
+      <div className="two-col">
+        <div>
+          <p>An event offers a finite, hospitable experience with a beginning, a middle, and an end. The barrier to entry is low, because the structure is designed to welcome people in. They arrive knowing how to take part, and they leave with something in hand.</p>
+        </div>
+        <div>
+          <p>A Coherence Conversation brings your people into presence, relationship, and flow. It carries the warmth of a good gathering into the longer work of building something together, so the value continues after the event ends.</p>
+        </div>
+      </div>
+    </Section>
+
+    <Section tone="off" calli={{ file: "calligraphy-34.jpg", cls: "faint v-corner-br" }}>
+      <SectionHead
+        eyebrow="How it works"
+        title="From your theme to <em>shared insight.</em>"
+        dek="You shape your event using our templates and onboarding program. Your people show up and talk. The synthesis comes back to you."
+      />
+      <div className="flow-steps">
+        <div className="flow-step">
+          <h4>You shape your event</h4>
+          <p>Using our templates and onboarding program, you craft your own questions, theme, and strategy for the conversations, guided by our team at every step.</p>
+        </div>
+        <div className="flow-step">
+          <h4>Your people show up and talk</h4>
+          <p>Each participant joins a guided one-to-one Coherence Conversation. There is nothing to install and nothing to prepare. They bring their work, their questions, and themselves.</p>
+        </div>
+        <div className="flow-step">
+          <h4>You receive the synthesis</h4>
+          <p>Our Coherence Engine turns every conversation into an individual synthesis and a field-level view across your whole event: the patterns, the themes, and the connections worth making.</p>
+        </div>
+      </div>
+    </Section>
+
+    <Section tone="teal" calli={{ file: "calligraphy-11.jpg", cls: "subtle v-wide-top" }}>
+      <SectionHead
+        eyebrow="The Coherence Journey"
+        title="From a single event to <em>a living collaboration.</em>"
+        dek="A Coherence Conversations event is your entry point to the Coherence Journey, the path a community travels from first contact to committed collaboration. Your event opens the first stages, and the same arc can carry your people all the way through."
+      />
+      <JourneyTrack steps={[
+        { name: "Discover", note: "Sensing the field: who is here, what matters, what wants to happen." },
+        { name: "Connect",  note: "Sensing each other: shared purpose, timing, and temperament." },
+        { name: "Converge", note: "From we could to we might: curiosity becomes early experiments.", highlight: true },
+        { name: "Seed",     note: "Preparing the work ahead: agreements, roles, and rhythms take shape." },
+        { name: "Build",    note: "The project lives: dialogue gives way to delivery." },
+      ]} />
+      <div style={{ marginTop: 48, maxWidth: 820, position: "relative", zIndex: 2 }}>
+        <p style={{ marginBottom: 20 }}>A great event creates a moment of connection. The Coherence Journey is built to carry that moment forward, from the first conversation through discovery, convergence, and committed action, so the momentum your event generates becomes something your community can build on.</p>
+        <p style={{ marginBottom: 0 }}>You begin with a single event. Over time, the same people can travel the full arc, each stage supported by Coherence Conversations, synthesis, and the relationships your event set in motion.</p>
+      </div>
+    </Section>
+
+    <Section tone="white">
+      <SectionHead
+        eyebrow="In the field now"
+        title="See the format <em>at work.</em>"
+        dek="Our first Closed Beta events show how a Coherence Conversations series adapts to a theme. Each is a live example of what we can shape for your community."
+      />
+      <CardGrid cols={2} items={[
+        { icon: "brain", title: "Coherence AI Synthesis · hosted by Christine",
+          body: "Christine sits down one-to-one with builders and practitioners at the frontier of AI-powered synthesis and sense-making, exploring how each guest approaches synthesis in their own work and where they see it heading. The themes range from personal research tools to whole-ecosystem mapping: a living map of a fast-moving field." },
+        { icon: "git-branch", title: "Audax OS · hosted by Victor",
+          body: "Conversations exploring the operating system for organizations that are distributed, remote-first, and fractional, where people work from their genius zone and AI agents are treated as real team members. A cross-section of people sensing the future of work as the framework takes shape in public." },
+      ]} />
+    </Section>
+
+    <Section tone="ink" calli={{ file: "calligraphy-29.jpg", cls: "on-dark v-corner-br" }}>
+      <SectionHead
+        eyebrow="Privacy, consent, and trust"
+        title="Consent is where <em>every conversation starts.</em>"
+        dek="Your participants' trust is yours to protect, and ours. Conversations are recorded and may be published only with clear consent, and every participant stays in control of what is shared."
+      />
+      <ul className="trust-list">
+        <li>Consent confirmed at the start of every conversation</li>
+        <li>Participants decide what is published, and where</li>
+        <li>Secure storage and clear permissions</li>
+        <li>Transparent use of AI throughout</li>
+        <li>Human hosts and human oversight</li>
+        <li>Synthesis that respects the person</li>
+      </ul>
+    </Section>
+
+    <CTABand
+      calli={{ file: "calligraphy-33.jpg", cls: "faint v-corner-bl" }}
+      eyebrow="Closed Beta · Limited places"
+      title="Ready to host <em>your first conversation?</em>"
+      body="If you hold a community, network, or event where the right conversations matter, request your place in the Closed Beta. We will be in touch to shape an event around your people and your theme."
+      cta={{ label: "Request your place", href: CLOSED_BETA_BOOKING_URL }}
+      tone="sand"
+    />
+  </>
+);
+
 Object.assign(window, {
   PageHome, PageVision, PageConversations, PageWhoFor,
   PageWhoForEvents, PageWhoForCompanies, PageWhoForNetworks, PageWhoForCivic,
   PageWhatWeDo, PageEvent, PageJoin, PageStart, PageAbout, PageCoherenceJourney,
+  PageClosedBeta,
 });
