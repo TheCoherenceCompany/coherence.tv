@@ -9,10 +9,10 @@ const PageHome = () => (
     {/* 0. Closed Beta announcement bar (animated marquee) */}
     <style>{`
       .cb-marquee { display:block; overflow:hidden; text-decoration:none;
-        background:var(--teal-900); color:#fff; padding:11px 0; }
+        background:#0E8080; color:#fff; padding:11px 0; }
       .cb-marquee-track { display:inline-flex; flex-wrap:nowrap; width:max-content;
         white-space:nowrap; will-change:transform;
-        animation:cb-marquee-scroll 40s linear infinite; }
+        animation:cb-marquee-scroll 50s linear infinite; }
       .cb-marquee:hover .cb-marquee-track { animation-play-state:paused; }
       .cb-mq-group { display:inline-flex; flex-wrap:nowrap; }
       .cb-mq-item { display:inline-flex; align-items:center; gap:8px; padding:0 22px;
