@@ -6,6 +6,25 @@
    ==================================================================== */
 const PageHome = () => (
   <>
+    {/* 0. Closed Beta announcement bar */}
+    <a
+      href="closedbeta2026.html"
+      style={{
+        display: "flex", alignItems: "center", justifyContent: "center",
+        gap: 14, padding: "11px 24px", background: "var(--teal-900)",
+        color: "#fff", fontSize: 14, fontWeight: 400, textDecoration: "none",
+        textAlign: "center", flexWrap: "wrap", lineHeight: 1.4,
+      }}
+    >
+      <span>
+        <strong style={{ fontWeight: 600 }}>Now in Closed Beta.</strong>{" "}
+        Host a Coherence Conversations event for your community.
+      </span>
+      <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 500, whiteSpace: "nowrap", borderBottom: "1px solid rgba(255,255,255,0.5)", paddingBottom: 1 }}>
+        Learn more <Icon name="arrow-right" />
+      </span>
+    </a>
+
     {/* 1.1 Hero */}
     <HeroLight
       eyebrow="The Coherence Company"
@@ -2529,9 +2548,9 @@ const PageCoherenceJourney = () => (
    American spelling, "we"/"you", no "help", no exclamation marks.
    ==================================================================== */
 
-/* TODO: replace with the real external booking / application URL
-   (Luma, Calendly, Typeform, etc.) once confirmed. */
-const CLOSED_BETA_BOOKING_URL = "#request";
+/* Closed Beta CTA target. Currently an email to Christine; swap for a
+   booking / application URL (Luma, Calendly, Typeform, etc.) when ready. */
+const CLOSED_BETA_BOOKING_URL = "mailto:christine@coherence.tv?subject=Closed%20Beta%20-%20Request%20to%20host%20a%20Coherence%20Conversations%20event";
 
 const PageClosedBeta = () => (
   <>

@@ -352,6 +352,7 @@ const Footer = () => (
         <a href="about.html">About</a>
         <a href="vision.html">Vision</a>
         <a href="conversations.html">Coherence Conversations</a>
+        <a href="closedbeta2026.html">Closed Beta</a>
         <a href="who-for.html">Who For</a>
         <a href="join.html">Join Us</a>
       </div>
