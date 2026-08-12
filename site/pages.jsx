@@ -6,23 +6,41 @@
    ==================================================================== */
 const PageHome = () => (
   <>
-    {/* 0. Closed Beta announcement bar */}
+    {/* 0. Closed Beta announcement bar (animated marquee) */}
+    <style>{`
+      .cb-marquee { display:block; overflow:hidden; text-decoration:none;
+        background:var(--teal-900); color:#fff; padding:11px 0; }
+      .cb-marquee-track { display:inline-flex; flex-wrap:nowrap; width:max-content;
+        white-space:nowrap; will-change:transform;
+        animation:cb-marquee-scroll 40s linear infinite; }
+      .cb-marquee:hover .cb-marquee-track { animation-play-state:paused; }
+      .cb-mq-group { display:inline-flex; flex-wrap:nowrap; }
+      .cb-mq-item { display:inline-flex; align-items:center; gap:8px; padding:0 22px;
+        font-size:14px; font-weight:400; line-height:1.4; }
+      .cb-mq-item strong { font-weight:600; }
+      .cb-mq-sep { width:5px; height:5px; border-radius:50%;
+        background:rgba(255,255,255,0.4); display:inline-block; flex:0 0 auto; }
+      @keyframes cb-marquee-scroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+      @media (prefers-reduced-motion: reduce) { .cb-marquee-track { animation:none; } }
+    `}</style>
     <a
       href="closedbeta2026.html"
-      style={{
-        display: "flex", alignItems: "center", justifyContent: "center",
-        gap: 14, padding: "11px 24px", background: "var(--teal-900)",
-        color: "#fff", fontSize: 14, fontWeight: 400, textDecoration: "none",
-        textAlign: "center", flexWrap: "wrap", lineHeight: 1.4,
-      }}
+      className="cb-marquee"
+      aria-label="Now in Closed Beta. Host a Coherence Conversations event for your community. Learn more."
     >
-      <span>
-        <strong style={{ fontWeight: 600 }}>Now in Closed Beta.</strong>{" "}
-        Host a Coherence Conversations event for your community.
-      </span>
-      <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 500, whiteSpace: "nowrap", borderBottom: "1px solid rgba(255,255,255,0.5)", paddingBottom: 1 }}>
-        Learn more <Icon name="arrow-right" />
-      </span>
+      <div className="cb-marquee-track" aria-hidden="true">
+        {Array.from({ length: 2 }).map((_, g) => (
+          <div key={g} className="cb-mq-group">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <span key={i} className="cb-mq-item">
+                <span><strong>Now in Closed Beta.</strong> Host a Coherence Conversations event for your community. Learn more</span>
+                <Icon name="arrow-right" />
+                <span className="cb-mq-sep"></span>
+              </span>
+            ))}
+          </div>
+        ))}
+      </div>
     </a>
 
     {/* 1.1 Hero */}
