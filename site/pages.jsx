@@ -73,7 +73,7 @@ const PageHome = () => (
             </div>
             <ul>
               <li>Write and code faster</li>
-              <li>Analyse and summarise at scale</li>
+              <li>Analyze and summarize at scale</li>
               <li>Amplify individual output</li>
               <li>Serve one person at a time</li>
             </ul>
@@ -108,7 +108,7 @@ const PageHome = () => (
       <div className="two-col">
         <div>
           <p>Connection does not automatically become understanding. Understanding does not automatically become trust. Trust does not automatically become action.</p>
-          <p>Events bring valuable people into the same room, but still leave too many important conversations to chance. Organisations contain deep knowledge, but often hear only the loudest, safest, or most senior voices.</p>
+          <p>Events bring valuable people into the same room, but still leave too many important conversations to chance. Organizations contain deep knowledge, but often hear only the loudest, safest, or most senior voices.</p>
         </div>
         <div>
           <p>Networks hold enormous relational capital, but many become directories, newsletters, or occasional gatherings. Civic ecosystems collect concern, but struggle to turn it into shared priorities, accountability, and local action.</p>
@@ -126,7 +126,7 @@ const PageHome = () => (
       />
       <CardGrid cols={3} items={[
         { num: "01", title: "Coherence Conversations",
-          body: "Our first product. Guided one-to-one dialogue becomes sensemaking, matchmaking, and practical next steps — for events, organisations, networks, and civic ecosystems.",
+          body: "Our first product. Guided one-to-one dialogue becomes sensemaking, matchmaking, and practical next steps — for events, organizations, networks, and civic ecosystems.",
           link: { label: "See Coherence Conversations", href: "conversations.html" } },
         { num: "02", title: "AI Guides",
           body: "AI Guides support people and groups through the work of sensemaking and coordination — turning many conversations into useful patterns, matches, insights, commitments, and next steps." },
@@ -167,20 +167,59 @@ const PageHome = () => (
         title="Built for people who<br/><em>bring others together.</em>"
         dek="Coherence Conversations is for people responsible for helping groups become more than a list of names, a room full of attendees, an org chart, or a mailing list. The first four markets are different, but the pattern is the same: valuable people are already present. Their insight, relationships, and capacity to act are under-activated."
       />
-      <CardGrid cols={4} items={[
-        { icon: "calendar", title: "Purpose-driven event organisers",
-          body: "From scheduled programme to activated human network. For conferences, summits, retreats, and high-intent events where the real value is who meets whom and what becomes possible afterwards.",
-          link: { label: "Read more", href: "who-for-events.html" } },
-        { icon: "building-2", title: "Companies & organisations",
-          body: "From employee voice to organisational intelligence. For companies, HR leaders, and transformation teams that need to hear more of the organisation's real intelligence.",
-          link: { label: "Read more", href: "who-for-companies.html" } },
-        { icon: "users", title: "Networks & professional communities",
-          body: "From member list to living network. For associations, founder communities, alumni networks, and curated communities that already gather valuable people but struggle to activate them.",
-          link: { label: "Read more", href: "who-for-networks.html" } },
-        { icon: "globe", title: "Civic & civil society ecosystems",
-          body: "From scattered concern to civic action. For municipalities, NGOs, foundations, and civic movements trying to make participation more useful, trusted, and action-oriented.",
-          link: { label: "Read more", href: "who-for-civic.html" } },
-      ]} />
+      <PersonaSelector
+        prompt="Which of these is you?"
+        personas={[
+          {
+            icon: "calendar", tab: "Events",
+            selfId: "You run gatherings where who-meets-whom matters as much as the content.",
+            from: "Scheduled program", to: "activated human network",
+            desc: "For conferences, summits, retreats, and high-intent events where the real value is who meets whom and what becomes possible afterwards.",
+            outcomes: [
+              "Stronger pre-event engagement — a conversation worth having, not another form",
+              "Better matching built from real context, not job titles and headshots",
+              "Richer audience intelligence, in time to shape the program",
+            ],
+            link: { label: "Explore Coherence for Events", href: "who-for-events.html" },
+          },
+          {
+            icon: "building-2", tab: "Organizations",
+            selfId: "You lead teams that need to coordinate across complexity.",
+            from: "Employee voice", to: "organizational intelligence",
+            desc: "For companies, HR leaders, and transformation teams that need to hear more of the organization's real intelligence — safely and usefully.",
+            outcomes: [
+              "Better offsites — people arrive with shared context and named tensions",
+              "Faster onboarding through context-rich guided conversations",
+              "Clearer shared priorities before the strategy session begins",
+            ],
+            link: { label: "Explore Coherence for Organizations", href: "who-for-companies.html" },
+          },
+          {
+            icon: "users", tab: "Ecosystems",
+            selfId: "You steward an ecosystem whose value depends on member-to-member relevance.",
+            from: "Member list", to: "living ecosystem",
+            desc: "For associations, founder communities, alumni networks, and curated communities that already gather valuable people but struggle to activate the intelligence between them.",
+            outcomes: [
+              "More relevant introductions built from real interests and offers",
+              "A live view of member needs, beyond usage data or annual surveys",
+              "Collaboration opportunities made visible — even the ones nobody knew were possible",
+            ],
+            link: { label: "Explore Coherence for Ecosystems", href: "who-for-networks.html" },
+          },
+          {
+            icon: "globe", tab: "Civic",
+            selfId: "You convene public-good work across difference.",
+            from: "Scattered concern", to: "civic action",
+            desc: "For municipalities, NGOs, foundations, and civic movements trying to turn participation into structured understanding, visible accountability, and practical local action.",
+            outcomes: [
+              "Inclusive, structured participation that doesn't privilege the loudest voices",
+              "Shared concerns made visible without flattening difference",
+              "Continuity between meetings, reducing the fade after convenings",
+            ],
+            link: { label: "Explore Coherence for Civic Ecosystems", href: "who-for-civic.html" },
+          },
+        ]}
+      />
       <div style={{ marginTop: 40, textAlign: "center" }}>
         <a className="btn btn-secondary" href="who-for.html">Explore Who It's For <Icon name="arrow-right" /></a>
       </div>
@@ -195,7 +234,7 @@ const PageHome = () => (
       />
       <CardGrid cols={3} items={[
         { num: "01", title: "Horizon 1 · Coherence Conversations",
-          body: "Guided dialogue becomes sensemaking, matchmaking, and practical next steps for events, organisations, networks, and civic ecosystems." },
+          body: "Guided dialogue becomes sensemaking, matchmaking, and practical next steps for events, organizations, networks, and civic ecosystems." },
         { num: "02", title: "Horizon 2 · AI Guides for the full journey",
           body: "AI Guides support discovery, connection, convergence, seeding, building, and follow-through across many kinds of collaboration." },
         { num: "03", title: "Horizon 3 · A wider coherence ecosystem",
@@ -220,7 +259,7 @@ const PageHome = () => (
       calli={{ file: "calligraphy-22.jpg", cls: "faint v-corner-br" }}
       eyebrow="Start a conversation"
       title="What are you trying<br/><em>to coordinate?</em>"
-      body="Are you building an event, company gathering, transformation programme, member network, civic process, community, partnership, or ecosystem where the right conversations matter? Start with a conversation. That seems appropriate."
+      body="Are you building an event, company gathering, transformation program, member network, civic process, community, partnership, or ecosystem where the right conversations matter? Start with a conversation. That seems appropriate."
       cta={{ label: "Start a Conversation", href: "start.html" }}
       tone="sand"
     />
@@ -236,7 +275,7 @@ const PageVision = () => (
     <HeroLight
       eyebrow="Vision"
       title='Humans and AI,<br/><em>wiser together.</em>'
-      sub="The Coherence Company exists to help people, organisations, communities, and AI Guides become more capable together. The next chapter of AI should not only make individuals faster — it should help groups listen better, make sense of complexity, build trust, and turn good intentions into action."
+      sub="The Coherence Company exists to help people, organizations, communities, and AI Guides become more capable together. The next chapter of AI should not only make individuals faster — it should help groups listen better, make sense of complexity, build trust, and turn good intentions into action."
       primaryCTA={{ label: "Explore Coherence Conversations", href: "coherenceconversations.html" }}
       secondaryCTA={{ label: "Join the Build", href: "join.html" }}
       meta={["Collaboration infrastructure for the AI age", "Building in public", "Remote · global"]}
@@ -257,11 +296,11 @@ const PageVision = () => (
         </div>
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--teal-800)" }}>Wisdom</h4>
-          <p>Context, judgement, care, timing, responsibility, and the ability to act well inside complexity. Not just knowing more — relating better, deciding better, and coordinating action without losing sight of what matters.</p>
+          <p>Context, judgment, care, timing, responsibility, and the ability to act well inside complexity. Not just knowing more — relating better, deciding better, and coordinating action without losing sight of what matters.</p>
         </div>
       </div>
       <div className="manifesto">
-        <p>We are not building merely better AI tools. We are defining a different model for how humans and AI collaborate at scale — one centred on trust, learning, empathy, and coordination rather than surveillance, automation, and centralised control. <em>Humans and AI, wiser together.</em></p>
+        <p>We are not building merely better AI tools. We are defining a different model for how humans and AI collaborate at scale — one centered on trust, learning, empathy, and coordination rather than surveillance, automation, and centralized control. <em>Humans and AI, wiser together.</em></p>
       </div>
     </Section>
 
@@ -275,7 +314,7 @@ const PageVision = () => (
       <div className="two-col">
         <div>
           <p>Communication, connection, and computation have scaled — but our ability to coordinate human effort has not kept pace. The result is fragmentation at the very moment when working together well has become essential.</p>
-          <p>People can meet, but not know how to build trust. Teams can talk, but lose shared context. Networks can grow, but fail to become useful. Civic groups can gather concern, but struggle to create action. Organisations can collect feedback, but still fail to hear themselves.</p>
+          <p>People can meet, but not know how to build trust. Teams can talk, but lose shared context. Networks can grow, but fail to become useful. Civic groups can gather concern, but struggle to create action. Organizations can collect feedback, but still fail to hear themselves.</p>
         </div>
         <div>
           <p>The missing layer is not another communication tool.</p>
@@ -289,7 +328,7 @@ const PageVision = () => (
       <SectionHead
         eyebrow="Collaboration infrastructure"
         title="AI should help groups <em>think together.</em>"
-        dek="The first wave of AI has largely been aimed at the individual: write faster, code faster, summarise faster, produce faster. Useful, certainly. But the larger opportunity is collective. AI Guides can help groups do what no individual tool can."
+        dek="The first wave of AI has largely been aimed at the individual: write faster, code faster, summarize faster, produce faster. Useful, certainly. But the larger opportunity is collective. AI Guides can help groups do what no individual tool can."
       />
       <ul className="trust-list">
         <li>Remember what has already been said</li>
@@ -300,7 +339,7 @@ const PageVision = () => (
         <li>Support commitment and follow-through</li>
       </ul>
       <div className="manifesto">
-        <p>This is AI as collaboration infrastructure. Not a control tower. Not a surveillance layer. Not a replacement for human judgement — <em>a support layer for collective intelligence.</em></p>
+        <p>This is AI as collaboration infrastructure. Not a control tower. Not a surveillance layer. Not a replacement for human judgment — <em>a support layer for collective intelligence.</em></p>
       </div>
     </Section>
 
@@ -364,12 +403,12 @@ const PageVision = () => (
       <SectionHead
         eyebrow="A public field for wiser AI"
         title="We cannot build <em>this alone.</em>"
-        dek="The future of AI is not already decided. Our work sits inside a wider field of builders, researchers, organisers, artists, technologists, facilitators, civic practitioners, funders, and communities asking what AI could become if it were designed for wisdom rather than domination."
+        dek="The future of AI is not already decided. Our work sits inside a wider field of builders, researchers, organizers, artists, technologists, facilitators, civic practitioners, funders, and communities asking what AI could become if it were designed for wisdom rather than domination."
       />
       <div className="two-col">
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--ink-500)" }}>One path</h4>
-          <p>Surveillance, extraction, manipulation, and centralised control. The default trajectory if no one builds an alternative.</p>
+          <p>Surveillance, extraction, manipulation, and centralized control. The default trajectory if no one builds an alternative.</p>
         </div>
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--teal-800)" }}>Another path</h4>
@@ -390,7 +429,7 @@ const PageVision = () => (
       />
       <CardGrid cols={3} items={[
         { num: "01", title: "Horizon 1 · Coherence Conversations",
-          body: "Our first product. Guided dialogue becomes sensemaking, matchmaking, and practical next steps for events, organisations, networks, and civic ecosystems. The wedge: concrete, testable, useful now." },
+          body: "Our first product. Guided dialogue becomes sensemaking, matchmaking, and practical next steps for events, organizations, networks, and civic ecosystems. The wedge: concrete, testable, useful now." },
         { num: "02", title: "Horizon 2 · AI Guides for the full journey",
           body: "AI Guides help groups move through discovery, connection, convergence, seeding, building, and follow-through — expanding Coherence from a conversation product into a repeatable collaboration layer." },
         { num: "03", title: "Horizon 3 · A wider coherence ecosystem",
@@ -401,12 +440,12 @@ const PageVision = () => (
     {/* 2.11 What we will not become */}
     <Section tone="white">
       <SectionHead
-        eyebrow="Clear centre, open edges"
+        eyebrow="Clear center, open edges"
         title="What we <em>will not become.</em>"
         dek="Ambition needs boundaries. We are building infrastructure for coherence — clear purpose, open participation, strong trust design, practical products, and deep respect for human agency."
       />
       <ul className="trust-list">
-        <li>Not AI to replace human judgement</li>
+        <li>Not AI to replace human judgment</li>
         <li>Not surveillance infrastructure</li>
         <li>Not a content company competing with the facilitators and partners we serve</li>
         <li>Not another platform that captures relationships and calls it community</li>
@@ -423,7 +462,7 @@ const PageVision = () => (
       <SectionHead
         eyebrow="Invitation"
         title="Help build <em>what comes next.</em>"
-        dek="The future of AI will be shaped by the people willing to build alternatives. We are looking for product builders, engineers, designers, facilitators, organisers, investors, researchers, writers, civic practitioners, community builders, and anyone who has seen the cost of poor coordination from the inside. The door is a conversation. That feels right."
+        dek="The future of AI will be shaped by the people willing to build alternatives. We are looking for product builders, engineers, designers, facilitators, organizers, investors, researchers, writers, civic practitioners, community builders, and anyone who has seen the cost of poor coordination from the inside. The door is a conversation. That feels right."
       />
       <div style={{ marginTop: 40 }}>
         <a className="btn btn-accent btn-lg" href="join.html">Join the Build <Icon name="arrow-right" /></a>
@@ -474,7 +513,7 @@ const PageConversations = () => (
         { icon: "sparkles", title: "Needs and offers",
           body: "A clearer map of what people are looking for and what they can contribute." },
         { icon: "compass", title: "Demand intelligence",
-          body: "Insight into what the group actually wants or needs before a gathering or programme begins." },
+          body: "Insight into what the group actually wants or needs before a gathering or program begins." },
         { icon: "fast-forward", title: "Follow-up opportunities",
           body: "A view of possible collaborations, commitments, next steps, and where further facilitation may help." },
       ]} />
@@ -490,7 +529,7 @@ const PageConversations = () => (
       <FlowSteps steps={[
         { name: "Invite",       note: "People are invited into guided one-to-one dialogue." },
         { name: "Converse",     note: "Structured prompts surface intent, needs, offers, and questions." },
-        { name: "Synthesise",   note: "AI Guides reveal themes, patterns, and matches." },
+        { name: "Synthesize",   note: "AI Guides reveal themes, patterns, and matches." },
         { name: "Profile",      note: "Richer profiles and reflections for each participant." },
         { name: "Match",        note: "Relevant introductions, not random proximity." },
         { name: "Act",          note: "Practical next steps, commitments, and follow-through." },
@@ -527,7 +566,7 @@ const PageConversations = () => (
       />
       <div className="two-col">
         <div>
-          <p>Events bring valuable people into a room, but leave too many important encounters to chance. Organisations ask for feedback, but rarely create enough trust for people to speak honestly.</p>
+          <p>Events bring valuable people into a room, but leave too many important encounters to chance. Organizations ask for feedback, but rarely create enough trust for people to speak honestly.</p>
           <p>Networks gather members, but do not always know what members care about or who should meet whom. Civic processes invite participation, but struggle to turn scattered concern into shared priorities and action.</p>
         </div>
         <div>
@@ -550,7 +589,7 @@ const PageConversations = () => (
         { num: "02", title: "More intentional than networking",
           body: "Networking depends on luck, status, or whoever stands near the coffee. Coherence Conversations helps people find relevance before the room becomes noisy." },
         { num: "03", title: "More collective than meeting intelligence",
-          body: "Most meeting tools summarise individual calls. Coherence Conversations reveals patterns across many conversations — local dialogue becomes group-level insight." },
+          body: "Most meeting tools summarize individual calls. Coherence Conversations reveals patterns across many conversations — local dialogue becomes group-level insight." },
         { num: "04", title: "More action-oriented than discussion",
           body: "Many communities can talk forever without moving. Coherence Conversations surfaces next steps, possible matches, and commitments." },
         { num: "05", title: "More trustworthy than extraction",
@@ -562,7 +601,7 @@ const PageConversations = () => (
     <Section tone="teal">
       <SectionHead
         eyebrow="AI Guides"
-        title="AI Guides are not the centre. <em>People are.</em>"
+        title="AI Guides are not the center. <em>People are.</em>"
         dek="The Guides support the human process — memory, synthesis, pattern recognition, matchmaking, and follow-through. They help participants prepare and reflect, and help hosts see what is emerging across many conversations without flattening everyone into a simplistic survey result."
       />
       <ul className="trust-list">
@@ -590,14 +629,14 @@ const PageConversations = () => (
       />
       <CardGrid cols={2} items={[
         { icon: "calendar", title: "Events",
-          body: "Conferences, summits, retreats, investor gatherings, and ecosystem convenings. Participants arrive with clearer intentions; organisers understand what the audience cares about before the room opens.",
-          link: { label: "For event organisers", href: "who-for-events.html" } },
-        { icon: "building-2", title: "Organisations",
-          body: "Culture transformation, AI adoption, leadership development, and employee voice. Surfaces real intelligence across the organisation — handled with the care that trust-sensitive work requires.",
+          body: "Conferences, summits, retreats, investor gatherings, and ecosystem convenings. Participants arrive with clearer intentions; organizers understand what the audience cares about before the room opens.",
+          link: { label: "For event organizers", href: "who-for-events.html" } },
+        { icon: "building-2", title: "Organizations",
+          body: "Culture transformation, AI adoption, leadership development, and employee voice. Surfaces real intelligence across the organization — handled with the care that trust-sensitive work requires.",
           link: { label: "For companies", href: "who-for-companies.html" } },
-        { icon: "users", title: "Networks & communities",
+        { icon: "users", title: "Ecosystems & communities",
           body: "Associations, founder communities, investor circles, and alumni networks. Helps members feel heard, discover one another, and move from passive membership into meaningful participation.",
-          link: { label: "For networks", href: "who-for-networks.html" } },
+          link: { label: "For ecosystems", href: "who-for-networks.html" } },
         { icon: "globe", title: "Civic & civil society",
           body: "Municipalities, coalitions, NGOs, and foundations. Helps communities listen to themselves and act — making participation more continuous and useful between elections.",
           link: { label: "For civic ecosystems", href: "who-for-civic.html" } },
@@ -645,7 +684,7 @@ const PageConversations = () => (
       <SectionHead
         eyebrow="Start with a pilot"
         title="How could this <em>help your group?</em>"
-        dek="Coherence Conversations is best tested where the need for meaningful connection is already visible — a purpose-driven event, a leadership retreat, an AI adoption programme, a member network, a civic listening process, or a coalition trying to move from concern to action."
+        dek="Coherence Conversations is best tested where the need for meaningful connection is already visible — a purpose-driven event, a leadership retreat, an AI adoption program, a member network, a civic listening process, or a coalition trying to move from concern to action."
       />
       <FitCompare
         strong={[
@@ -669,7 +708,7 @@ const PageConversations = () => (
       calli={{ file: "calligraphy-24.jpg", cls: "faint v-corner-br" }}
       eyebrow="Start a conversation"
       title="What are you trying <em>to coordinate?</em>"
-      body="Tell us about your event, organisation, network, or civic process — and we'll suggest the most relevant next step."
+      body="Tell us about your event, organization, network, or civic process — and we'll suggest the most relevant next step."
       cta={{ label: "Start a Conversation", href: "start.html" }}
       tone="sand"
     />
@@ -688,7 +727,7 @@ const PageWhoFor = () => (
       sub="Coherence Conversations helps people who bring others together turn dialogue into shared intelligence, relevant connections, and coordinated action. The contexts vary — an event, a company, a member network, a civic process — but the pattern is often the same."
       primaryCTA={{ label: "Find Your Context", href: "#find-context" }}
       secondaryCTA={{ label: "Start a Conversation", href: "start.html" }}
-      meta={["Events · Organisations · Networks · Civic"]}
+      meta={["Events · Organizations · Ecosystems · Civic"]}
       calli="calligraphy-25.jpg"
     />
 
@@ -719,15 +758,15 @@ const PageWhoFor = () => (
         dek="Each one has a clear coordination gap. Each one already gathers people with shared context or shared purpose. Each one needs better sensemaking, matchmaking, and follow-through."
       />
       <CardGrid cols={2} items={[
-        { icon: "calendar", title: "Purpose-driven event organisers",
-          body: "From scheduled programme to activated human network. For conferences, summits, retreats, investor gatherings, and high-intent events where the real value is who meets whom and what becomes possible — before the room even opens.",
+        { icon: "calendar", title: "Purpose-driven event organizers",
+          body: "From scheduled program to activated human network. For conferences, summits, retreats, investor gatherings, and high-intent events where the real value is who meets whom and what becomes possible — before the room even opens.",
           link: { label: "Explore Coherence for Events", href: "who-for-events.html" } },
-        { icon: "building-2", title: "Companies and organisational transformation",
-          body: "From employee voice to organisational intelligence. For companies, HR leaders, and transformation teams that need to hear more of the organisation's real intelligence — safely and usefully.",
-          link: { label: "Explore Coherence for Organisations", href: "who-for-companies.html" } },
-        { icon: "users", title: "Networks and professional communities",
-          body: "From member list to living network. For associations, founder communities, alumni networks, and curated communities that already gather valuable people but struggle to activate the intelligence between them.",
-          link: { label: "Explore Coherence for Networks", href: "who-for-networks.html" } },
+        { icon: "building-2", title: "Companies and organizational transformation",
+          body: "From employee voice to organizational intelligence. For companies, HR leaders, and transformation teams that need to hear more of the organization's real intelligence — safely and usefully.",
+          link: { label: "Explore Coherence for Organizations", href: "who-for-companies.html" } },
+        { icon: "users", title: "Ecosystems and professional communities",
+          body: "From member list to living ecosystem. For associations, founder communities, alumni networks, and curated communities that already gather valuable people but struggle to activate the intelligence between them.",
+          link: { label: "Explore Coherence for Ecosystems", href: "who-for-networks.html" } },
         { icon: "globe", title: "Civic and civil society ecosystems",
           body: "From scattered concern to civic action. For municipalities, NGOs, foundations, and civic movements trying to turn participation into structured understanding, visible accountability, and practical local action.",
           link: { label: "Explore Coherence for Civic Ecosystems", href: "who-for-civic.html" } },
@@ -739,7 +778,7 @@ const PageWhoFor = () => (
       <SectionHead
         eyebrow="The Coherence Journey"
         title="Different contexts, <em>one shared movement.</em>"
-        dek="Events, organisations, networks, and civic ecosystems are different worlds. But the movement they need is strikingly similar."
+        dek="Events, organizations, networks, and civic ecosystems are different worlds. But the movement they need is strikingly similar."
       />
       <JourneyTrack steps={[
         { name: "Discover", note: "Who is here? What matters? What is alive in this field?" },
@@ -762,16 +801,16 @@ const PageWhoFor = () => (
       />
       <div className="routing-list">
         <a className="routing-card" href="who-for-events.html">
-          <span className="routing-q">You are organising a gathering — a conference, summit, retreat, or high-intent event — and need participants to arrive prepared, meet more intelligently, and leave with relationships that continue.</span>
-          <span className="routing-a">Purpose-driven event organisers <Icon name="arrow-right" /></span>
+          <span className="routing-q">You are organizing a gathering — a conference, summit, retreat, or high-intent event — and need participants to arrive prepared, meet more intelligently, and leave with relationships that continue.</span>
+          <span className="routing-a">Purpose-driven event organizers <Icon name="arrow-right" /></span>
         </a>
         <a className="routing-card" href="who-for-companies.html">
-          <span className="routing-q">You are leading change inside an organisation — culture, transformation, AI adoption, leadership — and need to hear more of the organisation's real intelligence, safely and usefully.</span>
-          <span className="routing-a">Companies and organisational transformation <Icon name="arrow-right" /></span>
+          <span className="routing-q">You are leading change inside an organization — culture, transformation, AI adoption, leadership — and need to hear more of the organization's real intelligence, safely and usefully.</span>
+          <span className="routing-a">Companies and organizational transformation <Icon name="arrow-right" /></span>
         </a>
         <a className="routing-card" href="who-for-networks.html">
-          <span className="routing-q">You steward a network or community with members, goodwill, and shared purpose — but engagement is uneven, and members are not finding one another or acting together.</span>
-          <span className="routing-a">Networks and professional communities <Icon name="arrow-right" /></span>
+          <span className="routing-q">You steward an ecosystem or community with members, goodwill, and shared purpose — but engagement is uneven, and members are not finding one another or acting together.</span>
+          <span className="routing-a">Ecosystems and professional communities <Icon name="arrow-right" /></span>
         </a>
         <a className="routing-card" href="who-for-civic.html">
           <span className="routing-q">You are part of a municipality, civic coalition, foundation, NGO, or community movement that needs better listening, accountability, participation, and local action.</span>
@@ -809,7 +848,7 @@ const PageWhoFor = () => (
       />
       <FitCompare
         strong={[
-          "A clear host, steward, organiser, or sponsor",
+          "A clear host, steward, organizer, or sponsor",
           "A defined participant group with enough shared context",
           "Enough trust to invite meaningful conversation",
           "A reason for people to connect now",
@@ -842,7 +881,7 @@ const PageWhoFor = () => (
 );
 
 /* ====================================================================
-   2A. WHO FOR · Event Organisers
+   2A. WHO FOR · Event Organizers
    ==================================================================== */
 const SegmentHero = ({ eyebrow, title, sub, primaryCTA, calli = "calligraphy-26.jpg" }) => (
   <section className="page-hero">
@@ -866,7 +905,7 @@ const PageWhoForEvents = () => (
   <>
     <SegmentHero
       calli="calligraphy-26.jpg"
-      eyebrow="Segment 2A · Event Organisers"
+      eyebrow="Segment 2A · Event Organizers"
       title="Activate your participant network <em>before anyone enters the room.</em>"
       sub="For conferences, summits, retreats, and gatherings where the real value is not only content, but who meets whom and what becomes possible afterwards."
       primaryCTA={{ label: "Start a Pilot", href: "start.html" }}
@@ -895,7 +934,7 @@ const PageWhoForEvents = () => (
         { num: "02", title: "Generic participant profiles", body: "Short bios and job titles reveal almost nothing about what participants actually need, offer, or want to explore. Nobody fills in another form carefully." },
         { num: "03", title: "Missed high-value connections", body: "For large events, the probability of finding the right person becomes lottery-ticket level. That is a structural failure, not a UX inconvenience." },
         { num: "04", title: "Unsure who they should meet", body: "Participants scan a list of names with no way to judge relevance, and default to whoever is easiest to reach or already known." },
-        { num: "05", title: "No insight into participant interests", body: "Organisers walk into the event knowing less about their audience than a short structured conversation round would reveal." },
+        { num: "05", title: "No insight into participant interests", body: "Organizers walk into the event knowing less about their audience than a short structured conversation round would reveal." },
         { num: "06", title: "Dead or transactional networking apps", body: "Most event networking tools are either unused or reduce connection to a badge-scan — without the context that makes an introduction worth having." },
       ]} />
     </Section>
@@ -908,20 +947,20 @@ const PageWhoForEvents = () => (
       />
       <div className="flow-steps">
         <div className="flow-step"><h4>Guided conversations</h4><p>Participants receive guided prompts — not another form to fill in, but a conversation worth having. They surface intent, context, expertise, and what they most hope the gathering makes possible.</p></div>
-        <div className="flow-step"><h4>Synthesis & matching</h4><p>AI-supported synthesis turns many individual conversations into patterns: shared themes, relevant matches, offers, needs, and collective intelligence the organiser can actually use.</p></div>
-        <div className="flow-step"><h4>Insight to organisers</h4><p>Organisers receive a clear picture of the field before the doors open — what participants care about, who should meet whom, and where the most generative moments might happen.</p></div>
+        <div className="flow-step"><h4>Synthesis & matching</h4><p>AI-supported synthesis turns many individual conversations into patterns: shared themes, relevant matches, offers, needs, and collective intelligence the organizer can actually use.</p></div>
+        <div className="flow-step"><h4>Insight to organizers</h4><p>Organizers receive a clear picture of the field before the doors open — what participants care about, who should meet whom, and where the most generative moments might happen.</p></div>
       </div>
     </Section>
 
     <Section tone="teal">
       <SectionHead
-        eyebrow="Benefits for organisers"
+        eyebrow="Benefits for organizers"
         title="More insight, more relevance, <em>more value from the same room.</em>"
       />
       <CardGrid cols={3} items={[
         { icon: "trending-up", title: "Stronger pre-event engagement", body: "Guided conversations give participants a reason to engage before the event opens. Unlike a webinar or a poll, the conversation itself is worth having." },
         { icon: "users-round", title: "Better participant matching", body: "Matches are built from real context — what someone is actually working on, seeking, or offering — not just a job title and a headshot." },
-        { icon: "bar-chart-3", title: "Richer audience intelligence", body: "Organisers gain demand intelligence for live curation: what participants actually care about, in time to shape the programme around it." },
+        { icon: "bar-chart-3", title: "Richer audience intelligence", body: "Organizers gain demand intelligence for live curation: what participants actually care about, in time to shape the program around it." },
         { icon: "mic", title: "More authentic event content", body: "Participants talking about why they are attending creates far more useful pre-event signal than generic reposts of event marketing." },
         { icon: "compass", title: "Improved sponsor value", body: "Clearer audience insight means sponsors can see real relevance — not just attendance numbers, but who is in the room and what they are there for." },
         { icon: "smile", title: "Higher participant satisfaction", body: "Participants who arrive with shared context and a short list of people worth meeting leave with more to show for the time they invested." },
@@ -952,7 +991,7 @@ const PageWhoForEvents = () => (
         strong={[
           "100 to 5,000 participants",
           "Attendees come to meet collaborators, investors, partners, clients, experts, or peers",
-          "Organiser cares about community quality, not just attendance volume",
+          "Organizer cares about community quality, not just attendance volume",
           "Networking and follow-through are core to event value",
         ]}
         poor={[
@@ -974,7 +1013,7 @@ const PageWhoForEvents = () => (
         { title: "Participant journey design", body: "We design the pre-event arc: what participants are invited to do, when, and how — shaped around your event's timeline and audience." },
         { title: "Conversation design",      body: "We build the guided conversation prompts tailored to your cohort — what they are likely holding, what you want the field to reveal." },
         { title: "Pre-event activation",     body: "Participants receive a clear, consent-based invitation to a conversation they can complete in under twenty minutes — on their own time, before the event opens." },
-        { title: "AI-supported synthesis",   body: "We synthesise the field and prepare host-facing insight: themes, matches, emerging questions, and a picture of who is actually in the room." },
+        { title: "AI-supported synthesis",   body: "We synthesize the field and prepare host-facing insight: themes, matches, emerging questions, and a picture of who is actually in the room." },
         { title: "Event support",            body: "We stay close through the event — available to hosts, responsive to what the field reveals, ready to surface patterns as the gathering unfolds." },
         { title: "Post-event learning report", body: "A structured debrief on what worked, what the field revealed, and what a next iteration could test." },
       ]} />
@@ -996,7 +1035,7 @@ const PageWhoForCompanies = () => (
   <>
     <SegmentHero
       calli="calligraphy-27.jpg"
-      eyebrow="Segment 2B · Companies & AI-Native Organisations"
+      eyebrow="Segment 2B · Companies & AI-Native Organizations"
       title="Use company gatherings to create <em>real alignment</em> before people enter the room."
       sub="Coherence Conversations Event helps teams clarify context, surface priorities, build trust, and arrive at offsites, onboarding moments, and strategy sessions ready for better decisions and deeper collaboration."
       primaryCTA={{ label: "Start a Conversation", href: "start.html" }}
@@ -1005,13 +1044,13 @@ const PageWhoForCompanies = () => (
     <Section tone="white">
       <SectionHead
         eyebrow="Segment overview"
-        title="For organisations trying to <em>coordinate across complexity.</em>"
+        title="For organizations trying to <em>coordinate across complexity.</em>"
         dek="Coherence Conversations Event helps companies prepare their people to gather well — surfacing context, priorities, tensions, and trust before the live moment has to carry all of it."
       />
       <TagList items={[
-        "Distributed teams", "AI-native startups", "Fractional organisations",
+        "Distributed teams", "AI-native startups", "Fractional organizations",
         "Purpose-led companies", "Founder teams", "Project-based teams",
-        "Organisations preparing for change or growth"
+        "Organizations preparing for change or growth"
       ]} />
     </Section>
 
@@ -1051,7 +1090,7 @@ const PageWhoForCompanies = () => (
       <SectionHead
         eyebrow="Audax OS"
         title="Audax OS is how we are <em>building this internally.</em>"
-        dek="Audax OS is our emerging operating model for distributed, fractional, AI-native work. It organises company building through purpose, quests, missions, commitments, contribution, learning, and human-agent collaboration."
+        dek="Audax OS is our emerging operating model for distributed, fractional, AI-native work. It organizes company building through purpose, quests, missions, commitments, contribution, learning, and human-agent collaboration."
       />
       <JourneyTrack steps={[
         { name: "Purpose" },
@@ -1071,18 +1110,18 @@ const PageWhoForCompanies = () => (
       <div className="two-col">
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--ink-900)" }}>Humans hold</h4>
-          <p>Judgement, relationship, accountability, meaning, and consent. These are not processes you can automate. They require human presence, discretion, and lived context — and they determine whether organisational change actually takes hold.</p>
+          <p>Judgment, relationship, accountability, meaning, and consent. These are not processes you can automate. They require human presence, discretion, and lived context — and they determine whether organizational change actually takes hold.</p>
         </div>
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--teal-800)" }}>Agents support</h4>
-          <p>Memory, synthesis, pattern-finding, translation, and orientation. AI earns its place here not by replacing human work, but by making it possible for more of the organisation's real intelligence to surface and become useful.</p>
+          <p>Memory, synthesis, pattern-finding, translation, and orientation. AI earns its place here not by replacing human work, but by making it possible for more of the organization's real intelligence to surface and become useful.</p>
         </div>
       </div>
     </Section>
 
     <Section tone="off">
       <SectionHead
-        eyebrow="Organisational benefits"
+        eyebrow="Organizational benefits"
         title="Better gatherings. Clearer missions. <em>Stronger follow-through.</em>"
       />
       <CardGrid cols={3} items={[
@@ -1091,26 +1130,26 @@ const PageWhoForCompanies = () => (
         { icon: "list-checks", title: "Clearer shared priorities", body: "AI-supported synthesis turns individual perspectives into a visible shared map — so strategy conversations start from a more honest foundation." },
         { icon: "alert-triangle", title: "More visible tensions & opportunities", body: "What is unspoken becomes visible before it becomes a problem. Teams can address friction early, when it is easier to work with." },
         { icon: "heart-handshake", title: "Stronger team trust", body: "The practice of sharing honestly — even briefly — builds the kind of trust that makes distributed teams more coherent between live gatherings." },
-        { icon: "brain", title: "Useful AI-supported memory", body: "AI can hold and synthesise what has been said, decided, and shifted across gatherings — reducing the costly repetition of shared context." },
+        { icon: "brain", title: "Useful AI-supported memory", body: "AI can hold and synthesize what has been said, decided, and shifted across gatherings — reducing the costly repetition of shared context." },
       ]} />
     </Section>
 
     <Section tone="white">
       <SectionHead
         eyebrow="Best fit"
-        title="Best for organisations ready to <em>work on how they work.</em>"
+        title="Best for organizations ready to <em>work on how they work.</em>"
       />
       <FitCompare
         strong={[
           "Distributed or fractional teams",
-          "Organisations holding strategic gatherings",
+          "Organizations holding strategic gatherings",
           "Companies onboarding new contributors",
           "Teams preparing for new missions or growth phases",
-          "Organisations exploring AI-native ways of working",
+          "Organizations exploring AI-native ways of working",
         ]}
         poor={[
           "Teams looking only for a meeting app",
-          "Organisations unwilling to surface real tensions",
+          "Organizations unwilling to surface real tensions",
           "Companies seeking AI surveillance rather than collaboration support",
         ]}
       />
@@ -1126,15 +1165,15 @@ const PageWhoForCompanies = () => (
 );
 
 /* ====================================================================
-   2C. WHO FOR · Networks & Communities
+   2C. WHO FOR · Ecosystems & Communities
    ==================================================================== */
 const PageWhoForNetworks = () => (
   <>
     <SegmentHero
       calli="calligraphy-10.jpg"
-      eyebrow="Segment 2C · Networks & Professional Communities"
+      eyebrow="Segment 2C · Ecosystems & Professional Communities"
       title="Turn membership into <em>meaningful connection and shared intelligence.</em>"
-      sub="Coherence Conversations Event helps networks and professional communities reveal member interests, needs, offers, and collaboration opportunities before important gatherings or programmes."
+      sub="Coherence Conversations Event helps networks and professional communities reveal member interests, needs, offers, and collaboration opportunities before important gatherings or programs."
       primaryCTA={{ label: "Start a Conversation", href: "start.html" }}
     />
 
@@ -1153,14 +1192,14 @@ const PageWhoForNetworks = () => (
     <Section tone="off" calli={{ file: "calligraphy-29.jpg", cls: "faint v-corner-bl" }}>
       <SectionHead
         eyebrow="The problem"
-        title="Many networks have members. <em>Fewer have activation.</em>"
+        title="Many ecosystems have members. <em>Fewer have activation.</em>"
       />
       <CardGrid cols={3} items={[
         { num: "01", title: "Stale or underused directories", body: "Member directories capture what people were doing when they joined. They rarely reflect what members are actually seeking or offering now." },
         { num: "02", title: "New members struggle to orient", body: "Without a structured way to understand the landscape of the community, new members default to the loudest voices or the easiest connections." },
-        { num: "03", title: "No insight into member needs", body: "Network leaders rarely have a live picture of what their members most need, find difficult, or wish the community would offer." },
-        { num: "04", title: "Engagement clusters around the same few", body: "In most networks, a small core is highly active and the majority remains peripheral — not for lack of interest, but lack of a useful entry point." },
-        { num: "05", title: "Invisible collaboration opportunities", body: "The most valuable collaborations in a network are often the ones no one knew were possible — because the right context was never surfaced." },
+        { num: "03", title: "No insight into member needs", body: "Ecosystem leaders rarely have a live picture of what their members most need, find difficult, or wish the community would offer." },
+        { num: "04", title: "Engagement clusters around the same few", body: "In most ecosystems, a small core is highly active and the majority remains peripheral — not for lack of interest, but lack of a useful entry point." },
+        { num: "05", title: "Invisible collaboration opportunities", body: "The most valuable collaborations in an ecosystem are often the ones no one knew were possible — because the right context was never surfaced." },
         { num: "06", title: "Event energy that fades afterwards", body: "Gatherings generate momentum, but without shared context and follow-through infrastructure, the energy dissipates within days." },
       ]} />
     </Section>
@@ -1168,13 +1207,13 @@ const PageWhoForNetworks = () => (
     <Section tone="white">
       <SectionHead
         eyebrow="What we help with"
-        title="From passive membership to <em>active network intelligence.</em>"
+        title="From passive membership to <em>active ecosystem intelligence.</em>"
         dek="Guided conversations and AI-supported synthesis help surface what members care about, who should meet, and what themes or opportunities are emerging across the community."
       />
       <div className="flow-steps">
         <div className="flow-step"><h4>Invite & guide</h4><p>Members receive a short guided conversation invitation — not another form or forum post, but a conversation worth having that surfaces what they actually care about right now.</p></div>
         <div className="flow-step"><h4>Capture context</h4><p>Each conversation captures interests, needs, offers, questions, expertise, and collaboration intentions — in the member's own words. No form, no dropdown, no shallow profile.</p></div>
-        <div className="flow-step"><h4>Synthesise & match</h4><p>AI-supported synthesis reveals what the network is actually holding: emerging themes, relevant matches, and patterns that help leaders understand and activate the community.</p></div>
+        <div className="flow-step"><h4>Synthesize & match</h4><p>AI-supported synthesis reveals what the ecosystem is actually holding: emerging themes, relevant matches, and patterns that help leaders understand and activate the community.</p></div>
       </div>
     </Section>
 
@@ -1189,7 +1228,7 @@ const PageWhoForNetworks = () => (
     <Section tone="white">
       <SectionHead
         eyebrow="Community intelligence"
-        title="Make the network <em>visible to itself.</em>"
+        title="Make the ecosystem <em>visible to itself.</em>"
         dek="AI-supported synthesis can help community leaders understand emerging themes, unmet needs, member clusters, potential working groups, and opportunities for future programming."
       />
       <div className="dash-preview">
@@ -1221,15 +1260,15 @@ const PageWhoForNetworks = () => (
 
     <Section tone="off">
       <SectionHead
-        eyebrow="Benefits for network leaders"
+        eyebrow="Benefits for ecosystem leaders"
         title="Stronger engagement, better insight, <em>more useful community moments.</em>"
       />
       <CardGrid cols={3} items={[
         { icon: "user-plus", title: "Better member onboarding", body: "A guided conversation on joining gives new members an early way to be heard, find relevant others, and understand where they fit — rather than absorbing culture from the edges." },
         { icon: "shuffle", title: "More relevant introductions", body: "Introductions built from real context — shared interests, complementary needs, specific offers — have a reason to happen and a foundation to build on." },
-        { icon: "calendar", title: "Stronger event & programme design", body: "Understanding what members are actually holding and seeking lets programmes respond to real community needs rather than what the organiser assumes matters." },
-        { icon: "git-merge", title: "Clearer collaboration opportunities", body: "The most valuable collaborations in a network are often the ones nobody knew were possible. AI-supported synthesis helps make them visible." },
-        { icon: "ear", title: "Better understanding of needs", body: "Network leaders gain a live picture of member concerns, frustrations, and opportunities — beyond what usage data, event attendance, or annual surveys can reveal." },
+        { icon: "calendar", title: "Stronger event & program design", body: "Understanding what members are actually holding and seeking lets programs respond to real community needs rather than what the organizer assumes matters." },
+        { icon: "git-merge", title: "Clearer collaboration opportunities", body: "The most valuable collaborations in an ecosystem are often the ones nobody knew were possible. AI-supported synthesis helps make them visible." },
+        { icon: "ear", title: "Better understanding of needs", body: "Ecosystem leaders gain a live picture of member concerns, frustrations, and opportunities — beyond what usage data, event attendance, or annual surveys can reveal." },
         { icon: "heart", title: "Increased retention & belonging", body: "Members who feel heard, matched well, and connected to others who share their concerns are more likely to stay, contribute, and bring others in." },
       ]} />
     </Section>
@@ -1237,12 +1276,12 @@ const PageWhoForNetworks = () => (
     <Section tone="white">
       <SectionHead
         eyebrow="Best fit"
-        title="Best for networks that want <em>more than audience management.</em>"
+        title="Best for ecosystems that want <em>more than audience management.</em>"
       />
       <FitCompare
         strong={[
           "Communities with high-trust or high-intent members",
-          "Networks where members have complementary expertise",
+          "Ecosystems where members have complementary expertise",
           "Associations seeking stronger member value",
           "Communities moving from content to collaboration",
           "Ecosystem groups trying to map who is doing what",
@@ -1283,7 +1322,7 @@ const PageWhoForCivic = () => (
         title="For public-good ecosystems <em>working across difference.</em>"
       />
       <TagList items={[
-        "Civil society organisations", "Civic engagement platforms",
+        "Civil society organizations", "Civic engagement platforms",
         "Participatory governance initiatives", "Community coalitions",
         "Philanthropic & impact networks", "Regenerative place-based initiatives",
         "Public-interest innovation labs", "Multi-stakeholder alliances"
@@ -1317,7 +1356,7 @@ const PageWhoForCivic = () => (
         { icon: "heart-handshake", title: "Relationship & trust mapping", body: "Coherence helps reveal where trust already exists, where it is absent, and where relationship-building matters most before the room can do real work." },
         { icon: "layers", title: "Participatory sensemaking", body: "Instead of collecting input and processing it invisibly, the emerging patterns are made visible to the participants who created them." },
         { icon: "flag", title: "Working group formation", body: "The platform helps civic actors discover who else cares about the same concern — and whether there is enough shared energy to begin doing something about it." },
-        { icon: "book-open", title: "Public learning outputs", body: "Synthesised insights can be shared publicly, creating transparency about what the process found and inviting broader civic engagement." },
+        { icon: "book-open", title: "Public learning outputs", body: "Synthesized insights can be shared publicly, creating transparency about what the process found and inviting broader civic engagement." },
         { icon: "fast-forward", title: "Follow-through pathways", body: "After a convening, guided rounds help participants stay connected to each other and to the commitments that emerged — reducing the evaporation that follows most civic gatherings." },
       ]} />
     </Section>
@@ -1344,7 +1383,7 @@ const PageWhoForCivic = () => (
       <JourneyTrack steps={[
         { name: "Listen" },
         { name: "Share" },
-        { name: "Prioritise", highlight: true },
+        { name: "Prioritize", highlight: true },
         { name: "Form" },
         { name: "Act" },
       ]} />
@@ -1356,12 +1395,12 @@ const PageWhoForCivic = () => (
         title="From many voices to <em>shared capacity.</em>"
       />
       <CardGrid cols={3} items={[
-        { icon: "ear", title: "Better stakeholder understanding", body: "Civic leaders gain a more honest map of the field — who is present, what they actually hold, and where the real tensions run — rather than only hearing from the loudest or most organised voices." },
+        { icon: "ear", title: "Better stakeholder understanding", body: "Civic leaders gain a more honest map of the field — who is present, what they actually hold, and where the real tensions run — rather than only hearing from the loudest or most organized voices." },
         { icon: "users", title: "Inclusive, structured participation", body: "Guided conversations give every participant a way to contribute that does not privilege those who can travel, speak publicly, or are already inside the room." },
         { icon: "eye", title: "Visibility of shared concerns", body: "Synthesis helps stakeholders see what they share — which is often significantly more than the most visible conflicts suggest." },
-        { icon: "heart-handshake", title: "Stronger inter-group trust", body: "Being heard, synthesised fairly, and connected to others builds inter-group trust more reliably than statements of commitment alone." },
+        { icon: "heart-handshake", title: "Stronger inter-group trust", body: "Being heard, synthesized fairly, and connected to others builds inter-group trust more reliably than statements of commitment alone." },
         { icon: "link", title: "Continuity between meetings", body: "Guided follow-through rounds help civic processes maintain momentum between live gatherings — reducing the fade that turns participation into performance." },
-        { icon: "book-open", title: "Actionable public learning", body: "Well-synthesised civic conversations produce outputs that can inform policy, funding priorities, and future programme design — not just reports that are filed and forgotten." },
+        { icon: "book-open", title: "Actionable public learning", body: "Well-synthesized civic conversations produce outputs that can inform policy, funding priorities, and future program design — not just reports that are filed and forgotten." },
       ]} />
     </Section>
 
@@ -1382,7 +1421,7 @@ const PageWhoForCivic = () => (
         poor={[
           "Tokenistic participation processes",
           "Groups seeking only sentiment extraction",
-          "Highly polarised contexts without facilitation capacity",
+          "Highly polarized contexts without facilitation capacity",
           "Projects unwilling to share power or feedback loops",
         ]}
       />
@@ -1428,7 +1467,7 @@ const PageWhatWeDo = () => (
         title="AI should help humans become <em>more capable together.</em>"
       />
       <div className="manifesto">
-        <p>The real opportunity of AI is not only automation. It is <em>better coordination</em> — helping people, teams, communities, and organisations think together, learn together, and act together.</p>
+        <p>The real opportunity of AI is not only automation. It is <em>better coordination</em> — helping people, teams, communities, and organizations think together, learn together, and act together.</p>
       </div>
     </Section>
 
@@ -1441,7 +1480,7 @@ const PageWhatWeDo = () => (
       <JourneyTrack steps={[
         { name: "Discover", note: "Agent surfaces who is here" },
         { name: "Connect",  note: "Agent suggests relevant others" },
-        { name: "Converge", note: "Agent synthesises shared patterns", highlight: true },
+        { name: "Converge", note: "Agent synthesizes shared patterns", highlight: true },
         { name: "Seed",     note: "Agent supports commitments" },
         { name: "Build",    note: "Agent holds shared memory" },
       ]} />
@@ -1456,7 +1495,7 @@ const PageWhatWeDo = () => (
       <div className="two-col">
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--ink-500)" }}>Individual AI</h4>
-          <p>Individual AI tools help each person think, produce, and move faster. Genuinely useful. But they optimise at the individual level. When everyone uses AI separately, each person becomes more capable in isolation — while the organisation's collective coherence may actually decrease.</p>
+          <p>Individual AI tools help each person think, produce, and move faster. Genuinely useful. But they optimize at the individual level. When everyone uses AI separately, each person becomes more capable in isolation — while the organization's collective coherence may actually decrease.</p>
         </div>
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 22, margin: "0 0 12px", color: "var(--teal-800)" }}>Collaborative AI</h4>
@@ -1499,7 +1538,7 @@ const PageWhatWeDo = () => (
           link: { label: "Read more", href: "who-for-events.html" } },
         { icon: "building-2", title: "Companies", body: "Offsites, onboarding, strategy.",
           link: { label: "Read more", href: "who-for-companies.html" } },
-        { icon: "users", title: "Communities", body: "Networks, associations, programmes.",
+        { icon: "users", title: "Communities", body: "Networks, associations, programs.",
           link: { label: "Read more", href: "who-for-networks.html" } },
         { icon: "globe", title: "Civic", body: "Stakeholder convening, public dialogue.",
           link: { label: "Read more", href: "who-for-civic.html" } },
@@ -1509,7 +1548,7 @@ const PageWhatWeDo = () => (
     <Section tone="white">
       <SectionHead
         eyebrow="Pilots & collaboration design"
-        title="We build through pilots with <em>real gatherings, communities, and organisations.</em>"
+        title="We build through pilots with <em>real gatherings, communities, and organizations.</em>"
         dek="The product is developed through practical pilots where real coordination challenges reveal what the system needs to support."
       />
       <Timeline steps={[
@@ -1517,7 +1556,7 @@ const PageWhatWeDo = () => (
         { title: "Context mapping",        body: "We map the relevant field — participants, relationships, dynamics, existing practices — to understand where the system needs to fit." },
         { title: "Conversation design",    body: "We design the guided conversation prompts and participant journey, calibrated to the specific coordination challenge and cohort." },
         { title: "Activation",             body: "Participants are invited into the experience — with clear framing, consent, and a guided structure that fits their context and time." },
-        { title: "Synthesis & insight",    body: "We synthesise the field — themes, patterns, needs, offers, matches, and tensions — and prepare insight that participants and leaders can act on." },
+        { title: "Synthesis & insight",    body: "We synthesize the field — themes, patterns, needs, offers, matches, and tensions — and prepare insight that participants and leaders can act on." },
         { title: "Live support",           body: "We stay close during the live moment — available to hosts, responsive to emerging questions, and ready to surface what the field is showing." },
         { title: "Learning report",        body: "A structured reflection on what the pilot revealed — about the tool, the field, the design, and what a next iteration might explore." },
       ]} />
@@ -1566,7 +1605,7 @@ const PageEvent = () => (
           <p>Structured prompts surface intent, context, expertise, questions, and what each person hopes the event might make possible.</p>
         </div>
         <div className="flow-step">
-          <h4>AI synthesises the field</h4>
+          <h4>AI synthesizes the field</h4>
           <p>Intentions, themes, offers, needs, and possible matches emerge across the participant cohort.</p>
         </div>
         <div className="flow-step">
@@ -1593,7 +1632,7 @@ const PageEvent = () => (
 
     <Section tone="teal">
       <SectionHead
-        eyebrow="Host & organiser experience"
+        eyebrow="Host & organizer experience"
         title="Hosts see the field <em>before they hold the room.</em>"
       />
       <div className="dash-preview">
@@ -1611,7 +1650,7 @@ const PageEvent = () => (
       <SectionHead
         eyebrow="AI-supported synthesis"
         title="AI helps turn many conversations into <em>shared intelligence.</em>"
-        dek="The system helps identify patterns, themes, offers, needs, potential matches, and possible next steps while preserving human judgement and consent."
+        dek="The system helps identify patterns, themes, offers, needs, potential matches, and possible next steps while preserving human judgment and consent."
       />
       <div className="flow-steps">
         <div className="flow-step"><h4>Many conversations</h4><p>Each in the participant's own words.</p></div>
@@ -1647,7 +1686,7 @@ const PageEvent = () => (
         { title: "Event context mapping",   body: "We map your audience, the event arc, and the key coordination gaps — so what we build fits your gathering specifically, not a generic template." },
         { title: "Conversation design",     body: "We write the guided prompts and design the participant journey for your specific cohort — calibrated to what they are likely holding and what you want the field to reveal." },
         { title: "Participant activation",  body: "Participants receive a clear, consent-based invitation to a conversation they can complete in under twenty minutes — before the event, on their own time." },
-        { title: "Synthesis & insight",     body: "We synthesise the field — themes, matches, offers, needs, and host-facing insight — and deliver it before the event opens." },
+        { title: "Synthesis & insight",     body: "We synthesize the field — themes, matches, offers, needs, and host-facing insight — and deliver it before the event opens." },
         { title: "Event support",           body: "We remain available through the event to support hosts, respond to emerging field questions, and help surface what the cohort is showing." },
         { title: "Learning report",         body: "A structured debrief on what the pilot revealed — about the tool, the audience, the design, and what a next iteration could test." },
       ]} />
@@ -1706,7 +1745,7 @@ const PageJoin = () => (
       <SectionHead
         eyebrow="The movement"
         title="A company for <em>AI-supported collective intelligence.</em>"
-        dek="We are building a company that uses AI to support human agency, collaborative intelligence, and collective sensemaking — while organising itself through the same principles it offers to others."
+        dek="We are building a company that uses AI to support human agency, collaborative intelligence, and collective sensemaking — while organizing itself through the same principles it offers to others."
       />
     </Section>
 
@@ -1726,7 +1765,7 @@ const PageJoin = () => (
       <CardGrid cols={3} items={[
         { icon: "cpu", title: "Product & AI builders", body: "Engineers, product thinkers, and AI practitioners who can help build the guided conversation experience, synthesis layer, and the infrastructure that turns many conversations into shared intelligence." },
         { icon: "calendar", title: "Event & community builders", body: "Practitioners who have run real gatherings, activated communities, or designed participant journeys — and understand from experience where the connection layer breaks down." },
-        { icon: "compass", title: "Strategic operators", body: "People who can hold multiple threads simultaneously — across market, product, organisation, and field — and who are comfortable building in conditions where almost nothing is settled." },
+        { icon: "compass", title: "Strategic operators", body: "People who can hold multiple threads simultaneously — across market, product, organization, and field — and who are comfortable building in conditions where almost nothing is settled." },
         { icon: "pen-tool", title: "Designers & storytellers", body: "Designers and communicators who can give form to genuinely new work — and understand that making it clear is the hardest design problem here." },
         { icon: "microscope", title: "Researchers & sensemakers", body: "People drawn to the harder questions behind the product: collective intelligence, AI and human agency, trust as infrastructure, and what better coordination actually requires." },
         { icon: "git-merge", title: "Partnership & ecosystem builders", body: "Relationship holders who can open doors in the markets and communities where Coherence belongs — and who understand that this field is built through trust, not reach." },
@@ -1737,7 +1776,7 @@ const PageJoin = () => (
       <SectionHead
         eyebrow="How we work · Audax OS"
         title="Audax OS is our <em>internal operating model.</em>"
-        dek="Audax OS helps us organise distributed, fractional, AI-native work through purpose, quests, missions, commitments, contribution tracking, learning loops, and AI-supported coordination."
+        dek="Audax OS helps us organize distributed, fractional, AI-native work through purpose, quests, missions, commitments, contribution tracking, learning loops, and AI-supported coordination."
       />
       <JourneyTrack steps={[
         { name: "Purpose" },
@@ -1861,7 +1900,7 @@ const PageJoin = () => (
         <div>
           <h4 style={{ fontFamily: "var(--font-display)", fontSize: 20, margin: "0 0 12px", color: "var(--ink-700)" }}>What this quest needs</h4>
           <ul className="trust-list" style={{ gridTemplateColumns: "1fr" }}>
-            <li>Organisational design and operations</li>
+            <li>Organizational design and operations</li>
             <li>Documentation and culture design</li>
             <li>AI workflow design and contributor onboarding</li>
             <li>Governance thinking and practical discipline</li>
@@ -1898,7 +1937,7 @@ const PageJoin = () => (
       <SectionHead
         eyebrow="Slicing Pie & future equity"
         title="How contribution is <em>recognized at this stage.</em>"
-        dek="At this stage, most contribution is not salaried. We use a Slicing Pie-style contribution model to track early risk and effort so contribution can translate into future equity when the company formalises, raises investment, or reaches the agreed conversion event."
+        dek="At this stage, most contribution is not salaried. We use a Slicing Pie-style contribution model to track early risk and effort so contribution can translate into future equity when the company formalizes, raises investment, or reaches the agreed conversion event."
       />
       <div className="invite-note" style={{ marginTop: 32 }}>
         <div className="invite-note-icon"><Icon name="info" /></div>
@@ -1913,7 +1952,7 @@ const PageJoin = () => (
     <Section tone="off" calli={{ file: "calligraphy-10.jpg", cls: "faint v-corner-br" }}>
       <SectionHead
         eyebrow="Team & collaborators"
-        title="The people currently <em>holding the centre.</em>"
+        title="The people currently <em>holding the center.</em>"
       />
       <div className="profile-grid">
         {[
@@ -1951,7 +1990,7 @@ const PageStart = () => {
 
   const pathways = [
     "I want to pilot Coherence Conversations Event",
-    "I organise events",
+    "I organize events",
     "I lead a company or team",
     "I hold a network or community",
     "I work in civic or civil society ecosystems",
@@ -2019,7 +2058,7 @@ const PageStart = () => {
           <form className="conv-form" onSubmit={submit}>
             <div className="field"><label>Your name</label><input required placeholder="How should we address you?" /></div>
             <div className="field"><label>Email</label><input type="email" required placeholder="you@somewhere.org" /></div>
-            <div className="field"><label>Organisation</label><input placeholder="If relevant" /></div>
+            <div className="field"><label>Organization</label><input placeholder="If relevant" /></div>
             <div className="field"><label>Role</label><input placeholder="Your role in this work" /></div>
             <div className="field"><label>Pathway</label><input value={pathway} readOnly placeholder="Select a path above, or describe below" /></div>
             <div className="field"><label>What is the context? Who are you bringing together?</label><textarea rows="3" /></div>
@@ -2086,11 +2125,11 @@ const PageAbout = () => (
       <SectionHead
         eyebrow="Why we exist"
         title="Connection has scaled.<br/><em>Coordination has not.</em>"
-        dek="We live in an age of extraordinary connection and persistent fragmentation. People can gather across continents, form distributed teams, launch communities, and speak with AI systems that can write, code, summarise, and advise. And still, meaningful collaboration remains hard."
+        dek="We live in an age of extraordinary connection and persistent fragmentation. People can gather across continents, form distributed teams, launch communities, and speak with AI systems that can write, code, summarize, and advise. And still, meaningful collaboration remains hard."
       />
       <div className="two-col">
         <div>
-          <p>The right people do not find each other. Groups lose context between conversations. Organisations fail to hear themselves. Networks become passive. Civic concern struggles to become shared action.</p>
+          <p>The right people do not find each other. Groups lose context between conversations. Organizations fail to hear themselves. Networks become passive. Civic concern struggles to become shared action.</p>
           <p>Good intentions drift because the path from "we should" to "we are doing this" is still too fragile.</p>
         </div>
         <div>
@@ -2105,7 +2144,7 @@ const PageAbout = () => (
       <SectionHead
         eyebrow="The phrase that guides us"
         title="Humans and AI,<br/><em>wiser together.</em>"
-        dek="We use this phrase because intelligence alone is not enough. Wisdom includes context, judgement, care, timing, memory, trust, ethics, and the ability to act well inside complexity."
+        dek="We use this phrase because intelligence alone is not enough. Wisdom includes context, judgment, care, timing, memory, trust, ethics, and the ability to act well inside complexity."
       />
       <div className="two-col" style={{ gap: 40 }}>
         <div>
@@ -2113,7 +2152,7 @@ const PageAbout = () => (
           <ul className="trust-list" style={{ gridTemplateColumns: "1fr" }}>
             <li>Meaning and ethics</li>
             <li>Courage and care</li>
-            <li>Judgement inside complexity</li>
+            <li>Judgment inside complexity</li>
             <li>Relationship and trust</li>
             <li>Accountability and consequence</li>
           </ul>
@@ -2144,14 +2183,14 @@ const PageAbout = () => (
       <CardGrid cols={3} items={[
         { icon: "message-circle", title: "Build through conversations",
           body: "Important ideas should not live only in private heads or scattered documents. We use conversation to discover, clarify, test, and align." },
-        { icon: "pen-tool", title: "Turn insight into artefacts",
+        { icon: "pen-tool", title: "Turn insight into artifacts",
           body: "Conversations should become useful outputs: essays, product decisions, public learning, onboarding materials, pilot designs, and strategic clarity." },
         { icon: "compass", title: "Work through quests and missions",
           body: "Clearer quests: time-bound arcs of work with champions, milestones, and meaningful entry points for collaborators." },
         { icon: "sparkles", title: "Use AI Guides internally",
           body: "If AI Guides can support coordination, they should help us coordinate too: onboarding, memory, synthesis, mission clarity, and follow-through." },
         { icon: "heart", title: "Stay human while becoming AI-native",
-          body: "AI should reduce unnecessary friction, not strip the work of care, judgement, humour, trust, or responsibility." },
+          body: "AI should reduce unnecessary friction, not strip the work of care, judgment, humour, trust, or responsibility." },
         { icon: "rocket", title: "Keep the dream connected to delivery",
           body: "A large vision is useful only if it helps us build. The dream needs rails. Otherwise it becomes expensive fog." },
       ]} />
@@ -2162,7 +2201,7 @@ const PageAbout = () => (
       <SectionHead
         eyebrow="Who is behind this"
         title="People at the intersection of AI,<br/><em>collective intelligence, and coordination.</em>"
-        dek="The Coherence Company is being formed by people working at the intersection of AI, collective intelligence, facilitation, organisational design, community building, systems thinking, events, civic life, and regenerative futures."
+        dek="The Coherence Company is being formed by people working at the intersection of AI, collective intelligence, facilitation, organizational design, community building, systems thinking, events, civic life, and regenerative futures."
       />
       <div className="manifesto">
         <p>The founding story is still being written in public. What is clear is the shared conviction: AI should not only make isolated individuals faster. <em>It should help people think together, coordinate across difference, and build better futures together.</em></p>
@@ -2178,7 +2217,7 @@ const PageAbout = () => (
       <SectionHead
         eyebrow="The company as proof"
         title="The company must become<br/><em>evidence of the thesis.</em>"
-        dek="The Coherence Company cannot only talk about coherence. It has to practise it."
+        dek="The Coherence Company cannot only talk about coherence. It has to practice it."
       />
       <div className="two-col">
         <div>
@@ -2207,25 +2246,25 @@ const PageAbout = () => (
       <SectionHead
         eyebrow="Who we build with"
         title="The work needs<br/><em>collaborators, not just customers.</em>"
-        dek="The Coherence Company is not designed to build everything alone. We are especially interested in collaborators already working on purposeful gatherings, organisational transformation, AI adoption, professional networks, civic participation, collective intelligence, and human-centred AI."
+        dek="The Coherence Company is not designed to build everything alone. We are especially interested in collaborators already working on purposeful gatherings, organizational transformation, AI adoption, professional networks, civic participation, collective intelligence, and human-centered AI."
       />
       <div className="two-col">
         <div>
-          <p>Our role is not to replace experienced event organisers, facilitators, community builders, and civic practitioners — or to compete with every experience provider in the field.</p>
+          <p>Our role is not to replace experienced event organizers, facilitators, community builders, and civic practitioners — or to compete with every experience provider in the field.</p>
           <p>Our role is to build infrastructure that helps them do their work with more coherence, better memory, stronger matchmaking, clearer insight, and more useful follow-through.</p>
         </div>
         <div>
           <TagList items={[
             "Purposeful events and convenings",
-            "Organisational transformation",
+            "Organizational transformation",
             "AI adoption and culture change",
             "Professional networks and communities",
             "Civic participation and local action",
             "Collective intelligence",
             "Facilitation and dialogue",
-            "Human-centred AI",
+            "Human-centered AI",
             "Trust, identity, and consent",
-            "New organisational models",
+            "New organizational models",
           ]} />
         </div>
       </div>
@@ -2245,7 +2284,7 @@ const PageAbout = () => (
       <div className="two-col">
         <div>
           <p>We are looking for people who want to help build the next generation of collaboration infrastructure — people who care about AI, human agency, sensemaking, coordination, trust, and practical action.</p>
-          <p>You might be a product builder, engineer, designer, facilitator, researcher, writer, organiser, community builder, event host, civic practitioner, investor, operator, or transformation partner.</p>
+          <p>You might be a product builder, engineer, designer, facilitator, researcher, writer, organizer, community builder, event host, civic practitioner, investor, operator, or transformation partner.</p>
         </div>
         <div>
           <ul className="trust-list">
@@ -2285,7 +2324,7 @@ const PageCoherenceJourney = () => (
     <HeroLight
       eyebrow="About · The Coherence Journey"
       title='From first contact<br/><em>to shared action.</em>'
-      sub="The Coherence Journey is our map for how groups become capable together. It describes the movement from discovery and connection through convergence, seeding, and sustained action — across events, organisations, networks, and civic ecosystems."
+      sub="The Coherence Journey is our map for how groups become capable together. It describes the movement from discovery and connection through convergence, seeding, and sustained action — across events, organizations, networks, and civic ecosystems."
       primaryCTA={{ label: "Explore Coherence Conversations", href: "conversations.html" }}
       secondaryCTA={{ label: "Back to About", href: "about.html" }}
       meta={["Five stages · Discover · Connect · Converge · Seed · Build"]}
@@ -2297,7 +2336,7 @@ const PageCoherenceJourney = () => (
       <SectionHead
         eyebrow="What it is"
         title="A shared vocabulary for<br/><em>the work of coordination.</em>"
-        dek="The Coherence Journey is not a product, a platform, or a methodology. It is a map — a shared vocabulary for practitioners, tool builders, organisers, and communities working on the fragile middle between first contact and real collaboration."
+        dek="The Coherence Journey is not a product, a platform, or a methodology. It is a map — a shared vocabulary for practitioners, tool builders, organizers, and communities working on the fragile middle between first contact and real collaboration."
       />
       <div className="two-col">
         <div>
@@ -2306,7 +2345,7 @@ const PageCoherenceJourney = () => (
         </div>
         <div>
           <p>By naming these stages, we can design better support for each of them: better conversations, better AI Guides, better practices, better tools, and better follow-through.</p>
-          <p>The Journey applies across contexts. Whether you are organising an event, leading a transformation, stewarding a network, or supporting a civic process — the underlying pattern is the same.</p>
+          <p>The Journey applies across contexts. Whether you are organizing an event, leading a transformation, stewarding a network, or supporting a civic process — the underlying pattern is the same.</p>
         </div>
       </div>
     </Section>
@@ -2494,18 +2533,18 @@ const PageCoherenceJourney = () => (
       <SectionHead
         eyebrow="Across all contexts"
         title="The same journey, <em>different terrain.</em>"
-        dek="The Coherence Journey applies whether you are organising an event, leading organisational transformation, stewarding a network, or supporting a civic process. The stages are the same. The support each stage needs is designed to fit the terrain."
+        dek="The Coherence Journey applies whether you are organizing an event, leading organizational transformation, stewarding a network, or supporting a civic process. The stages are the same. The support each stage needs is designed to fit the terrain."
       />
       <CardGrid cols={4} items={[
         { icon: "calendar", title: "Events",
           body: "Participants discover who else is present before the room opens, form relevant connections during and after, and converge on emerging themes and possible collaborations.",
           link: { label: "Events", href: "who-for-events.html" } },
-        { icon: "building-2", title: "Organisations",
+        { icon: "building-2", title: "Organizations",
           body: "Teams discover what people actually think, form working connections across silos, converge on real priorities, seed action, and build cultures of honest communication.",
-          link: { label: "Organisations", href: "who-for-companies.html" } },
-        { icon: "users", title: "Networks",
+          link: { label: "Organizations", href: "who-for-companies.html" } },
+        { icon: "users", title: "Ecosystems",
           body: "Members discover one another intelligently, form relevant partnerships, converge on shared priorities, seed working groups, and build sustained member value.",
-          link: { label: "Networks", href: "who-for-networks.html" } },
+          link: { label: "Ecosystems", href: "who-for-networks.html" } },
         { icon: "globe", title: "Civic ecosystems",
           body: "Citizens discover who else cares, connect across difference, converge on shared concerns, seed practical action, and build accountability and continuity between moments.",
           link: { label: "Civic", href: "who-for-civic.html" } },
@@ -2522,12 +2561,12 @@ const PageCoherenceJourney = () => (
       <Timeline steps={[
         { title: "Conversations surface what is real",
           body: "Guided one-to-one dialogue helps people express their intentions, context, needs, and offers — honestly and in their own words. This is the foundation of Discovery." },
-        { title: "AI Guides synthesise what is emerging",
+        { title: "AI Guides synthesize what is emerging",
           body: "Across many conversations, patterns begin to appear: shared themes, recurring questions, complementary needs and offers, and possible matches. Convergence becomes visible." },
         { title: "Relevant people find each other",
           body: "Matchmaking based on real context rather than job titles or random proximity. Connection becomes more useful — and more likely to continue." },
         { title: "Hosts see the field before they hold it",
-          body: "Organisers, community leaders, and facilitators receive insight about the group before the gathering begins — reducing guesswork and increasing the chance of meaningful moments." },
+          body: "Organizers, community leaders, and facilitators receive insight about the group before the gathering begins — reducing guesswork and increasing the chance of meaningful moments." },
         { title: "Next steps become concrete",
           body: "Commitments, possible collaborations, and practical follow-through are supported from within the process rather than left to chance after it." },
       ]} />
@@ -2544,7 +2583,7 @@ const PageCoherenceJourney = () => (
         dek="The Coherence Journey is not something we own. It is a description of a pattern that exists in human groups — and a shared language for the people designing support for that pattern."
       />
       <div className="manifesto">
-        <p>Facilitators, community builders, event organisers, civic practitioners, organisational designers, researchers, and AI builders all work somewhere along this journey. We are building tools and practices for it. We are also hoping to make the map itself more useful to others — so that more people can build better support for the fragile middle where groups either find their coherence or lose it. <em>The journey belongs to the groups that take it.</em></p>
+        <p>Facilitators, community builders, event organizers, civic practitioners, organizational designers, researchers, and AI builders all work somewhere along this journey. We are building tools and practices for it. We are also hoping to make the map itself more useful to others — so that more people can build better support for the fragile middle where groups either find their coherence or lose it. <em>The journey belongs to the groups that take it.</em></p>
       </div>
     </Section>
 

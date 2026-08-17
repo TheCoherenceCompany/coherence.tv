@@ -268,6 +268,7 @@ img { max-width: 100%; display: block; }
   .calli.v-full { width: 460px; height: 460px; }
   .calli.v-wide-top { width: 900px; height: 320px; }
 }
+
 .hero-vertical {
   position: absolute;
   right: 28px; top: 0; bottom: 0;
@@ -990,6 +991,95 @@ img { max-width: 100%; display: block; }
 }
 .section-off .tag-list li { background: #fff; }
 
+/* ---------- Persona selector ("one of these is you") ---------- */
+.persona { position: relative; z-index: 2; margin-top: 8px; }
+.persona-prompt {
+  font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--teal-800); margin-bottom: 20px;
+}
+.persona-tabs {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+}
+.persona-tab {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 18px; text-align: left;
+  background: #fff; border: 1px solid var(--border-1); border-radius: 14px;
+  cursor: pointer; font: inherit; color: var(--ink-700);
+  transition: border-color 200ms var(--ease-out), background 200ms var(--ease-out),
+              box-shadow 200ms var(--ease-out), transform 200ms var(--ease-out);
+}
+.persona-tab:hover { border-color: var(--teal-200); transform: translateY(-2px); box-shadow: var(--shadow-2); }
+.persona-tab:focus-visible { outline: 2px solid var(--teal-700); outline-offset: 2px; }
+.persona-tab.active {
+  border-color: var(--teal-800); background: var(--teal-050);
+  box-shadow: 0 6px 18px rgba(31,154,154,0.15);
+}
+.persona-tab-icon {
+  width: 40px; height: 40px; flex: 0 0 auto;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 10px; background: var(--teal-050); color: var(--teal-900);
+  transition: background 200ms var(--ease-out), color 200ms var(--ease-out);
+}
+.persona-tab.active .persona-tab-icon { background: var(--teal-800); color: #fff; }
+.persona-tab-icon iconify-icon { font-size: 20px; }
+.persona-tab-label { font-size: 15px; font-weight: 500; color: var(--ink-900); line-height: 1.25; }
+
+.persona-panel {
+  margin-top: 20px;
+  display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px;
+  padding: 40px; border: 1px solid var(--border-1); border-radius: 18px;
+  background: linear-gradient(180deg, #fff, var(--surface-off));
+}
+@media (prefers-reduced-motion: no-preference) {
+  .persona-panel { animation: persona-fade 340ms var(--ease-out); }
+}
+@keyframes persona-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.persona-panel-main { display: flex; flex-direction: column; align-items: flex-start; }
+.persona-selfid {
+  font-size: 13px; font-weight: 500; line-height: 1.4; color: var(--teal-800);
+  margin-bottom: 18px; padding: 7px 14px; border-radius: 999px;
+  background: var(--teal-050);
+}
+.persona-transform {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 30px; line-height: 1.15; letter-spacing: -0.015em;
+  color: var(--ink-900); margin: 0 0 16px;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px;
+}
+.persona-arrow { color: var(--teal-700); font-size: 26px; font-weight: 300; }
+.persona-to { color: var(--teal-800); font-style: italic; }
+.persona-desc {
+  font-size: 16px; font-weight: 300; line-height: 1.6; color: var(--ink-600);
+  margin: 0 0 24px; max-width: 46ch;
+}
+.persona-link { align-self: flex-start; margin-top: auto; }
+
+.persona-outcomes {
+  list-style: none; margin: 0; padding: 0; align-self: center;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.persona-outcomes li {
+  display: flex; gap: 12px; align-items: flex-start;
+  font-size: 15px; font-weight: 300; line-height: 1.5; color: var(--ink-700);
+}
+.persona-check {
+  width: 24px; height: 24px; flex: 0 0 auto; margin-top: 1px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 999px; background: var(--teal-050); color: var(--teal-800);
+  font-size: 13px;
+}
+
+@media (max-width: 860px) {
+  .persona-tabs { grid-template-columns: repeat(2, 1fr); }
+  .persona-panel { grid-template-columns: 1fr; gap: 28px; padding: 28px; }
+  .persona-link { margin-top: 4px; }
+}
+@media (max-width: 520px) {
+  .persona-tabs { grid-template-columns: 1fr; }
+  .persona-transform { font-size: 26px; }
+}
+
 /* ---------- Timeline ---------- */
 .timeline {
   list-style: none; padding: 0; margin: 56px 0 0;
@@ -1357,4 +1447,3 @@ a.btn { text-decoration: none; }
   .nav-links { gap: 18px; flex-wrap: wrap; justify-content: flex-end; }
   .hero-vertical { display: none; }
 }
-

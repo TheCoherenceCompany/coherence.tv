@@ -67,8 +67,8 @@ const NAV_LINKS = [
     sub: [
       { href: "who-for.html",          label: "Overview",         icon: "compass" },
       { href: "who-for-events.html",   label: "Events",           icon: "calendar" },
-      { href: "who-for-companies.html",label: "Organisations",    icon: "building-2" },
-      { href: "who-for-networks.html", label: "Networks",         icon: "users" },
+      { href: "who-for-companies.html",label: "Organizations",    icon: "building-2" },
+      { href: "who-for-networks.html", label: "Ecosystems",       icon: "users" },
       { href: "who-for-civic.html",    label: "Civic Ecosystems", icon: "globe" },
     ]
   },
@@ -232,6 +232,57 @@ const TagList = ({ items }) => (
   </ul>
 );
 
+/* ---------- Persona selector ("one of these is you") ---------- */
+
+const PersonaSelector = ({ prompt, personas }) => {
+  const [active, setActive] = React.useState(0);
+  const p = personas[active];
+  return (
+    <div className="persona">
+      {prompt && <div className="persona-prompt">{prompt}</div>}
+      <div className="persona-tabs" role="tablist" aria-label="Who it's for">
+        {personas.map((it, i) => (
+          <button
+            key={i}
+            type="button"
+            role="tab"
+            aria-selected={active === i}
+            className={`persona-tab${active === i ? " active" : ""}`}
+            onClick={() => setActive(i)}
+          >
+            <span className="persona-tab-icon"><Icon name={it.icon} /></span>
+            <span className="persona-tab-label">{it.tab}</span>
+          </button>
+        ))}
+      </div>
+      <div className="persona-panel" role="tabpanel" key={active}>
+        <div className="persona-panel-main">
+          <div className="persona-selfid">{p.selfId}</div>
+          <h3 className="persona-transform">
+            <span className="persona-from">{p.from}</span>
+            <span className="persona-arrow" aria-hidden="true">→</span>
+            <span className="persona-to">{p.to}</span>
+          </h3>
+          <p className="persona-desc">{p.desc}</p>
+          {p.link && (
+            <a className="persona-link btn btn-secondary" href={p.link.href}>
+              {p.link.label} <Icon name="arrow-right" />
+            </a>
+          )}
+        </div>
+        <ul className="persona-outcomes">
+          {p.outcomes.map((o, i) => (
+            <li key={i}>
+              <span className="persona-check"><Icon name="check" /></span>
+              <span>{o}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
 /* ---------- Journey track (5 stages) ---------- */
 
 const JourneyTrack = ({ steps }) => {
@@ -394,6 +445,6 @@ const FlowSteps = ({ steps }) => (
 Object.assign(window, {
   LOREM, LOREM_SHORT, ICON_MAP, Icon,
   Nav, Footer, Eyebrow, SectionHead, Section, HeroLight,
-  CardGrid, TagList, JourneyTrack, Timeline, FitCompare,
+  CardGrid, TagList, PersonaSelector, JourneyTrack, Timeline, FitCompare,
   TensionsBlock, CTABand, FlowSteps,
 });

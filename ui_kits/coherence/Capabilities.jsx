@@ -15,7 +15,7 @@ const CAPABILITIES = [
   {
     icon: "book-open",
     title: "Editorial",
-    body: "Reports, books, and digests for organisations that have something worth saying carefully."
+    body: "Reports, books, and digests for organizations that have something worth saying carefully."
   }
 ];
 
