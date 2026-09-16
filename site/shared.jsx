@@ -362,7 +362,7 @@ const TensionsBlock = ({ items }) => (
 
 /* ---------- CTA Band ---------- */
 
-const CTABand = ({ eyebrow, title, body, cta, tone = "sand", calli }) => (
+const CTABand = ({ eyebrow, title, body, cta, cta2, tone = "sand", calli }) => (
   <section className={`cta-band cta-${tone}`}>
     {calli && (
       <div
@@ -375,10 +375,19 @@ const CTABand = ({ eyebrow, title, body, cta, tone = "sand", calli }) => (
       {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
       <h2 className="cta-band-title" dangerouslySetInnerHTML={{ __html: title }} />
       {body && <p className="cta-band-body">{body}</p>}
-      {cta && (
-        <a className="btn btn-primary btn-lg" href={cta.href}>
-          {cta.label} <Icon name="arrow-right" />
-        </a>
+      {(cta || cta2) && (
+        <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
+          {cta && (
+            <a className="btn btn-primary btn-lg" href={cta.href}>
+              {cta.label} <Icon name="arrow-right" />
+            </a>
+          )}
+          {cta2 && (
+            <a className="btn btn-secondary btn-lg" href={cta2.href}>
+              {cta2.label} <Icon name="arrow-right" />
+            </a>
+          )}
+        </div>
       )}
     </div>
   </section>
@@ -401,9 +410,9 @@ const Footer = () => (
       </div>
       <div className="footer-col">
         <h6>Explore</h6>
+        <a href="products.html">Products</a>
         <a href="about.html">About</a>
         <a href="vision.html">Vision</a>
-        <a href="products.html">Products</a>
         <a href="conversations.html">Coherence Conversations</a>
         <a href="closedbeta2026.html">Closed Beta</a>
         <a href="who-for.html">Who For</a>

@@ -1419,11 +1419,13 @@ a.btn { text-decoration: none; }
   margin: 24px 0 28px; max-width: 980px;
 }
 .page-hero h1 em { font-style: italic; color: var(--teal-800); }
+.page-hero h1.lg { font-size: 84px; }
 .page-hero .page-hero-sub {
   font-size: 19px; font-weight: 300; line-height: 1.55;
   color: var(--ink-700); max-width: 640px; margin: 0 0 36px;
 }
 .page-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
   .container, .container-narrow { padding: 0 28px; }
@@ -1431,6 +1433,7 @@ a.btn { text-decoration: none; }
   .section-title { font-size: 40px; }
   .hero-h1 { font-size: 64px; }
   .page-hero h1 { font-size: 48px; }
+  .page-hero h1.lg { font-size: 52px; }
   .cta-band-title { font-size: 38px; }
   .card-grid.cols-3, .card-grid.cols-4,
   .stats, .seed-meta,
