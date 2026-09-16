@@ -60,6 +60,7 @@ const Icon = ({ name }) => (
 );
 
 const NAV_LINKS = [
+  { href: "products.html",      label: "Products",                match: ["products"] },
   { href: "about.html",         label: "About",                   match: ["about", "coherence-journey"] },
   { href: "vision.html",        label: "Vision",                  match: ["vision"] },
   { href: "conversations.html", label: "Coherence Conversations", match: ["conversations", "coherenceconversations"] },
@@ -69,7 +70,7 @@ const NAV_LINKS = [
       { href: "who-for-events.html",   label: "Events",           icon: "calendar" },
       { href: "who-for-companies.html",label: "Organizations",    icon: "building-2" },
       { href: "who-for-networks.html", label: "Ecosystems",       icon: "users" },
-      { href: "who-for-civic.html",    label: "Civic Ecosystems", icon: "globe" },
+      { href: "who-for-civic.html",    label: "Civics",           icon: "globe" },
     ]
   },
 ];
@@ -402,6 +403,7 @@ const Footer = () => (
         <h6>Explore</h6>
         <a href="about.html">About</a>
         <a href="vision.html">Vision</a>
+        <a href="products.html">Products</a>
         <a href="conversations.html">Coherence Conversations</a>
         <a href="closedbeta2026.html">Closed Beta</a>
         <a href="who-for.html">Who For</a>

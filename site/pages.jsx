@@ -207,7 +207,7 @@ const PageHome = () => (
             link: { label: "Explore Coherence for Ecosystems", href: "who-for-networks.html" },
           },
           {
-            icon: "globe", tab: "Civic",
+            icon: "globe", tab: "Civics",
             selfId: "You convene public-good work across difference.",
             from: "Scattered concern", to: "civic action",
             desc: "For municipalities, NGOs, foundations, and civic movements trying to turn participation into structured understanding, visible accountability, and practical local action.",
@@ -1772,6 +1772,28 @@ const PageJoin = () => (
       ]} />
     </Section>
 
+    {/* Building this with us — Chapter 3 roles, tied to the three product lines */}
+    <Section tone="off">
+      <SectionHead
+        eyebrow="Building this with us"
+        title="Three products <em>need more than two founders.</em>"
+        dek="Chapter 3 is the shift from research and relationship-building into a company that behaves like a fundable business: three named products, defined roles, and a team large enough that momentum no longer rests on two people."
+      />
+      <CardGrid cols={4} items={[
+        { icon: "cpu", title: "Technical co-founder or lead",
+          body: "Our top priority right now. The person who lets our founders specialize instead of each doing a bit of everything." },
+        { icon: "git-branch", title: "Product leads",
+          body: "One for each of the three product lines, to carry a product from thesis to something people can rely on." },
+        { icon: "compass", title: "Organizational design",
+          body: "Audax OS development alongside Victor, on the regenerative-principles side, not a conventional HR playbook." },
+        { icon: "send", title: "Communications lead",
+          body: "Someone genuinely motivated by regenerative AI and regenerative society, telling our own story publicly." },
+      ]} />
+      <div style={{ marginTop: 40, textAlign: "center" }}>
+        <a className="btn btn-secondary" href="products.html">See the three products <Icon name="arrow-right" /></a>
+      </div>
+    </Section>
+
     <Section tone="teal">
       <SectionHead
         eyebrow="How we work · Audax OS"
@@ -1792,13 +1814,13 @@ const PageJoin = () => (
       <SectionHead
         eyebrow="Current quests"
         title="Enter through a mission, <em>not vague enthusiasm.</em>"
-        dek="Our current quests are First Revenue Path, Internal Beta, and Audax OS v0.1. Together, they focus the company on revenue learning, product readiness, and the operating system needed to onboard the first 20 collaborators."
+        dek="Our current quests are First Revenue Path, Closed Beta, and Audax OS v0.1. Together, they focus the company on revenue learning, product readiness, and the operating system needed to onboard the first 20 collaborators."
       />
       <CardGrid cols={3} items={[
         { num: "Q1", icon: "compass", title: "First Revenue Path",
           body: "Develop the first revenue path by speaking with first clients and users, shaping the sales approach, and designing the path towards first revenue.",
           link: { label: "See this quest", href: "#q1" } },
-        { num: "Q2", icon: "sparkles", title: "Internal Beta",
+        { num: "Q2", icon: "sparkles", title: "Closed Beta",
           body: "Get the product, experience, prompts, outputs, and flows ready for external beta testing. Not perfect — ready.",
           link: { label: "See this quest", href: "#q2" } },
         { num: "Q3", icon: "git-branch", title: "Audax OS v0.1",
@@ -1847,7 +1869,7 @@ const PageJoin = () => (
     <Section id="q2" tone="white">
       <SectionHead
         eyebrow="Quest 2 · Owner: Christine · ~1.5 months"
-        title="Internal Beta"
+        title="Closed Beta"
         dek="Get the product ready for external beta. Test live settings, training flows, prompts, AI Guide outputs, and the full internal experience until it is strong enough to invite external users with confidence. Not perfect — ready."
       />
       <div className="two-col">
@@ -2735,9 +2757,197 @@ const PageClosedBeta = () => (
   </>
 );
 
+/* ====================================================================
+   PRODUCTS — Chapter 3 overview: three product lines, one journey
+   ==================================================================== */
+const PageProducts = () => (
+  <>
+    <section className="page-hero" style={{ paddingBottom: 56 }}>
+      <div className="calli in-gradient"
+        style={{ backgroundImage: "url('assets/backgrounds/calligraphy-11.jpg')",
+                 backgroundSize: "cover", backgroundPosition: "50% 20%",
+                 width: "72%", minWidth: 900, height: "100%", right: -80, top: 0,
+                 WebkitMaskImage: "linear-gradient(to bottom, black 0%, black 35%, transparent 85%)",
+                 maskImage: "linear-gradient(to bottom, black 0%, black 35%, transparent 85%)" }}
+        aria-hidden="true" />
+      <div className="container">
+        <Eyebrow>What we're building</Eyebrow>
+        <h1>Three products. <em>One coherence journey.</em></h1>
+        <p className="page-hero-sub" style={{ marginBottom: 0 }}>
+          The Coherence Company builds coordination infrastructure for the AI age, expressed as
+          three products. One is live today. Two are in active development. Together, they carry
+          a group from a single guided conversation to a durable organization to a wider ecosystem
+          that senses, learns, and acts as one.
+        </p>
+      </div>
+    </section>
+
+    {/* Overview: three products at a glance */}
+    <Section tone="teal">
+      <SectionHead
+        eyebrow="At a glance"
+        title="One thesis, <em>three doorways in.</em>"
+        dek="Each product stands on its own. Together, they give the Coherence Journey a shape people can actually plug into, rather than one large, hard-to-explain idea."
+      />
+      <CardGrid cols={3} items={[
+        { num: "01", icon: "message-circle", title: "Coherence Conversations, and an event-building agent",
+          body: "Live today. Guided one-to-one conversations, and the agent that helps you turn them into a full event, for your community, network, or organization.",
+          link: { label: "See Coherence Conversations", href: "conversations.html" } },
+        { num: "02", icon: "git-branch", title: "Audax OS agent",
+          body: "In development. An agent that helps you build a distributed, fractional, purposeful, agentic-native organization, and keep it running once the design session ends.",
+          link: { label: "Read more below", href: "#audax" } },
+        { num: "03", icon: "network", title: "Ecosystem weaving agent",
+          body: "In development. An agent for networks of purpose-aligned organizations that want to sense, remember, and act together, not just stay connected.",
+          link: { label: "Read more below", href: "#ecosystem" } },
+      ]} />
+    </Section>
+
+    {/* Product 01 — Coherence Conversations & event-building agent */}
+    <Section id="conversations" tone="teal" calli={{ file: "calligraphy-25.jpg", cls: "faint v-corner-br" }}>
+      <SectionHead
+        eyebrow="Product 01 · Live today"
+        title="Coherence Conversations, <em>and an agent for building events around them.</em>"
+        dek="Our flagship product. A guided, one-to-one conversation format, and the agent that helps a host turn many conversations into an activated community, network, or event."
+      />
+      <CardGrid cols={3} items={[
+        { icon: "mic", title: "A conversation that goes somewhere",
+          body: "A shared set of questions, guided by a human host, recorded and synthesized with consent. Nothing to install and nothing to rehearse." },
+        { icon: "sparkles", title: "Synthesis across the whole field",
+          body: "Our engine turns many conversations into individual takeaways and a shared view of the themes, matches, and openings across a group." },
+        { icon: "user-plus", title: "Built to be hosted, not just attended",
+          body: "Templates, onboarding, and real human support help a host shape their own questions, theme, and strategy, rather than run a generic script." },
+      ]} />
+      <div className="manifesto">
+        <p>Underneath, we are building the infrastructure to string richer experiences together: an entry lounge, a consent moment, the conversation itself, and a considered close, rather than a single fixed room.</p>
+      </div>
+      <div style={{ marginTop: 32 }}>
+        <a className="btn btn-secondary" href="closedbeta2026.html">Host a Coherence Conversations event <Icon name="arrow-right" /></a>
+      </div>
+    </Section>
+
+    {/* Product 01 — what's next (clearly exploratory, not committed) */}
+    <Section tone="off">
+      <SectionHead
+        eyebrow="What's next for this infrastructure"
+        title="Directions we're exploring, <em>not commitments yet.</em>"
+        dek="Once the underlying room-building infrastructure is in place, the same format opens onto other kinds of guided gatherings. These are live conversations inside our team, not features on a roadmap."
+      />
+      <TagList items={[
+        "Commerce and giving built into an event",
+        "Memorial and remembrance experiences",
+        "Healing and practice circles",
+      ]} />
+    </Section>
+
+    {/* Product 02 — Audax OS agent */}
+    <Section id="audax" tone="ink" calli={{ file: "calligraphy-07.jpg", cls: "on-dark v-edge-right" }}>
+      <SectionHead
+        eyebrow="Product 02 · In development"
+        title="Audax OS, <em>built for organizations in the agentic age.</em>"
+        dek="An agent that helps you build a distributed, fractional, purposeful organization, inward and outward, where AI agents are treated as first class collaborators. The AI capable of building it has only recently arrived."
+      />
+      <div className="two-col">
+        <div>
+          <p>Most of what an organization needs already exists somewhere in the world: frameworks for governance, value tracking, onboarding, ritual, conflict resolution. Roughly 90 to 95 percent of it, in some form.</p>
+          <p>The real work is assembling that into a coherent whole, and then holding the space for it to actually happen: onboarding people, keeping rituals running, following through week by week. That follow-through is what tends to be missing, even after a good design session.</p>
+        </div>
+        <div>
+          <p>We are building Audax OS as something bigger than the Coherence Company itself, so it can grow its own legs: its own beta program, its own client organizations, rather than staying a tool for our internal use only.</p>
+          <p>That outside growth is what gives it enough energy to become genuinely robust, more than any one small startup could supply by working only on its own problems.</p>
+        </div>
+      </div>
+      <div style={{ marginTop: 40 }}>
+        <a className="btn btn-secondary on-dark" href="https://audax.earth/" target="_blank" rel="noopener noreferrer">Explore Audax OS <Icon name="arrow-right" /></a>
+      </div>
+      <div className="manifesto" style={{ marginTop: 48 }}>
+        <p>The work is not designing everything from scratch. <em>It is assembling what already exists into a coherent whole, and holding it to actually happen.</em></p>
+      </div>
+    </Section>
+
+    {/* Product 02 — why agents force this, old vs. emerging organization */}
+    <Section tone="ink" calli={{ file: "calligraphy-30.jpg", cls: "on-dark v-corner-bl" }}>
+      <SectionHead
+        eyebrow="Why this, why now"
+        title="Built for the age of <em>humans and agents,</em> not the office."
+        dek="AI agents cannot work well inside fog. They need context, permission, memory, feedback, escalation, and human judgment to participate well, and that same need forces a clarity that helps human contributors too."
+      />
+      <FitCompare
+        poor={[
+          "Fixed roles",
+          "Full-time employment as default",
+          "Office-based context",
+          "Departmental silos",
+          "Managerial supervision, tasks, and reporting",
+          "Culture as an HR function",
+          "AI as a tool added later",
+        ]}
+        strong={[
+          "Fluid contribution",
+          "Fractional participation",
+          "Distributed context",
+          "Mission-based cells",
+          "Shared accountability, commitments, and learning",
+          "Trust as infrastructure",
+          "AI agents as collaborators",
+        ]}
+      />
+      <div className="manifesto">
+        <p>Technology scales faster than coherence. <em>The missing layer is not another app. It is a shared grammar for collaboration.</em></p>
+      </div>
+      <div style={{ marginTop: 32 }}>
+        <a className="btn btn-secondary on-dark" href="https://audax.earth/" target="_blank" rel="noopener noreferrer">Explore Audax OS in full <Icon name="arrow-right" /></a>
+      </div>
+    </Section>
+
+    {/* Product 03 — Ecosystem weaving agent */}
+    <Section id="ecosystem" tone="teal">
+      <SectionHead
+        eyebrow="Product 03 · In development"
+        title="An ecosystem-weaving agent <em>for networks that want to act, not just connect.</em>"
+        dek="For a group of independent, purpose-aligned organizations who want to move from a network of connected projects to an ecosystem capable of sensing, learning, and acting together."
+      />
+      <CardGrid cols={3} items={[
+        { icon: "eye", title: "Makes the field visible",
+          body: "Distills public signals from scattered updates, repositories, talks, and transcripts into one legible picture of what a distributed community is actually doing." },
+        { icon: "search", title: "Surfaces the right match",
+          body: "When one organization is looking for a technical partner and another has already built most of what it needs, this agent is what puts them in the same room, before both spend months solving it alone." },
+        { icon: "book-open", title: "Remembers what mattered",
+          body: "Holds on to the useful insight that would otherwise disappear under the next wave of updates, so it stays findable and actionable long after the post that surfaced it scrolls by." },
+      ]} />
+      <div className="manifesto">
+        <p>This agent closes the gap between finding each other and acting together: sharing relevant context and surfacing needs and offers, with clear attribution throughout, so nobody has to wonder whose work is whose.</p>
+      </div>
+      <div style={{ marginTop: 32 }}>
+        <p style={{ color: "var(--ink-600)", maxWidth: 720 }}>We are building this to be offered to other networks and communities as a standalone service, not only used to support our own ecosystem. The ecosystem worth weaving is bigger than any one company.</p>
+      </div>
+    </Section>
+
+    {/* Product 03 — ARKo, the first concrete build */}
+    <Section tone="off" calli={{ file: "calligraphy-27.jpg", cls: "faint v-corner-br" }}>
+      <SectionHead
+        eyebrow="Product 03 · First build"
+        title="ARKo, <em>the agent putting this to the test.</em>"
+        dek="ARKo is our first concrete build inside Audax Lab №1, a bounded challenge: help aligned organizations understand what is happening across the field, discover opportunities for collaboration, and develop a more coherent shared narrative."
+      />
+      <div style={{ marginTop: 32 }}>
+        <a className="btn btn-secondary" href="https://ark.audax.earth/index.html" target="_blank" rel="noopener noreferrer">Read more about Audax Lab №1 <Icon name="arrow-right" /></a>
+      </div>
+    </Section>
+
+    <CTABand
+      calli={{ file: "calligraphy-29.jpg", cls: "faint v-corner-br" }}
+      eyebrow="Where to start"
+      title="Pick the product <em>closest to what you're building.</em>"
+      body="Coherence Conversations is open for hosts today. Audax OS and the ecosystem-weaving agent are taking shape alongside the people who join us early. If you want to help build one of them, we are looking for you."
+      cta={{ label: "Host a Coherence Conversations event", href: "closedbeta2026.html" }}
+      tone="sand"
+    />
+  </>
+);
+
 Object.assign(window, {
   PageHome, PageVision, PageConversations, PageWhoFor,
   PageWhoForEvents, PageWhoForCompanies, PageWhoForNetworks, PageWhoForCivic,
   PageWhatWeDo, PageEvent, PageJoin, PageStart, PageAbout, PageCoherenceJourney,
-  PageClosedBeta,
+  PageClosedBeta, PageProducts,
 });
