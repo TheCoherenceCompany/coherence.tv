@@ -10,6 +10,7 @@ const PAGES = {
   "who-for-companies":  () => window.PageWhoForCompanies,
   "who-for-networks":   () => window.PageWhoForNetworks,
   "who-for-civic":      () => window.PageWhoForCivic,
+  "iris":               () => window.PageIris,
   "event":              () => window.PageEvent,
   "join":               () => window.PageJoin,
   "start":              () => window.PageStart,

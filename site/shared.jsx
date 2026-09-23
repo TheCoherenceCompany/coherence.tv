@@ -64,6 +64,7 @@ const NAV_LINKS = [
   { href: "about.html",         label: "About",                   match: ["about", "coherence-journey"] },
   { href: "vision.html",        label: "Vision",                  match: ["vision"] },
   { href: "conversations.html", label: "Coherence Conversations", match: ["conversations", "coherenceconversations"] },
+  { href: "iris.html",          label: "IRIS",                    match: ["iris"] },
   { href: "who-for.html",       label: "Who Is This For?",        match: ["who-for"],
     sub: [
       { href: "who-for.html",          label: "Overview",         icon: "compass" },
@@ -415,6 +416,7 @@ const Footer = () => (
         <a href="vision.html">Vision</a>
         <a href="conversations.html">Coherence Conversations</a>
         <a href="closedbeta2026.html">Closed Beta</a>
+        <a href="iris.html">IRIS</a>
         <a href="who-for.html">Who For</a>
         <a href="join.html">Join Us</a>
       </div>

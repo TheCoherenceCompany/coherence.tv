@@ -1572,6 +1572,63 @@ const PageWhatWeDo = () => (
 );
 
 /* ====================================================================
+   3B. IRIS (publishing pipeline)
+   ==================================================================== */
+const PageIris = () => (
+  <>
+    <section className="page-hero">
+      <div className="calli in-gradient"
+        style={{ backgroundImage: "url('assets/backgrounds/calligraphy-11.jpg')",
+                 width: 900, height: 900, right: -160, top: 0 }}
+        aria-hidden="true" />
+      <div className="container">
+        <Eyebrow>Publishing</Eyebrow>
+        <h1>IRIS by The Coherence Company <em>turns conversations into shared recordings.</em></h1>
+        <p className="page-hero-sub">
+          IRIS is the publishing layer behind Coherence Conversations. It takes a recorded,
+          consented conversation and prepares it for the places people already gather —
+          YouTube, LinkedIn, and beyond.
+        </p>
+        <div className="page-hero-ctas">
+          <a className="btn btn-primary btn-lg" href="conversations.html">See Coherence Conversations <Icon name="arrow-right" /></a>
+          <a className="btn btn-ghost btn-lg" href="start.html">Start a Conversation</a>
+        </div>
+      </div>
+    </section>
+
+    <Section tone="white">
+      <SectionHead
+        eyebrow="What it does"
+        title="From conversation to <em>shared recording.</em>"
+        dek="A Coherence Conversation produces more than notes — it produces a recording worth sharing. IRIS is the automated pipeline that carries that recording from the room to an audience."
+      />
+      <CardGrid cols={3} items={[
+        { num: "01", title: "Record", body: "Every guided conversation can be captured as it happens, with participants aware from the start." },
+        { num: "02", title: "Review & consent", body: "A recording moves forward only after the people in it approve what will be shared, and where." },
+        { num: "03", title: "Publish", body: "Approved recordings are prepared and uploaded to the platforms your audience already watches." },
+      ]} />
+    </Section>
+
+    <Section tone="off" calli={{ file: "calligraphy-03.jpg", cls: "faint v-corner-bl" }}>
+      <SectionHead
+        eyebrow="Consent, by design"
+        title="Nothing publishes without <em>a yes.</em>"
+        dek="Every recording moves through an approval step before it reaches an audience. Participants and hosts decide what is shared, where, and when — IRIS carries out that decision, it does not make it."
+      />
+    </Section>
+
+    <CTABand
+      calli={{ file: "calligraphy-26.jpg", cls: "faint v-corner-br" }}
+      eyebrow="Curious how this fits your event"
+      title="Let's design <em>a pilot.</em>"
+      body="Whether it's a single gathering or an ongoing series, we can talk through what recording and publishing should look like for your group."
+      cta={{ label: "Start a Conversation", href: "start.html" }}
+      tone="sand"
+    />
+  </>
+);
+
+/* ====================================================================
    4. COHERENCE CONVERSATIONS EVENT
    ==================================================================== */
 const PageEvent = () => (
@@ -2957,6 +3014,6 @@ const PageProducts = () => (
 Object.assign(window, {
   PageHome, PageVision, PageConversations, PageWhoFor,
   PageWhoForEvents, PageWhoForCompanies, PageWhoForNetworks, PageWhoForCivic,
-  PageWhatWeDo, PageEvent, PageJoin, PageStart, PageAbout, PageCoherenceJourney,
+  PageWhatWeDo, PageIris, PageEvent, PageJoin, PageStart, PageAbout, PageCoherenceJourney,
   PageClosedBeta, PageProducts,
 });
