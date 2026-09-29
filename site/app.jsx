@@ -17,7 +17,6 @@ const PAGES = {
   "about":              () => window.PageAbout,
   "coherence-journey":              () => window.PageCoherenceJourney,
   "closedbeta2026":                 () => window.PageClosedBeta,
-  "products":                       () => window.PageProducts,
 };
 
 const App = () => {

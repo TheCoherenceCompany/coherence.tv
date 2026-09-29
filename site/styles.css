@@ -444,6 +444,70 @@ img { max-width: 100%; display: block; }
   color: var(--ink-600); margin: 0;
 }
 
+/* ---------- roadmap (status-tagged cards, Vision page) ---------- */
+.roadmap-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px; margin-top: 48px;
+}
+.roadmap-card {
+  background: #fff;
+  border: 1px solid var(--border-1);
+  border-top: 3px solid var(--ink-400);
+  border-radius: 18px;
+  padding: 32px 28px;
+  display: flex; flex-direction: column;
+  transition: transform 280ms var(--ease-out), box-shadow 280ms var(--ease-out);
+}
+.roadmap-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-3); }
+.roadmap-card.status-live { border-top-color: var(--teal-700); }
+
+.status-pill {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 999px;
+  margin-bottom: 20px; align-self: flex-start;
+}
+.status-pill .status-dot { width: 6px; height: 6px; border-radius: 999px; background: currentColor; flex: 0 0 auto; }
+.status-pill.live { background: var(--teal-800); color: #fff; }
+.status-pill.dev  { background: var(--surface-off); color: var(--ink-500); border: 1px solid var(--border-1); }
+
+.roadmap-icon {
+  width: 48px; height: 48px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 12px; background: var(--teal-050); color: var(--teal-900);
+  margin-bottom: 20px;
+}
+.roadmap-icon iconify-icon { font-size: 22px; }
+
+.roadmap-card h3 {
+  font-size: 21px; font-weight: 400; color: var(--ink-900);
+  letter-spacing: -0.01em; margin: 0 0 12px;
+}
+.roadmap-card p {
+  font-size: 14.5px; font-weight: 300; line-height: 1.6;
+  color: var(--ink-600); margin: 0 0 20px; flex: 1;
+}
+.roadmap-card .roadmap-link {
+  font-size: 14px; font-weight: 500; color: var(--teal-800);
+  display: inline-flex; align-items: center; gap: 6px; text-decoration: none;
+}
+.roadmap-card .roadmap-link:hover { text-decoration: underline; }
+
+/* dark variant on ink sections */
+.section-ink .roadmap-card {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.10);
+  border-top-color: rgba(255,255,255,0.25);
+}
+.section-ink .roadmap-card.status-live { border-top-color: var(--teal-400); }
+.section-ink .roadmap-card h3 { color: #fff; }
+.section-ink .roadmap-card p  { color: rgba(255,255,255,0.7); }
+.section-ink .roadmap-card .roadmap-link { color: var(--teal-300); }
+
+@media (max-width: 860px) {
+  .roadmap-grid { grid-template-columns: 1fr; }
+}
+
 /* ---------- coherence journey ---------- */
 .journey {
   background: linear-gradient(180deg, var(--surface-white) 0%, var(--teal-050) 100%);
@@ -1072,9 +1136,91 @@ img { max-width: 100%; display: block; }
   font-size: 13px;
 }
 
+.persona-panel.deep { grid-template-columns: 1fr; gap: 28px; align-content: start; }
+@media (min-width: 861px) {
+  .persona-panel.deep { min-height: 670px; }
+}
+.persona-panel-head { display: flex; flex-direction: column; align-items: flex-start; }
+.persona-panel.deep .persona-desc { max-width: 72ch; margin-bottom: 0; }
+.persona-panel-foot { display: flex; flex-direction: column; gap: 28px; align-items: flex-start; }
+.persona-panel.deep .persona-outcomes {
+  align-self: stretch;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.persona-panel.deep .persona-link { margin-top: 0; }
+.persona-extra {
+  display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px;
+  padding: 28px 0;
+  border-top: 1px solid var(--border-1);
+  border-bottom: 1px solid var(--border-1);
+}
+.persona-extra-label {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--teal-800); margin-bottom: 14px;
+}
+.persona-contexts {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.persona-contexts li {
+  font-size: 13px; font-weight: 400; color: var(--ink-800);
+  background: #fff; border: 1px solid var(--border-1);
+  padding: 7px 13px; border-radius: 999px;
+}
+.persona-fit {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.persona-fit li {
+  position: relative; padding-left: 18px;
+  font-size: 14.5px; font-weight: 300; line-height: 1.5; color: var(--ink-700);
+}
+.persona-fit li::before {
+  content: ""; position: absolute; left: 0; top: 0.6em;
+  width: 6px; height: 6px; border-radius: 999px; background: var(--teal-700);
+}
+
+/* dark variant on ink sections */
+.section-ink .persona-extra {
+  border-top-color: rgba(255,255,255,0.20);
+  border-bottom-color: rgba(255,255,255,0.20);
+}
+.section-ink .persona-extra-label { color: var(--teal-300); }
+.section-ink .persona-contexts li {
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.28);
+  color: rgba(255,255,255,0.9);
+}
+.section-ink .persona-fit li { color: rgba(255,255,255,0.82); }
+.section-ink .persona-fit li::before { background: var(--teal-300); }
+.section-ink .persona-tab {
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(255,255,255,0.32);
+  color: rgba(255,255,255,0.9);
+}
+.section-ink .persona-tab:hover { border-color: var(--teal-300); background: rgba(255,255,255,0.20); }
+.section-ink .persona-tab.active {
+  border-color: var(--teal-300);
+  background: rgba(75,219,219,0.24);
+}
+.section-ink .persona-tab-label { color: #fff; }
+.section-ink .persona-panel {
+  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.10));
+  border-color: rgba(255,255,255,0.28);
+}
+.section-ink .persona-transform { color: #fff; }
+.section-ink .persona-to { color: var(--teal-300); }
+.section-ink .persona-arrow { color: var(--teal-400); }
+.section-ink .persona-desc { color: rgba(255,255,255,0.75); }
+.section-ink .persona-outcomes li { color: rgba(255,255,255,0.82); }
+.section-ink .persona-link.btn-secondary { color: var(--teal-300); border-color: rgba(157, 236, 236, 0.45); }
+.section-ink .persona-link.btn-secondary:hover { color: #fff; border-color: var(--teal-300); }
+
 @media (max-width: 860px) {
   .persona-tabs { grid-template-columns: repeat(2, 1fr); }
   .persona-panel { grid-template-columns: 1fr; gap: 28px; padding: 28px; }
+  .persona-extra { grid-template-columns: 1fr; gap: 24px; }
+  .persona-panel.deep .persona-outcomes { grid-template-columns: 1fr; gap: 16px; }
   .persona-link { margin-top: 4px; }
 }
 @media (max-width: 520px) {

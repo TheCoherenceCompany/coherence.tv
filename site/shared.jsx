@@ -60,7 +60,6 @@ const Icon = ({ name }) => (
 );
 
 const NAV_LINKS = [
-  { href: "products.html",      label: "Products",                match: ["products"] },
   { href: "about.html",         label: "About",                   match: ["about", "coherence-journey"] },
   { href: "vision.html",        label: "Vision",                  match: ["vision"] },
   { href: "conversations.html", label: "Coherence Conversations", match: ["conversations", "coherenceconversations"] },
@@ -239,6 +238,33 @@ const TagList = ({ items }) => (
 const PersonaSelector = ({ prompt, personas }) => {
   const [active, setActive] = React.useState(0);
   const p = personas[active];
+  const deep = !!(p.contexts || p.fit);
+  const head = (
+    <>
+      <div className="persona-selfid">{p.selfId}</div>
+      <h3 className="persona-transform">
+        <span className="persona-from">{p.from}</span>
+        <span className="persona-arrow" aria-hidden="true">→</span>
+        <span className="persona-to">{p.to}</span>
+      </h3>
+      <p className="persona-desc">{p.desc}</p>
+    </>
+  );
+  const outcomes = (
+    <ul className="persona-outcomes">
+      {p.outcomes.map((o, i) => (
+        <li key={i}>
+          <span className="persona-check"><Icon name="check" /></span>
+          <span>{o}</span>
+        </li>
+      ))}
+    </ul>
+  );
+  const link = p.link && (
+    <a className="persona-link btn btn-secondary" href={p.link.href}>
+      {p.link.label} <Icon name="arrow-right" />
+    </a>
+  );
   return (
     <div className="persona">
       {prompt && <div className="persona-prompt">{prompt}</div>}
@@ -257,29 +283,42 @@ const PersonaSelector = ({ prompt, personas }) => {
           </button>
         ))}
       </div>
-      <div className="persona-panel" role="tabpanel" key={active}>
-        <div className="persona-panel-main">
-          <div className="persona-selfid">{p.selfId}</div>
-          <h3 className="persona-transform">
-            <span className="persona-from">{p.from}</span>
-            <span className="persona-arrow" aria-hidden="true">→</span>
-            <span className="persona-to">{p.to}</span>
-          </h3>
-          <p className="persona-desc">{p.desc}</p>
-          {p.link && (
-            <a className="persona-link btn btn-secondary" href={p.link.href}>
-              {p.link.label} <Icon name="arrow-right" />
-            </a>
-          )}
-        </div>
-        <ul className="persona-outcomes">
-          {p.outcomes.map((o, i) => (
-            <li key={i}>
-              <span className="persona-check"><Icon name="check" /></span>
-              <span>{o}</span>
-            </li>
-          ))}
-        </ul>
+      <div className={`persona-panel${deep ? " deep" : ""}`} role="tabpanel" key={active}>
+        {deep ? (
+          <>
+            <div className="persona-panel-head">{head}</div>
+            <div className="persona-extra">
+              {p.contexts && (
+                <div className="persona-extra-block">
+                  <div className="persona-extra-label">Typical contexts</div>
+                  <ul className="persona-contexts">
+                    {p.contexts.map((c, i) => <li key={i}>{c}</li>)}
+                  </ul>
+                </div>
+              )}
+              {p.fit && (
+                <div className="persona-extra-block">
+                  <div className="persona-extra-label">Strong fit when</div>
+                  <ul className="persona-fit">
+                    {p.fit.map((f, i) => <li key={i}>{f}</li>)}
+                  </ul>
+                </div>
+              )}
+            </div>
+            <div className="persona-panel-foot">
+              {outcomes}
+              {link}
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="persona-panel-main">
+              {head}
+              {link}
+            </div>
+            {outcomes}
+          </>
+        )}
       </div>
     </div>
   );
@@ -411,7 +450,6 @@ const Footer = () => (
       </div>
       <div className="footer-col">
         <h6>Explore</h6>
-        <a href="products.html">Products</a>
         <a href="about.html">About</a>
         <a href="vision.html">Vision</a>
         <a href="conversations.html">Coherence Conversations</a>
